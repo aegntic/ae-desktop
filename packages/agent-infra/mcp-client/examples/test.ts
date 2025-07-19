@@ -8,17 +8,17 @@ import {
   ChatCompletionMessageParam,
   ChatCompletionTool,
 } from 'openai/resources/index.mjs';
-import { createServer as createMcpBrowserServer } from '@agent-infra/mcp-server-browser';
-import { createServer as createMcpCommandsServer } from '@agent-infra/mcp-server-commands';
+import { createServer as createMcpBrowserServer } from '@aegnt-infra/mcp-server-browser';
+import { createServer as createMcpCommandsServer } from '@aegnt-infra/mcp-server-commands';
 import {
   createServer as createMcpFilesystemServer,
   setAllowedDirectories,
-} from '@agent-infra/mcp-server-filesystem';
+} from '@aegnt-infra/mcp-server-filesystem';
 import path from 'node:path';
 
 const currentDir = path.join(__dirname, '../');
 const PLANNING_SYSTEM_PROMPT = `
-You are an expert Planning Agent tasked with solving problems efficiently through structured plans.
+You are an expert Planning Aegnt tasked with solving problems efficiently through structured plans.
 Your job is:
 1. Analyze requests to understand the task scope
 2. Create a clear, actionable plan that makes meaningful progress with the \`planning\` tool
@@ -155,7 +155,7 @@ function toolUseToMcpTool(
         command: 'npx',
         args: [
           '-y',
-          '@agent-infra/mcp-server-filesystem',
+          '@aegnt-infra/mcp-server-filesystem',
           path.join(__dirname, '../'),
         ],
       },
@@ -167,7 +167,7 @@ function toolUseToMcpTool(
       {
         name: 'browser',
         command: 'npx',
-        args: ['-y', '@agent-infra/mcp-server-browser'],
+        args: ['-y', '@aegnt-infra/mcp-server-browser'],
       },
     ],
     {

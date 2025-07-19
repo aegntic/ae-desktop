@@ -285,7 +285,7 @@ export class ServiceManager {
       personas: this.adaptPersonasForModel(vlmProvider),
     };
 
-    // Store adapter in settings for use by the agent
+    // Store adapter in settings for use by the aegnt
     settings.set('superClaudeAdapter', adapter);
   }
 

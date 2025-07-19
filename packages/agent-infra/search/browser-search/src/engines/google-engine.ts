@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import type { Page } from '@agent-infra/browser';
+import type { Page } from '@aegnt-infra/browser';
 import type { SearchEngineAdapter, SearchResult } from '../types';
 
 /**

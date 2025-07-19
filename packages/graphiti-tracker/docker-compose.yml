@@ -3,7 +3,7 @@ version: '3.8'
 services:
   ollama:
     image: ollama/ollama:latest
-    container_name: ui-tars-ollama
+    container_name: ui-ae-ollama
     ports:
       - "11434:11434"
     volumes:
@@ -23,7 +23,7 @@ services:
 
   neo4j:
     image: neo4j:5.26.0
-    container_name: ui-tars-neo4j
+    container_name: ui-ae-neo4j
     ports:
       - "7474:7474"  # HTTP
       - "7687:7687"  # Bolt
@@ -42,7 +42,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.graphiti
-    container_name: ui-tars-graphiti
+    container_name: ui-ae-graphiti
     ports:
       - "8100:8100"
     environment:

@@ -3,7 +3,7 @@
  */
 
 import { EventEmitter } from 'events';
-import { logger } from '@ui-tars/shared/logger';
+import { logger } from '@ui-ae/shared/logger';
 import { GraphitiClient } from './client';
 import type {
   UIAction,

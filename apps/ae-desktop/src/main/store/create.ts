@@ -4,7 +4,7 @@
  */
 import { createStore } from 'zustand/vanilla';
 
-import { StatusEnum } from '@ui-tars/shared/types';
+import { StatusEnum } from '@ui-ae/shared/types';
 
 import type { AppState } from './types';
 

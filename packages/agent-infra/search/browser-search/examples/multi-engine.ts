@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { ConsoleLogger } from '@agent-infra/logger';
+import { ConsoleLogger } from '@aegnt-infra/logger';
 import { googleSearch } from './google-search';
 import { bingSearch } from './bing-search';
 import { githubSearch } from './github-search';

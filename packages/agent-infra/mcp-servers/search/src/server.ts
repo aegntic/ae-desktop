@@ -13,9 +13,9 @@ import {
   SearchConfig,
   SearchProvider,
   PageResult,
-} from '@agent-infra/search';
-import type { SearchSettings } from '@agent-infra/shared';
-import type { LocalBrowser } from '@agent-infra/browser';
+} from '@aegnt-infra/search';
+import type { SearchSettings } from '@aegnt-infra/shared';
+import type { LocalBrowser } from '@aegnt-infra/browser';
 
 let searchSetting: SearchSettings & { externalBrowser: LocalBrowser | null } = {
   provider: SearchProvider.BrowserSearch,

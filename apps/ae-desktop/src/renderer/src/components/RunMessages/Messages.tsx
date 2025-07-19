@@ -4,7 +4,7 @@
  */
 import { useState } from 'react';
 import { AlertCircle, Camera, ChevronDown, Loader2 } from 'lucide-react';
-import { ErrorStatusEnum } from '@ui-tars/shared/types';
+import { ErrorStatusEnum } from '@ui-ae/shared/types';
 
 import { Button } from '@renderer/components/ui/button';
 import {

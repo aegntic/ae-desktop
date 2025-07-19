@@ -1,4 +1,4 @@
-# @agent-infra/mcp-shared
+# @aegnt-infra/mcp-shared
 
 ## 1.2.9
 
@@ -108,7 +108,7 @@
 
 ### Minor Changes
 
-- feat(agent-tars): provider mcp servers
+- feat(aegnt-27): provider mcp servers
 
 ### Patch Changes
 

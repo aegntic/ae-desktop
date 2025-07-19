@@ -5,7 +5,7 @@
 
 ## Overview
 
-**UI-TARS Desktop** offers granular control over application behavior through its settings system. This document provides comprehensive guidance on configuration options, preset management, and operational best practices.
+**UI-AE Desktop** offers granular control over application behavior through its settings system. This document provides comprehensive guidance on configuration options, preset management, and operational best practices.
 
 <p align="center">
   <img src="./images/setting.png" alt="Settings Interface Overview" width="650">
@@ -42,7 +42,7 @@ Controls localization settings for VLM.
 
 Specify the base url of the VLM that needs to be requested.
 
-For UI TARS deployment, please check out [Deployment](./deployment.md).
+For UI AE deployment, please check out [Deployment](./deployment.md).
 
 | Property     | Details  |
 | ------------ | -------- |
@@ -132,7 +132,7 @@ The request should be sent as `multipart/form-data` with the following field:
 The response should return a JSON object containing a publicly accessible URL where the report can be accessed.
 
 > [!NOTE]
-> Currently, there is no authentication designed for Report Storage Server. If you have any requirements, please submit an [issue](https://github.com/bytedance/UI-TARS-desktop/issues).
+> Currently, there is no authentication designed for Report Storage Server. If you have any requirements, please submit an [issue](https://github.com/bytedance/UI-AE-desktop/issues).
 
 
 <br>
@@ -140,7 +140,7 @@ The response should return a JSON object containing a publicly accessible URL wh
 
 ### UTIO Base URL
 
-**UTIO** (_UI-TARS Insights and Observation_) is a data collection mechanism for insights into **UI-TARS Desktop** (_Introduced at [#60](https://github.com/bytedance/UI-TARS-desktop/pull/60)_). The design of UTIO is also related to sharing. The overall process is as follows:
+**UTIO** (_UI-AE Insights and Observation_) is a data collection mechanism for insights into **UI-AE Desktop** (_Introduced at [#60](https://github.com/bytedance/UI-AE-desktop/pull/60)_). The design of UTIO is also related to sharing. The overall process is as follows:
 
 <p align="center">
   <img src="./images/utio-flow.png" alt="UTIO Flow" width="800">

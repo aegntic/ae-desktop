@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { ConsoleLogger } from '@agent-infra/logger';
+import { ConsoleLogger } from '@aegnt-infra/logger';
 import { BrowserSearch } from '../src';
 
 export async function bingSearch() {
@@ -18,7 +18,7 @@ export async function bingSearch() {
   try {
     logger.info('Performing Bing search');
     const results = await browserSearch.perform({
-      query: 'GUI Agent',
+      query: 'GUI Aegnt',
       count: 5,
       engine: 'bing',
     });

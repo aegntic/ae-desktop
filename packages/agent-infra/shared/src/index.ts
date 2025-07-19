@@ -5,6 +5,6 @@
 
 export * from './common/index';
 export * from './browser/index';
-export * from './agent/index';
+export * from './aegnt/index';
 export * from './mcp/tools';
-export * from './agent-tars-types';
+export * from './aegnt-27-types';

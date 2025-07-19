@@ -2,8 +2,8 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-// import { execute } from '@main/agent/execute';
-// import { PredictionParsed } from '@ui-tars/shared/types';
+// import { execute } from '@main/aegnt/execute';
+// import { PredictionParsed } from '@ui-ae/shared/types';
 
 // const screenWidth = 1310;
 // const screenHeight = 813;

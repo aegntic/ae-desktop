@@ -4,7 +4,7 @@
  */
 
 /**
- * Agent execution states
+ * Aegnt execution states
  */
 export enum AgentState {
   IDLE = 'IDLE',

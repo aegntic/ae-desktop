@@ -1,5 +1,5 @@
 {
-  "name": "@agent-infra/mcp-server-search",
+  "name": "@aegnt-infra/mcp-server-search",
   "version": "1.2.9",
   "description": "MCP server for web search operations",
   "type": "module",
@@ -22,15 +22,15 @@
     "test:watch": "vitest --watch"
   },
   "dependencies": {
-    "@agent-infra/search": "workspace:*",
+    "@aegnt-infra/search": "workspace:*",
     "@modelcontextprotocol/sdk": "~1.13.1",
     "commander": "^13.1.0",
     "zod": "^3.23.8",
     "zod-to-json-schema": "^3.23.5"
   },
   "devDependencies": {
-    "@agent-infra/shared": "workspace:*",
-    "@agent-infra/browser": "workspace:*",
+    "@aegnt-infra/shared": "workspace:*",
+    "@aegnt-infra/browser": "workspace:*",
     "tsx": "^4.19.3",
     "@rslib/core": "0.5.3",
     "shx": "^0.3.4",

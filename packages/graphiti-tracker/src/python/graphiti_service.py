@@ -1,5 +1,5 @@
 """
-Graphiti Service for UI-TARS Action Tracking
+Graphiti Service for UI-AE Action Tracking
 Uses Ollama with free models (Gemma 2, Llama 3, etc.) instead of OpenAI
 """
 import os
@@ -31,7 +31,7 @@ graphiti_instance: Optional[Graphiti] = None
 
 # Action tracking models
 class UIAction(BaseModel):
-    """Represents a UI action performed by the agent"""
+    """Represents a UI action performed by the aegnt"""
     action_type: str = Field(..., description="Type of action (click, type, scroll, etc.)")
     action_inputs: Dict[str, Any] = Field(default_factory=dict, description="Action parameters")
     target_element: Optional[Dict[str, Any]] = Field(None, description="Target UI element info")
@@ -67,7 +67,7 @@ class Episode(BaseModel):
     name: str
     content: str
     entity_names: List[str] = Field(default_factory=list)
-    source: str = "ui-tars-desktop"
+    source: str = "ui-ae-desktop"
     reference_time: Optional[datetime] = None
 
 # Initialize Graphiti on startup
@@ -126,8 +126,8 @@ async def lifespan(app: FastAPI):
 
 # Create FastAPI app
 app = FastAPI(
-    title="UI-TARS Graphiti Tracker",
-    description="Knowledge graph service for tracking UI-TARS actions",
+    title="UI-AE Graphiti Tracker",
+    description="Knowledge graph service for tracking UI-AE actions",
     version="0.1.0",
     lifespan=lifespan
 )
@@ -205,7 +205,7 @@ async def track_action_result(result: ActionResult) -> Dict[str, Any]:
         await graphiti_instance.add_episode(
             name=f"result_{result.action_id}",
             episode_body=episode_content,
-            source="ui-tars-desktop",
+            source="ui-ae-desktop",
             entities=entity_names
         )
         
@@ -232,7 +232,7 @@ async def start_session(session: Session) -> Dict[str, Any]:
         await graphiti_instance.add_episode(
             name=f"session_start_{session.session_id}",
             episode_body=episode_content,
-            source="ui-tars-desktop",
+            source="ui-ae-desktop",
             reference_time=session.start_time,
             entities=[f"session_{session.session_id}", "session_start"]
         )
@@ -260,7 +260,7 @@ async def end_session(session_id: str) -> Dict[str, Any]:
         await graphiti_instance.add_episode(
             name=f"session_end_{session_id}",
             episode_body=episode_content,
-            source="ui-tars-desktop",
+            source="ui-ae-desktop",
             reference_time=end_time,
             entities=[f"session_{session_id}", "session_end"]
         )
@@ -305,7 +305,7 @@ async def health_check() -> Dict[str, str]:
     """Health check endpoint"""
     return {
         "status": "healthy",
-        "service": "ui-tars-graphiti-tracker",
+        "service": "ui-ae-graphiti-tracker",
         "timestamp": datetime.now().isoformat()
     }
 

@@ -1,20 +1,20 @@
 {
-  "name": "@ui-tars/cli",
+  "name": "@ui-ae/cli",
   "version": "1.2.3",
-  "description": "CLI for UI-TARS",
+  "description": "CLI for UI-AE",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bytedance/UI-TARS-desktop"
+    "url": "https://github.com/bytedance/UI-AE-desktop"
   },
   "bugs": {
-    "url": "https://github.com/bytedance/UI-TARS-desktop/issues"
+    "url": "https://github.com/bytedance/UI-AE-desktop/issues"
   },
   "bin": {
-    "ui-tars": "./bin/index.js"
+    "ui-ae": "./bin/index.js"
   },
   "keywords": [
     "CLI",
-    "UI-TARS"
+    "UI-AE"
   ],
   "scripts": {
     "prepare": "npm run build",
@@ -37,9 +37,9 @@
     "jimp": "1.6.0",
     "js-yaml": "^4.1.0",
     "@clack/prompts": "^0.10.0",
-    "@ui-tars/operator-nut-js": "workspace:*",
-    "@ui-tars/operator-adb": "workspace:*",
-    "@ui-tars/sdk": "workspace:*",
+    "@ui-ae/operator-nut-js": "workspace:*",
+    "@ui-ae/operator-adb": "workspace:*",
+    "@ui-ae/sdk": "workspace:*",
     "node-fetch": "^2.7.0"
   },
   "devDependencies": {

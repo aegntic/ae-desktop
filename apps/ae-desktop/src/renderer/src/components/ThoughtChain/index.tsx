@@ -5,7 +5,7 @@
 import { MousePointerClick } from 'lucide-react';
 import { Button } from '@renderer/components/ui/button';
 
-import { PredictionParsed } from '@ui-tars/shared/types';
+import { PredictionParsed } from '@ui-ae/shared/types';
 import { ActionIconMap } from '@renderer/const/actions';
 import { Markdown } from '../markdown';
 

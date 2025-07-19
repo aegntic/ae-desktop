@@ -18,7 +18,7 @@ import { ScrollArea } from '@renderer/components/ui/scroll-area';
 import { useStore } from '@renderer/hooks/useStore';
 import { useSession } from '@renderer/hooks/useSession';
 import Prompts from '../../components/Prompts';
-import { IMAGE_PLACEHOLDER } from '@ui-tars/shared/constants';
+import { IMAGE_PLACEHOLDER } from '@ui-ae/shared/constants';
 import {
   AssistantTextMessage,
   ErrorMessage,
@@ -33,7 +33,7 @@ import ChatInput from '../../components/ChatInput';
 import { CountDown } from '../../components/CountDown';
 import { TerminateDialog } from '../../components/AlertDialog/terminateDialog';
 
-import { PredictionParsed, StatusEnum } from '@ui-tars/shared/types';
+import { PredictionParsed, StatusEnum } from '@ui-ae/shared/types';
 import { Operator } from '@main/store/types';
 import { api } from '../../api';
 import { useRemoteResource } from '../../hooks/useRemoteResource';
@@ -53,7 +53,7 @@ const RemoteOperator = () => {
   const navigate = useNavigate();
   const { setOpen } = useSidebar();
 
-  const { status: agentStatus, messages = [], thinking, errorMsg } = useStore();
+  const { status: aegntStatus, messages = [], thinking, errorMsg } = useStore();
   const containerRef = useRef<HTMLDivElement>(null);
   const suggestions: string[] = [];
   const [selectImg, setSelectImg] = useState<number | undefined>(undefined);
@@ -203,9 +203,9 @@ const RemoteOperator = () => {
   };
 
   const needsConfirm =
-    agentStatus === StatusEnum.RUNNING ||
-    agentStatus === StatusEnum.CALL_USER ||
-    agentStatus === StatusEnum.PAUSE;
+    aegntStatus === StatusEnum.RUNNING ||
+    aegntStatus === StatusEnum.CALL_USER ||
+    aegntStatus === StatusEnum.PAUSE;
 
   const onNewChat = useCallback(async () => {
     const session = await createSession('New Session', {
@@ -324,7 +324,7 @@ const RemoteOperator = () => {
       <NavHeader
         title={state.operator}
         onBack={handleBack}
-        docUrl="https://github.com/bytedance/UI-TARS-desktop/"
+        docUrl="https://github.com/bytedance/UI-AE-desktop/"
       >
         <CountDown
           operator={state.operator}

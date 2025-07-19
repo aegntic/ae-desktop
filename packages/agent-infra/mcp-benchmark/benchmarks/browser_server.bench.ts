@@ -10,7 +10,7 @@ import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/
 import { InMemoryTransport } from '@modelcontextprotocol/sdk/inMemory.js';
 import { bench, describe, beforeAll, afterAll } from 'vitest';
 
-import { createServer } from '@agent-infra/mcp-server-browser';
+import { createServer } from '@aegnt-infra/mcp-server-browser';
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
 import { spawn } from 'child_process';
 import { waitForReady } from '../helpers/utils';

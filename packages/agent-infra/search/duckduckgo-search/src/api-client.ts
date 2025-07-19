@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Logger, defaultLogger } from '@agent-infra/logger';
+import { Logger, defaultLogger } from '@aegnt-infra/logger';
 import * as DDG from 'duck-duck-scrape';
 import asyncRetry from 'async-retry';
 import { SearchOptions, SearchResults } from 'duck-duck-scrape';

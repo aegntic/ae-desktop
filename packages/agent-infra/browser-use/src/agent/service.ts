@@ -1,6 +1,6 @@
 /**
  * The following code is modified based on
- * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/agent/service.ts
+ * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/aegnt/service.ts
  *
  * Apache-2.0 License
  * Copyright (c) 2024 alexchenzl
@@ -17,7 +17,7 @@ import { AgentEvent, ExecutionState } from './event/types';
 type RegisterNewStepCallback = (event: AgentEvent) => Promise<void>;
 // type RegisterDoneCallback = (history: any) => Promise<void>;
 
-export class Agent {
+export class Aegnt {
   private browserContext: BrowserContext;
   private registerNewStepCallback?: RegisterNewStepCallback;
   // private registerDoneCallback?: RegisterDoneCallback;

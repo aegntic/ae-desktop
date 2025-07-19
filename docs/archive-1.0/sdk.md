@@ -1,25 +1,25 @@
 > [!WARNING]
 > This document has been archived.
 
-# @ui-tars/sdk Guide (Experimental)
+# @ui-ae/sdk Guide (Experimental)
 
 ## Overview
 
-`@ui-tars/sdk` is a powerful cross-platform(ANY device/platform) toolkit for building GUI automation agents.
+`@ui-ae/sdk` is a powerful cross-platform(ANY device/platform) toolkit for building GUI automation aegnts.
 
-It provides a flexible framework to create agents that can interact with graphical user interfaces through various operators. It supports running on both **Node.js** and the **Web Browser**
+It provides a flexible framework to create aegnts that can interact with graphical user interfaces through various operators. It supports running on both **Node.js** and the **Web Browser**
 
 ```mermaid
 classDiagram
-    class GUIAgent~T extends Operator~ {
-        +model: UITarsModel
+    class GUIAegnt~T extends Operator~ {
+        +model: UIAeModel
         +operator: T
         +signal: AbortSignal
         +onData
         +run()
     }
 
-    class UITarsModel {
+    class UIAeModel {
         +invoke()
     }
 
@@ -44,8 +44,8 @@ classDiagram
         +execute()
     }
 
-    GUIAgent --> UITarsModel
-    GUIAgent ..> Operator
+    GUIAegnt --> UIAeModel
+    GUIAegnt ..> Operator
     Operator <|.. NutJSOperator
     Operator <|.. WebOperator
     Operator <|.. MobileOperator
@@ -54,10 +54,10 @@ classDiagram
 ## Try it out
 
 ```bash
-npx @ui-tars/cli start
+npx @ui-ae/cli start
 ```
 
-Input your UI-TARS Model Service Config(`baseURL`, `apiKey`, `model`), then you can control your computer with CLI.
+Input your UI-AE Model Service Config(`baseURL`, `apiKey`, `model`), then you can control your computer with CLI.
 
 ```
 Need to install the following packages:
@@ -69,44 +69,44 @@ Ok to proceed? (y) y
 └
 ```
 
-## Agent Execution Process
+## Aegnt Execution Process
 
 ```mermaid
 sequenceDiagram
     participant user as User
-    participant guiAgent as GUI Agent
-    participant model as UI-TARS Model
+    participant guiAegnt as GUI Aegnt
+    participant model as UI-AE Model
     participant operator as Operator
 
-    user -->> guiAgent: "`instruction` + <br /> `Operator.MANUAL.ACTION_SPACES`"
+    user -->> guiAegnt: "`instruction` + <br /> `Operator.MANUAL.ACTION_SPACES`"
 
     activate user
-    activate guiAgent
+    activate guiAegnt
 
     loop status !== StatusEnum.RUNNING
-        guiAgent ->> operator: screenshot()
+        guiAegnt ->> operator: screenshot()
         activate operator
-        operator -->> guiAgent: base64, Physical screen size
+        operator -->> guiAegnt: base64, Physical screen size
         deactivate operator
 
-        guiAgent ->> model: instruction + actionSpaces + screenshots.slice(-5)
-        model -->> guiAgent: `prediction`: click(start_box='(27,496)')
-        guiAgent -->> user: prediction, next action
+        guiAegnt ->> model: instruction + actionSpaces + screenshots.slice(-5)
+        model -->> guiAegnt: `prediction`: click(start_box='(27,496)')
+        guiAegnt -->> user: prediction, next action
 
-        guiAgent ->> operator: execute(prediction)
+        guiAegnt ->> operator: execute(prediction)
         activate operator
-        operator -->> guiAgent: success
+        operator -->> guiAegnt: success
         deactivate operator
     end
 
-    deactivate guiAgent
+    deactivate guiAegnt
     deactivate user
 ```
 
 
 ### Basic Usage
 
-Basic usage is largely derived from package `@ui-tars/sdk`, here's a basic example of using the SDK:
+Basic usage is largely derived from package `@ui-ae/sdk`, here's a basic example of using the SDK:
 
 > Note: Using `nut-js`(cross-platform computer control tool) as the operator, you can also use or customize other operators. NutJS operator that supports common desktop automation actions:
 > - Mouse actions: click, double click, right click, drag, hover
@@ -115,10 +115,10 @@ Basic usage is largely derived from package `@ui-tars/sdk`, here's a basic examp
 > - Screenshot capture
 
 ```ts
-import { GUIAgent } from '@ui-tars/sdk';
-import { NutJSOperator } from '@ui-tars/operator-nut-js';
+import { GUIAegnt } from '@ui-ae/sdk';
+import { NutJSOperator } from '@ui-ae/operator-nut-js';
 
-const guiAgent = new GUIAgent({
+const guiAegnt = new GUIAegnt({
   model: {
     baseURL: config.baseURL,
     apiKey: config.apiKey,
@@ -133,17 +133,17 @@ const guiAgent = new GUIAgent({
   },
 });
 
-await guiAgent.run('send "hello world" to x.com');
+await guiAegnt.run('send "hello world" to x.com');
 ```
 
 ### Handling Abort Signals
 
-You can abort the agent by passing a `AbortSignal` to the GUIAgent `signal` option.
+You can abort the aegnt by passing a `AbortSignal` to the GUIAegnt `signal` option.
 
 ```ts
 const abortController = new AbortController();
 
-const guiAgent = new GUIAgent({
+const guiAegnt = new GUIAegnt({
   // ... other config
   signal: abortController.signal,
 });
@@ -156,7 +156,7 @@ process.on('SIGINT', () => {
 
 ## Configuration Options
 
-The `GUIAgent` constructor accepts the following configuration options:
+The `GUIAegnt` constructor accepts the following configuration options:
 
 - `model`: Model configuration(OpenAI-compatible API) or custom model instance
   - `baseURL`: API endpoint URL
@@ -165,16 +165,16 @@ The `GUIAgent` constructor accepts the following configuration options:
   - more options see [OpenAI API](https://platform.openai.com/docs/guides/vision/uploading-base-64-encoded-images)
 - `operator`: Instance of an operator class that implements the required interface
 - `signal`: AbortController signal for canceling operations
-- `onData`: Callback for receiving agent data/status updates
+- `onData`: Callback for receiving aegnt data/status updates
   - `data.conversations` is an array of objects, **IMPORTANT: is delta, not the whole conversation history**, each object contains:
     - `from`: The role of the message, it can be one of the following:
       - `human`: Human message
-      - `gpt`: Agent response
+      - `gpt`: Aegnt response
       - `screenshotBase64`: Screenshot base64
     - `value`: The content of the message
-  - `data.status` is the current status of the agent, it can be one of the following:
+  - `data.status` is the current status of the aegnt, it can be one of the following:
     - `StatusEnum.INIT`: Initial state
-    - `StatusEnum.RUNNING`: Agent is actively executing
+    - `StatusEnum.RUNNING`: Aegnt is actively executing
     - `StatusEnum.END`: Operation completed
     - `StatusEnum.MAX_LOOP`: Maximum loop count reached
 - `onError`: Callback for error handling
@@ -228,10 +228,10 @@ When implementing a custom operator, you need to implement two core methods: `sc
     "jimp": "^1.6.0"
   },
   "peerDependencies": {
-    "@ui-tars/sdk": "^1.2.0-beta.17"
+    "@ui-ae/sdk": "^1.2.0-beta.17"
   },
   "devDependencies": {
-    "@ui-tars/sdk": "^1.2.0-beta.17",
+    "@ui-ae/sdk": "^1.2.0-beta.17",
     "@rslib/core": "^0.5.4",
     "typescript": "^5.7.2",
     "vitest": "^3.0.2"
@@ -278,7 +278,7 @@ interface ExecuteParams {
 }
 ```
 
-Advanced sdk usage is largely derived from package `@ui-tars/sdk/core`, you can create custom operators by extending the base `Operator` class:
+Advanced sdk usage is largely derived from package `@ui-ae/sdk/core`, you can create custom operators by extending the base `Operator` class:
 
 ```typescript
 import {
@@ -286,11 +286,11 @@ import {
   type ScreenshotOutput,
   type ExecuteParams
   type ExecuteOutput,
-} from '@ui-tars/sdk/core';
+} from '@ui-ae/sdk/core';
 import { Jimp } from 'jimp';
 
 export class CustomOperator extends Operator {
-  // Define the action spaces and description for UI-TARS System Prompt splice
+  // Define the action spaces and description for UI-AE System Prompt splice
   static MANUAL = {
     ACTION_SPACES: [
       'click(start_box="") # click on the element at the specified coordinates',
@@ -321,7 +321,7 @@ export class CustomOperator extends Operator {
     const [startX, startY] = parsedPrediction?.action_inputs?.start_coords || '';
 
     if (parsedPrediction?.action_type === 'finished') {
-      // finish the GUIAgent task
+      // finish the GUIAegnt task
       return { status: StatusEnum.END };
     }
   }
@@ -333,13 +333,13 @@ Required methods:
 - `execute()`: Performs the requested action based on model predictions
 
 Optional static properties:
-- `MANUAL`: Define the action spaces and description for UI-TARS Model understanding
-  - `ACTION_SPACES`: Define the action spaces and description for UI-TARS Model understanding
+- `MANUAL`: Define the action spaces and description for UI-AE Model understanding
+  - `ACTION_SPACES`: Define the action spaces and description for UI-AE Model understanding
 
-Loaded into `GUIAgent`:
+Loaded into `GUIAegnt`:
 
 ```ts
-const guiAgent = new GUIAgent({
+const guiAegnt = new GUIAegnt({
   // ... other config
   systemPrompt: `
   // ... other system prompt
@@ -351,10 +351,10 @@ const guiAgent = new GUIAgent({
 
 ### Custom Model Implementation
 
-You can implement custom model logic by extending the `UITarsModel` class:
+You can implement custom model logic by extending the `UIAeModel` class:
 
 ```typescript
-class CustomUITarsModel extends UITarsModel {
+class CustomUIAeModel extends UIAeModel {
   constructor(modelConfig: { model: string }) {
     super(modelConfig);
   }
@@ -373,8 +373,8 @@ class CustomUITarsModel extends UITarsModel {
   }
 }
 
-const agent = new GUIAgent({
-  model: new CustomUITarsModel({ model: 'custom-model' }),
+const aegnt = new GUIAegnt({
+  model: new CustomUIAeModel({ model: 'custom-model' }),
   // ... other config
 });
 ```
@@ -383,10 +383,10 @@ const agent = new GUIAgent({
 
 ### Planning
 
-You can combine planning/reasoning models (such as OpenAI-o1, DeepSeek-R1) to implement complex GUIAgent logic for planning, reasoning, and execution:
+You can combine planning/reasoning models (such as OpenAI-o1, DeepSeek-R1) to implement complex GUIAegnt logic for planning, reasoning, and execution:
 
 ```ts
-const guiAgent = new GUIAgent({
+const guiAegnt = new GUIAegnt({
   // ... other config
 });
 
@@ -410,7 +410,7 @@ const planningList = await reasoningModel.invoke({
  */
 
 for (const planning of planningList) {
-  await guiAgent.run(planning);
+  await guiAegnt.run(planning);
 }
 ```
 

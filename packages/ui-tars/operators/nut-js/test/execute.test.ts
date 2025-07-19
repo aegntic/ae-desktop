@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { type ExecuteParams } from '@ui-tars/sdk/core';
+import { type ExecuteParams } from '@ui-ae/sdk/core';
 import {
   Button,
   Key,
@@ -17,7 +17,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { NutJSOperator } from '../src/index';
 
-vi.mock('@ui-tars/sdk/core', async (importOriginal) => {
+vi.mock('@ui-ae/sdk/core', async (importOriginal) => {
   const actual: any = await importOriginal();
   return {
     useContext: vi.fn().mockReturnValue({
@@ -149,18 +149,18 @@ describe('execute', () => {
     expect(keyboard.pressKey).not.toHaveBeenCalledWith(Key.Enter);
   });
 
-  it('type Hello World\nUI-TARS\n', async () => {
+  it('type Hello World\nUI-AE\n', async () => {
     const nutJSOperator = new NutJSOperator();
     const executeParams: ExecuteParams = {
       prediction:
-        "Thought: To proceed with the task of accessing doubao.com, I need to type the URL into the address bar. This will allow me to navigate to the website and continue with the subsequent steps of the task.\nAction: type(content='Hello World\\nUI-TARS\\n')",
+        "Thought: To proceed with the task of accessing doubao.com, I need to type the URL into the address bar. This will allow me to navigate to the website and continue with the subsequent steps of the task.\nAction: type(content='Hello World\\nUI-AE\\n')",
       parsedPrediction: {
         reflection: '',
         thought:
           'To proceed with the task of accessing doubao.com, I need to type the URL into the address bar. This will allow me to navigate to the website and continue with the subsequent steps of the task.\n' +
-          `Type "Hello World\nUI-TARS\n" into the browser's address bar.`,
+          `Type "Hello World\nUI-AE\n" into the browser's address bar.`,
         action_type: 'type',
-        action_inputs: { content: 'Hello World\\nUI-TARS\\n' },
+        action_inputs: { content: 'Hello World\\nUI-AE\\n' },
       },
       screenWidth: 1920,
       screenHeight: 1080,
@@ -169,7 +169,7 @@ describe('execute', () => {
 
     await nutJSOperator.execute(executeParams);
 
-    expect(keyboard.type).toHaveBeenCalledWith('Hello World\\nUI-TARS');
+    expect(keyboard.type).toHaveBeenCalledWith('Hello World\\nUI-AE');
     expect(keyboard.pressKey).toHaveBeenCalledWith(Key.Enter);
   });
 

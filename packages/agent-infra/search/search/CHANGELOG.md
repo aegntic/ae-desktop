@@ -1,20 +1,20 @@
-# @agent-infra/search
+# @aegnt-infra/search
 
 ## 0.0.5
 
 ### Patch Changes
 
 - Updated dependencies
-  - @agent-infra/browser-search@0.0.5
-  - @agent-infra/shared@0.0.2
+  - @aegnt-infra/browser-search@0.0.5
+  - @aegnt-infra/shared@0.0.2
 
 ## 0.0.4
 
 ### Patch Changes
 
 - Updated dependencies [941c26c]
-  - @agent-infra/browser-search@0.0.4
-  - @agent-infra/shared@0.0.2
+  - @aegnt-infra/browser-search@0.0.4
+  - @aegnt-infra/shared@0.0.2
 
 ## 0.0.3
 
@@ -24,8 +24,8 @@
 - Updated dependencies [eb293fb]
 - Updated dependencies [a85ef50]
 - Updated dependencies [eb293fb]
-  - @agent-infra/shared@0.0.2
-  - @agent-infra/browser-search@0.0.3
+  - @aegnt-infra/shared@0.0.2
+  - @aegnt-infra/browser-search@0.0.3
 
 ## 0.0.3-beta.3
 
@@ -33,8 +33,8 @@
 
 - Updated dependencies
 - Updated dependencies [bd34a4e]
-  - @agent-infra/shared@0.0.2-beta.0
-  - @agent-infra/browser-search@0.0.3-beta.3
+  - @aegnt-infra/shared@0.0.2-beta.0
+  - @aegnt-infra/browser-search@0.0.3-beta.3
 
 ## 0.0.3-beta.2
 
@@ -42,33 +42,33 @@
 
 - chore: publish
 - Updated dependencies
-  - @agent-infra/browser-search@0.0.3-beta.2
-  - @agent-infra/shared@0.0.1
+  - @aegnt-infra/browser-search@0.0.3-beta.2
+  - @aegnt-infra/shared@0.0.1
 
 ## 0.0.3-beta.1
 
 ### Patch Changes
 
 - Updated dependencies
-  - @agent-infra/browser-search@0.0.3-beta.1
-  - @agent-infra/shared@0.0.1
+  - @aegnt-infra/browser-search@0.0.3-beta.1
+  - @aegnt-infra/shared@0.0.1
 
 ## 0.0.3-beta.0
 
 ### Patch Changes
 
-- @agent-infra/browser-search@0.0.3-beta.0
-- @agent-infra/shared@0.0.1
+- @aegnt-infra/browser-search@0.0.3-beta.0
+- @aegnt-infra/shared@0.0.1
 
 ## 0.0.2
 
 ### Patch Changes
 
-- @agent-infra/browser-search@0.0.2
-- @agent-infra/shared@0.0.1
+- @aegnt-infra/browser-search@0.0.2
+- @aegnt-infra/shared@0.0.1
 
 ## 0.0.2-beta.0
 
 ### Patch Changes
 
-- @agent-infra/browser-search@0.0.2-beta.0
+- @aegnt-infra/browser-search@0.0.2-beta.0

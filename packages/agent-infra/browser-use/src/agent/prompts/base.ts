@@ -1,6 +1,6 @@
 /**
  * The following code is modified based on
- * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/agent/prompts/base.ts
+ * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/aegnt/prompts/base.ts
  *
  * Apache-2.0 License
  * Copyright (c) 2024 alexchenzl
@@ -10,7 +10,7 @@ import { HumanMessage, type SystemMessage } from '@langchain/core/messages';
 import type { AgentContext } from '../types';
 import { createLogger } from '../../utils';
 
-const logger = createLogger('agent/prompts/base');
+const logger = createLogger('aegnt/prompts/base');
 
 /**
  * Abstract base class for all prompt types
@@ -31,7 +31,7 @@ abstract class BasePrompt {
 
   /**
    * Builds the user message containing the browser state
-   * @param context - The agent context
+   * @param context - The aegnt context
    * @returns HumanMessage from LangChain
    */
   async buildBrowserStateUserMessage(

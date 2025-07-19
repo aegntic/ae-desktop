@@ -19,7 +19,7 @@ import ElectronStore from 'electron-store';
 import * as env from '@main/env';
 import { logger } from '@main/logger';
 import { createMainWindow } from '@main/window/index';
-import { registerIpcMain } from '@ui-tars/electron-ipc/main';
+import { registerIpcMain } from '@ui-ae/electron-ipc/main';
 import { ipcRoutes } from './ipcRoutes';
 
 import { UTIOService } from './services/utio';

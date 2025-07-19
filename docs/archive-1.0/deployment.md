@@ -33,18 +33,18 @@ pip install vllm==${VLLM_VERSION} --extra-index-url https://download.pytorch.org
 ### Download the Model
 We provide three model sizes on Hugging Face: **2B**, **7B**, and **72B**. To achieve the best performance, we recommend using the **7B-DPO** or **72B-DPO** model (based on your hardware configuration):
 
-- [2B-SFT](https://huggingface.co/bytedance-research/UI-TARS-2B-SFT)
-- [7B-SFT](https://huggingface.co/bytedance-research/UI-TARS-7B-SFT)
-- [7B-DPO](https://huggingface.co/bytedance-research/UI-TARS-7B-DPO)
-- [72B-SFT](https://huggingface.co/bytedance-research/UI-TARS-72B-SFT)
-- [72B-DPO](https://huggingface.co/bytedance-research/UI-TARS-72B-DPO)
+- [2B-SFT](https://huggingface.co/bytedance-research/UI-AE-2B-SFT)
+- [7B-SFT](https://huggingface.co/bytedance-research/UI-AE-7B-SFT)
+- [7B-DPO](https://huggingface.co/bytedance-research/UI-AE-7B-DPO)
+- [72B-SFT](https://huggingface.co/bytedance-research/UI-AE-72B-SFT)
+- [72B-DPO](https://huggingface.co/bytedance-research/UI-AE-72B-DPO)
 
 
 ### Start an OpenAI API Service
 Run the command below to start an OpenAI-compatible API service:
 
 ```bash
-python -m vllm.entrypoints.openai.api_server --served-model-name ui-tars --model <path to your model>
+python -m vllm.entrypoints.openai.api_server --served-model-name ui-ae --model <path to your model>
 ```
 
 ### Input your API information
@@ -57,7 +57,7 @@ python -m vllm.entrypoints.openai.api_server --served-model-name ui-tars --model
 VLM Provider: ollama
 VLM Base Url: http://localhost:11434/v1
 VLM API Key: api_key
-VLM Model Name: ui-tars
+VLM Model Name: ui-ae
 ``` -->
 
 > **Note**: VLM Base Url is OpenAI compatible API endpoints (see [OpenAI API protocol document](https://platform.openai.com/docs/guides/vision/uploading-base-64-encoded-images) for more details).

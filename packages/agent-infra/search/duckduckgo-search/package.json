@@ -1,5 +1,5 @@
 {
-  "name": "@agent-infra/duckduckgo-search",
+  "name": "@aegnt-infra/duckduckgo-search",
   "version": "0.0.1",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -28,7 +28,7 @@
   "dependencies": {
     "async-retry": "1.3.3",
     "duck-duck-scrape": "^2.2.7",
-    "@agent-infra/logger": "workspace:*"
+    "@aegnt-infra/logger": "workspace:*"
   },
   "devDependencies": {
     "@types/async-retry": "1.4.9",

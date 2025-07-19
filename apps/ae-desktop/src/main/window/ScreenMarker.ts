@@ -9,7 +9,7 @@
  */
 import { BrowserWindow, screen, app } from 'electron';
 
-import { PredictionParsed, Conversation } from '@ui-tars/shared/types';
+import { PredictionParsed, Conversation } from '@ui-ae/shared/types';
 
 import * as env from '@main/env';
 import { logger } from '@main/logger';

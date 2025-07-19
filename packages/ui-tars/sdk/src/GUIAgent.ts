@@ -11,9 +11,9 @@ import {
   ErrorStatusEnum,
   GUIAgentError,
   Message,
-} from '@ui-tars/shared/types';
-import { IMAGE_PLACEHOLDER, MAX_LOOP_COUNT } from '@ui-tars/shared/constants';
-import { sleep } from '@ui-tars/shared/utils';
+} from '@ui-ae/shared/types';
+import { IMAGE_PLACEHOLDER, MAX_LOOP_COUNT } from '@ui-ae/shared/constants';
+import { sleep } from '@ui-ae/shared/utils';
 import asyncRetry from 'async-retry';
 import { Jimp } from 'jimp';
 import { v4 as uuidv4 } from 'uuid';
@@ -118,7 +118,7 @@ export class GUIAgent<T extends Operator> extends BaseGUIAgent<
     let totalTime = 0;
     let previousResponseId: string | undefined;
 
-    // start running agent
+    // start running aegnt
     data.status = StatusEnum.RUNNING;
     await onData?.({ data: { ...data, conversations: [] } });
 

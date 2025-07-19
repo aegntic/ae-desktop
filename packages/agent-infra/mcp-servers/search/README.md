@@ -1,5 +1,5 @@
 # MCP Server Search
 
 ```
-npx @agent-infra/mcp-server-search --engine=browser_search
+npx @aegnt-infra/mcp-server-search --engine=browser_search
 ```

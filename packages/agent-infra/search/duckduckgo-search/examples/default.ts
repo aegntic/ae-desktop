@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { ConsoleLogger } from '@agent-infra/logger';
+import { ConsoleLogger } from '@aegnt-infra/logger';
 import { DuckDuckGoSearchClient } from '../src';
 
 async function runExample() {
@@ -10,7 +10,7 @@ async function runExample() {
   try {
     const client = new DuckDuckGoSearchClient();
     const searchResults = await client.search({
-      query: 'UI-TARS',
+      query: 'UI-AE',
       count: 5,
       retry: {
         retries: 3,

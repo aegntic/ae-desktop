@@ -4,7 +4,7 @@
  */
 import os from 'os';
 
-import type { KeyInput, Page, BrowserType } from '@agent-infra/browser';
+import type { KeyInput, Page, BrowserType } from '@aegnt-infra/browser';
 
 function isMacChrome(browser: BrowserType) {
   return os.platform() === 'darwin' && browser === 'chrome';

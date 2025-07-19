@@ -1,4 +1,4 @@
-import { type MCPServer } from '@agent-infra/mcp-shared/client';
+import { type MCPServer } from '@aegnt-infra/mcp-shared/client';
 import { SearchSettings } from './search';
 
 export enum ModelProvider {

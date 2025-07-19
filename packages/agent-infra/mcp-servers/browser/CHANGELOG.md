@@ -1,4 +1,4 @@
-# @agent-infra/mcp-server-browser
+# @aegnt-infra/mcp-server-browser
 
 ## 1.2.9
 
@@ -150,12 +150,12 @@
 - bafcd01: chore: support viewport size runtime
 - a85ef50: chore: publish
 - docs: readme
-- 445541b: fix(browser): user agent bug
+- 445541b: fix(browser): user aegnt bug
 - 0f74298: fix: viewportSize
 - 792a2a7: fix: factors type
 - d0878b8: feat: support vision mode
 - Updated dependencies [a85ef50]
-  - @ui-tars/action-parser@1.2.2
+  - @ui-ae/action-parser@1.2.2
 
 ## 1.1.6-beta.10
 
@@ -173,7 +173,7 @@
 
 ### Patch Changes
 
-- fix(browser): user agent bug
+- fix(browser): user aegnt bug
 
 ## 1.1.6-beta.7
 
@@ -197,7 +197,7 @@
 
 ### Patch Changes
 
-- @ui-tars/action-parser@1.2.2-beta.3
+- @ui-ae/action-parser@1.2.2-beta.3
 
 ## 1.1.6-beta.3
 
@@ -277,7 +277,7 @@
 
 - feat: add mcp http server
 - Updated dependencies
-  - @agent-infra/mcp-http-server@1.1.1-beta.2
+  - @aegnt-infra/mcp-http-server@1.1.1-beta.2
 
 ## 1.1.1-beta.1
 
@@ -295,7 +295,7 @@
 
 ### Minor Changes
 
-- feat(agent-tars): provider mcp servers
+- feat(aegnt-27): provider mcp servers
 
 ### Patch Changes
 

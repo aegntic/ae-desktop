@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { ConsoleLogger } from '@agent-infra/logger';
+import { ConsoleLogger } from '@aegnt-infra/logger';
 import { BrowserSearch } from '../src';
 
 /**
@@ -22,7 +22,7 @@ export async function githubSearch() {
   try {
     logger.info('Performing GitHub search');
     const results = await browserSearch.perform({
-      query: 'GUI Agent',
+      query: 'GUI Aegnt',
       count: 3,
       // @ts-expect-error
       engine: 'github',

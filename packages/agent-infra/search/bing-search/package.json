@@ -1,5 +1,5 @@
 {
-  "name": "@agent-infra/bing-search",
+  "name": "@aegnt-infra/bing-search",
   "version": "0.0.1",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -26,7 +26,7 @@
     "run:example": "ts-node scripts/example.ts"
   },
   "dependencies": {
-    "@agent-infra/logger": "workspace:*"
+    "@aegnt-infra/logger": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "20.14.8",

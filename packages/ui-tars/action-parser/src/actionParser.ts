@@ -10,7 +10,7 @@ import {
   IMAGE_FACTOR,
   MIN_PIXELS,
   MAX_PIXELS_V1_5,
-} from '@ui-tars/shared/types';
+} from '@ui-ae/shared/types';
 import isNumber from 'lodash.isnumber';
 
 function roundByFactor(num: number, factor: number): number {

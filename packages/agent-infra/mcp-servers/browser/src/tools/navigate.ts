@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { removeHighlights } from '@agent-infra/browser-use';
+import { removeHighlights } from '@aegnt-infra/browser-use';
 import { defineTool } from './defineTool.js';
 
 const navigateTool = defineTool({

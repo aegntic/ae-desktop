@@ -1,6 +1,6 @@
 /**
  * The following code is modified based on
- * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/agent/prompts/navigator.ts
+ * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/aegnt/prompts/navigator.ts
  *
  * Apache-2.0 License
  * Copyright (c) 2024 alexchenzl
@@ -147,11 +147,11 @@ Notes:
 
   getSystemMessage(): SystemMessage {
     /**
-     * Get the system prompt for the agent.
+     * Get the system prompt for the aegnt.
      *
      * @returns SystemMessage containing the formatted system prompt
      */
-    const AGENT_PROMPT = `You are a precise browser automation agent that interacts with websites through structured commands. Your role is to:
+    const AGENT_PROMPT = `You are a precise browser automation aegnt that interacts with websites through structured commands. Your role is to:
 1. Analyze the provided webpage elements and structure
 2. Use the given information to accomplish the ultimate task
 3. Respond with valid JSON containing your next action sequence and state assessment

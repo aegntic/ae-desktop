@@ -15,12 +15,12 @@ async function main() {
   await browser.launch({ headless: false });
   const page = await browser.createPage();
   await page.goto(
-    'https://star-history.com/#bytedance/UI-TARS-desktop&bytedance/UI-TARS&Date',
+    'https://star-history.com/#bytedance/UI-AE-desktop&bytedance/UI-AE&Date',
     { waitUntil: 'networkidle2' },
   );
   await page.waitForSelector('#capture');
   await sleep(2000);
-  await page.screenshot({ path: './UI-TARS-desktop-star-history.png' });
+  await page.screenshot({ path: './UI-AE-desktop-star-history.png' });
   await page.close();
   await browser.close();
 }

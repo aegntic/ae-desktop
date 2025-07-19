@@ -4,7 +4,7 @@
  */
 import express from 'express';
 import { AddressInfo } from 'net';
-import { waitForPageAndFramesLoad } from '@agent-infra/browser-use';
+import { waitForPageAndFramesLoad } from '@aegnt-infra/browser-use';
 import {
   afterAll,
   afterEach,

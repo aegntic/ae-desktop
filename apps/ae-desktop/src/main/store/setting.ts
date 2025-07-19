@@ -44,7 +44,7 @@ export class SettingStore {
   public static getInstance(): ElectronStore<LocalStore> {
     if (!SettingStore.instance) {
       SettingStore.instance = new ElectronStore<LocalStore>({
-        name: 'ui_tars.setting',
+        name: 'ui_ae.setting',
         defaults: DEFAULT_SETTING,
       });
 

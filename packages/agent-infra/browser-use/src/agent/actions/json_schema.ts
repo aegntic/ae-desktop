@@ -1,6 +1,6 @@
 /**
  * The following code is modified based on
- * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/agent/actions/json_schema.ts
+ * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/aegnt/actions/json_schema.ts
  *
  * Apache-2.0 License
  * Copyright (c) 2024 alexchenzl
@@ -11,7 +11,7 @@
 export const jsonNavigatorOutputSchema = {
   properties: {
     current_state: {
-      description: 'Current state of the agent',
+      description: 'Current state of the aegnt',
       properties: {
         page_summary: {
           title: 'Page Summary',

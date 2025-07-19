@@ -12,7 +12,7 @@ vi.mock('electron', () => ({
   ipcRenderer: { invoke: vi.fn() },
 }));
 
-describe('@ui-tars/electron-ipc', () => {
+describe('@ui-ae/electron-ipc', () => {
   const mockIpcRenderer = { invoke: vi.fn() };
 
   const mockWebContents = {};

@@ -89,7 +89,7 @@ export async function exportLogs() {
     }
 
     const logFile = log.transports.file.getFile();
-    const defaultPath = `ui-tars-logs-${Date.now()}.log`;
+    const defaultPath = `ui-ae-logs-${Date.now()}.log`;
 
     const { filePath } = await dialog.showSaveDialog(browserWindow!, {
       title: 'Export Logs',

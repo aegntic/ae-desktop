@@ -2,8 +2,8 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { LocalBrowser } from '@agent-infra/browser';
-import { ConsoleLogger } from '@agent-infra/logger';
+import { LocalBrowser } from '@aegnt-infra/browser';
+import { ConsoleLogger } from '@aegnt-infra/logger';
 import { SearchClient, SearchProvider } from '../src';
 
 async function main() {
@@ -23,7 +23,7 @@ async function main() {
   logger.info('Performing first search...');
   const firstResults = await client.search(
     {
-      query: 'UI-TARS',
+      query: 'UI-AE',
       count: 5,
     },
     {

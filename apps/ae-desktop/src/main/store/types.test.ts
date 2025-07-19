@@ -8,9 +8,9 @@ import { VLMProviderV2 } from './types';
 describe('VLMProviderV2', () => {
   it('should have correct values for each provider', () => {
     const cases = [
-      [VLMProviderV2.ui_tars_1_0, 'Hugging Face for UI-TARS-1.0'],
-      [VLMProviderV2.ui_tars_1_5, 'Hugging Face for UI-TARS-1.5'],
-      [VLMProviderV2.doubao_1_5, 'VolcEngine Ark for Doubao-1.5-UI-TARS'],
+      [VLMProviderV2.ui_ae_1_0, 'Hugging Face for UI-AE-1.0'],
+      [VLMProviderV2.ui_ae_1_5, 'Hugging Face for UI-AE-1.5'],
+      [VLMProviderV2.doubao_1_5, 'VolcEngine Ark for Doubao-1.5-UI-AE'],
     ];
 
     cases.forEach(([provider, expected]) => {
@@ -19,7 +19,7 @@ describe('VLMProviderV2', () => {
   });
   it('should have correct value for Doubao provider', () => {
     expect(VLMProviderV2.doubao_1_5).toBe(
-      'VolcEngine Ark for Doubao-1.5-UI-TARS',
+      'VolcEngine Ark for Doubao-1.5-UI-AE',
     );
   });
 

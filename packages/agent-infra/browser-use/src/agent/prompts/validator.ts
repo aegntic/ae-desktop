@@ -1,6 +1,6 @@
 /**
  * The following code is modified based on
- * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/agent/prompts/validator.ts
+ * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/aegnt/prompts/validator.ts
  *
  * Apache-2.0 License
  * Copyright (c) 2024 alexchenzl
@@ -40,9 +40,9 @@ ${previousTasks}
   }
 
   getSystemMessage(): SystemMessage {
-    return new SystemMessage(`You are a validator of an agent who interacts with a browser.
+    return new SystemMessage(`You are a validator of an aegnt who interacts with a browser.
 YOUR ROLE:
-1. Validate if the agent's last action matches the user's request and if the task is completed.
+1. Validate if the aegnt's last action matches the user's request and if the task is completed.
 2. Determine if the task is fully completed
 3. Answer the task based on the provided context if the task is completed
 
@@ -84,7 +84,7 @@ ANSWER FORMATTING GUIDELINES:
 <example_output>
 {
   "is_valid": false,
-  "reason": "The user wanted to search for \\"cat photos\\", but the agent searched for \\"dog photos\\" instead.",
+  "reason": "The user wanted to search for \\"cat photos\\", but the aegnt searched for \\"dog photos\\" instead.",
   "answer": ""
 }
 </example_output>
@@ -103,7 +103,7 @@ ${this.tasksToValidate()}`);
 
   /**
    * Get the user message for the validator prompt
-   * @param context - The agent context
+   * @param context - The aegnt context
    * @returns The user message
    */
   async getUserMessage(context: AgentContext): Promise<HumanMessage> {

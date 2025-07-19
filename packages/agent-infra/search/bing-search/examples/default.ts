@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { ConsoleLogger } from '@agent-infra/logger';
+import { ConsoleLogger } from '@aegnt-infra/logger';
 import { BingSearchClient } from '../src';
 
 async function runExample() {
@@ -14,7 +14,7 @@ async function runExample() {
       logger,
     });
     const results = await client.search({
-      q: 'UI-TARS',
+      q: 'UI-AE',
       count: 5,
     });
     console.log(JSON.stringify(results.webPages, null, 2));

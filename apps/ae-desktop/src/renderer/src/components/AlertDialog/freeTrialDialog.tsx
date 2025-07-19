@@ -47,7 +47,7 @@ export const FreeTrialDialog = memo(
               <p>
                 As part of our research, we offer a 30-minute free trial of our
                 cloud service powered by Volcano Engine, where you can
-                experience UI-TARS with remote computer and browser operations
+                experience UI-AE with remote computer and browser operations
                 without purchasing model service and computing resources.
               </p>
               <p className="my-4">
@@ -61,7 +61,7 @@ export const FreeTrialDialog = memo(
                 and will not be utilized for any other activities.
               </p>
               <p className="my-4">
-                Thank you for your support of the UI-TARS research project!
+                Thank you for your support of the UI-AE research project!
               </p>
               <div className="flex items-center gap-2 mb-4 text-foreground">
                 <Checkbox

@@ -3,12 +3,12 @@ import {
   LocalBrowser,
   Page,
   RemoteBrowserOptions,
-} from '@agent-infra/browser';
+} from '@aegnt-infra/browser';
 import { Tool as McpTool } from '@modelcontextprotocol/sdk/types.js';
-import { Logger } from '@agent-infra/logger';
+import { Logger } from '@aegnt-infra/logger';
 import { Browser, Viewport } from 'puppeteer-core';
 import { ZodObject, ZodRawShape } from 'zod';
-import { DOMElementNode } from '@agent-infra/browser-use';
+import { DOMElementNode } from '@aegnt-infra/browser-use';
 
 declare global {
   interface Window {

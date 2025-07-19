@@ -3,4 +3,4 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 export const REPO_OWNER = 'bytedance';
-export const REPO_NAME = 'UI-TARS-desktop';
+export const REPO_NAME = 'UI-AE-desktop';

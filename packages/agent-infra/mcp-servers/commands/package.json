@@ -1,5 +1,5 @@
 {
-  "name": "@agent-infra/mcp-server-commands",
+  "name": "@aegnt-infra/mcp-server-commands",
   "version": "1.2.9",
   "description": "An MCP server to run arbitrary commands",
   "type": "module",
@@ -9,12 +9,12 @@
   "bin": {
     "mcp-server-commands": "./dist/index.cjs"
   },
-  "homepage": "https://github.com/bytedance/UI-TARS-desktop",
-  "bugs": "https://github.com/bytedance/UI-TARS-desktop/issues",
+  "homepage": "https://github.com/bytedance/UI-AE-desktop",
+  "bugs": "https://github.com/bytedance/UI-AE-desktop/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bytedance/UI-TARS-desktop.git",
-    "directory": "packages/agent-infra/mcp-servers/commands"
+    "url": "https://github.com/bytedance/UI-AE-desktop.git",
+    "directory": "packages/aegnt-infra/mcp-servers/commands"
   },
   "files": [
     "dist"

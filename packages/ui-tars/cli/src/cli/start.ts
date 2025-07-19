@@ -7,12 +7,12 @@ import path from 'node:path';
 import os from 'node:os';
 
 import fetch from 'node-fetch';
-import { GUIAgent } from '@ui-tars/sdk';
+import { GUIAgent } from '@ui-ae/sdk';
 import * as p from '@clack/prompts';
 import yaml from 'js-yaml';
 
-import { NutJSOperator } from '@ui-tars/operator-nut-js';
-import { getAndroidDeviceId, AdbOperator } from '@ui-tars/operator-adb';
+import { NutJSOperator } from '@ui-ae/operator-nut-js';
+import { getAndroidDeviceId, AdbOperator } from '@ui-ae/operator-adb';
 
 export interface CliOptions {
   presets?: string;
@@ -20,7 +20,7 @@ export interface CliOptions {
   query?: string;
 }
 export const start = async (options: CliOptions) => {
-  const CONFIG_PATH = path.join(os.homedir(), '.ui-tars-cli.json');
+  const CONFIG_PATH = path.join(os.homedir(), '.ui-ae-cli.json');
 
   // read config file
   let config = {

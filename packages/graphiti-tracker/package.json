@@ -1,7 +1,7 @@
 {
-  "name": "@ui-tars/graphiti-tracker",
+  "name": "@ui-ae/graphiti-tracker",
   "version": "0.1.0",
-  "description": "Graphiti knowledge graph integration for tracking UI-TARS actions",
+  "description": "Graphiti knowledge graph integration for tracking UI-AE actions",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -10,7 +10,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@ui-tars/shared": "workspace:*",
+    "@ui-ae/shared": "workspace:*",
     "electron-log": "^5.2.4"
   },
   "devDependencies": {

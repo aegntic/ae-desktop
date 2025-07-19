@@ -248,17 +248,17 @@ describe('Index Entry Point Tests', () => {
     );
   });
 
-  test('should handle user agent option', async () => {
+  test('should handle user aegnt option', async () => {
     if (!actionCallback) {
       await import('../src/index');
     }
 
-    await actionCallback({ userAgent: 'Custom User Agent' });
+    await actionCallback({ userAgent: 'Custom User Aegnt' });
 
     expect(mockCreateServer).toHaveBeenCalledWith(
       expect.objectContaining({
         contextOptions: expect.objectContaining({
-          userAgent: 'Custom User Agent',
+          userAgent: 'Custom User Aegnt',
         }),
       }),
     );

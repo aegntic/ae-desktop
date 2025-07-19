@@ -1,12 +1,12 @@
-# Browser Operator for UI-TARS
+# Browser Operator for UI-AE
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/bytedance/UI-TARS-desktop/LICENSE)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/bytedance/UI-AE-desktop/LICENSE)
 
-A browser automation operator for UI-TARS that enables controlling web browsers through natural language instructions.
+A browser automation operator for UI-AE that enables controlling web browsers through natural language instructions.
 
 ## Features
 
-- Control web browsers using [UI-TARS](https://github.com/bytedance/UI-TARS)(Vision-Lanuage Model)
+- Control web browsers using [UI-AE](https://github.com/bytedance/UI-AE)(Vision-Lanuage Model)
 - Support for common browser actions:
   - Clicking (single, double, right-click)
   - Typing text
@@ -15,12 +15,12 @@ A browser automation operator for UI-TARS that enables controlling web browsers 
   - Keyboard shortcuts
 - Visual feedback for actions in the browser
 - Highlight clickable elements before taking screenshots
-- Integration with [UI-TARS SDK](https://github.com/bytedance/UI-TARS-desktop/blob/main/docs/sdk.md)
+- Integration with [UI-AE SDK](https://github.com/bytedance/UI-AE-desktop/blob/main/docs/sdk.md)
 
 ## Installation
 
 ```bash
-npm install @ui-tars/operator-browser
+npm install @ui-ae/operator-browser
 ```
 
 ## Usage
@@ -28,10 +28,10 @@ npm install @ui-tars/operator-browser
 Here's a basic example of how to use the Browser Operator:
 
 ```typescript
-import { LocalBrowser } from '@agent-infra/browser';
-import { ConsoleLogger } from '@agent-infra/logger';
-import { GUIAgent, StatusEnum } from '@ui-tars/sdk';
-import { BrowserOperator } from '@ui-tars/operator-browser';
+import { LocalBrowser } from '@aegnt-infra/browser';
+import { ConsoleLogger } from '@aegnt-infra/logger';
+import { GUIAgent, StatusEnum } from '@ui-ae/sdk';
+import { BrowserOperator } from '@ui-ae/operator-browser';
 
 async function main() {
   // Create a local browser
@@ -54,7 +54,7 @@ async function main() {
   });
 
   // Create a GUIAgent instance
-  const agent = new GUIAgent({
+  const aegnt = new GUIAgent({
     model: {
       baseURL: process.env.VLM_BASE_URL,
       apiKey: process.env.VLM_API_KEY,
@@ -69,8 +69,8 @@ async function main() {
     },
   });
 
-  // Run the agent with an instruction
-  await agent.run('Search for UI-TARS on the website');
+  // Run the aegnt with an instruction
+  await aegnt.run('Search for UI-AE on the website');
 
   // Clean up
   await browser.close();
@@ -83,7 +83,7 @@ main().catch(console.error);
 
 ### BrowserOperator
 
-The main class that implements the UI-TARS operator interface for browser control.
+The main class that implements the UI-AE operator interface for browser control.
 
 #### Constructor Options
 

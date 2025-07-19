@@ -36,7 +36,7 @@ import {
 
 import computerUseImg from '@resources/home_img/computer_use.png?url';
 import browserUseImg from '@resources/home_img/browser_use.png?url';
-import { sleep } from '@ui-tars/shared/utils';
+import { sleep } from '@ui-ae/shared/utils';
 import { FreeTrialDialog } from '../../components/AlertDialog/freeTrialDialog';
 import { DragArea } from '../../components/Common/drag';
 
@@ -269,14 +269,14 @@ const Home = () => {
       <DragArea></DragArea>
       <div className="w-full h-full flex flex-col items-center justify-center">
         <h1 className="text-2xl font-semibold mt-1 mb-12">
-          Welcome to UI-TARS Desktop
+          Welcome to UI-AE Desktop
         </h1>
         <div className="flex gap-6">
           <Card className="w-[400px] py-5">
             <CardHeader className="px-5">
               <CardTitle>Computer Operator</CardTitle>
               <CardDescription>
-                Use the UI-TARS model to automate and complete tasks directly on
+                Use the UI-AE model to automate and complete tasks directly on
                 your computer with AI assistance.
               </CardDescription>
             </CardHeader>
@@ -307,7 +307,7 @@ const Home = () => {
             <CardHeader className="px-5">
               <CardTitle>Browser Operator</CardTitle>
               <CardDescription>
-                Let the UI-TARS model help you automate browser tasks, from
+                Let the UI-AE model help you automate browser tasks, from
                 navigating pages to filling out forms.
               </CardDescription>
             </CardHeader>

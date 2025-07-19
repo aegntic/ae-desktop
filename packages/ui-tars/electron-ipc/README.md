@@ -1,4 +1,4 @@
-# UI-TARS Electron IPC Handlers
+# UI-AE Electron IPC Handlers
 
 A type-safe IPC (Inter-Process Communication) solution for Electron applications.
 
@@ -12,7 +12,7 @@ A type-safe IPC (Inter-Process Communication) solution for Electron applications
 ## Installation
 
 ```bash
-npm install @ui-tars/electron-ipc
+npm install @ui-ae/electron-ipc
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm install @ui-tars/electron-ipc
 
 ```ts
 // router.ts
-import { initIpc } from '@ui-tars/electron-ipc/main';
+import { initIpc } from '@ui-ae/electron-ipc/main';
 import { z } from 'zod';
 
 const t = initIpc.create();
@@ -46,7 +46,7 @@ export type AppRouter = typeof router;
 
 ```ts
 // main.ts
-import { registerIpcMain, createServer } from '@ui-tars/electron-ipc/main';
+import { registerIpcMain, createServer } from '@ui-ae/electron-ipc/main';
 import { router } from './router';
 
 // Register IPC handlers
@@ -61,7 +61,7 @@ await server.hello({ a: '123' }); // => 'hello123'
 
 ```ts
 // renderer.ts
-import { createClient } from '@ui-tars/electron-ipc/renderer';
+import { createClient } from '@ui-ae/electron-ipc/renderer';
 import type { AppRouter } from './router';
 
 const client = createClient<AppRouter>({

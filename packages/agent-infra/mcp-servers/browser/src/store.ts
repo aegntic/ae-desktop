@@ -4,7 +4,7 @@
  */
 import os from 'node:os';
 import { McpState } from './typings.js';
-import { ConsoleLogger, Logger } from '@agent-infra/logger';
+import { ConsoleLogger, Logger } from '@aegnt-infra/logger';
 import path from 'node:path';
 import { sanitizeForFilePath } from './utils/utils.js';
 

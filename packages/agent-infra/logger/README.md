@@ -1,13 +1,13 @@
-# @agent-infra/logger
+# @aegnt-infra/logger
 
 <p>
-  <a href="https://npmjs.com/package/@agent-infra/logger?activeTab=readme"><img src="https://img.shields.io/npm/v/@agent-infra/logger?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" /></a>
-  <a href="https://npmcharts.com/compare/@agent-infra/logger?minimal=true"><img src="https://img.shields.io/npm/dm/@agent-infra/logger.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="downloads" /></a>
-  <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/@agent-infra/logger.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="node version"></a>
-  <a href="https://github.com/bytedance/UI-TARS-desktop/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="license" /></a>
+  <a href="https://npmjs.com/package/@aegnt-infra/logger?activeTab=readme"><img src="https://img.shields.io/npm/v/@aegnt-infra/logger?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" /></a>
+  <a href="https://npmcharts.com/compare/@aegnt-infra/logger?minimal=true"><img src="https://img.shields.io/npm/dm/@aegnt-infra/logger.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="downloads" /></a>
+  <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/@aegnt-infra/logger.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="node version"></a>
+  <a href="https://github.com/bytedance/UI-AE-desktop/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="license" /></a>
 </p>
 
-A tiny, powerful isomorphic logger for both Node.js and browser environments. built for **Agent Tars**.
+A tiny, powerful isomorphic logger for both Node.js and browser environments. built for **Aegnt Ae**.
 
 | Browser                                 | Node.js                           |
 | --------------------------------------- | --------------------------------- |
@@ -26,17 +26,17 @@ A tiny, powerful isomorphic logger for both Node.js and browser environments. bu
 ## Installation
 
 ```bash
-npm install @agent-infra/logger
+npm install @aegnt-infra/logger
 # or
-yarn add @agent-infra/logger
+yarn add @aegnt-infra/logger
 # or
-pnpm add @agent-infra/logger
+pnpm add @aegnt-infra/logger
 ```
 
 ## Quick Start
 
 ```typescript
-import { ConsoleLogger } from '@agent-infra/logger';
+import { ConsoleLogger } from '@aegnt-infra/logger';
 
 // Create a logger with a prefix
 const logger = new ConsoleLogger('[App]');
@@ -108,7 +108,7 @@ The main logger implementation with colored console output.
 Control verbosity with log levels:
 
 ```ts
-import { ConsoleLogger, LogLevel } from '@agent-infra/logger';
+import { ConsoleLogger, LogLevel } from '@aegnt-infra/logger';
 
 const logger = new ConsoleLogger('[App]');
 
@@ -168,7 +168,7 @@ apiLogger.warn('Rate limit reached'); // Outputs: [App:API] Rate limit reached
 Configure different log levels based on environment:
 
 ```typescript
-import { ConsoleLogger, LogLevel } from '@agent-infra/logger';
+import { ConsoleLogger, LogLevel } from '@aegnt-infra/logger';
 
 // Create base logger
 const logger = new ConsoleLogger('[App]');
@@ -188,7 +188,7 @@ if (process.env.NODE_ENV === 'production') {
 Combine with error tracking services:
 
 ```typescript
-import { ConsoleLogger } from '@agent-infra/logger';
+import { ConsoleLogger } from '@aegnt-infra/logger';
 import * as Sentry from '@sentry/browser'; // Example error tracking
 
 const logger = new ConsoleLogger('[App]');
@@ -211,7 +211,7 @@ logger.error = function(...args) {
 You can modify the CSS_COLOR_VALUES in your application to customize colors:
 
 ```typescript
-import { ConsoleLogger, CSS_COLOR_VALUES } from '@agent-infra/logger';
+import { ConsoleLogger, CSS_COLOR_VALUES } from '@aegnt-infra/logger';
 
 // Override default colors with your theme
 Object.assign(CSS_COLOR_VALUES, {
@@ -232,7 +232,7 @@ For larger applications, organize loggers by feature or module:
 
 ```typescript
 // logger.ts
-import { ConsoleLogger, LogLevel } from '@agent-infra/logger';
+import { ConsoleLogger, LogLevel } from '@aegnt-infra/logger';
 
 // Create root logger
 const rootLogger = new ConsoleLogger('[MyApp]');
@@ -254,7 +254,7 @@ export const uiLogger = rootLogger.spawn('UI');
 For machine-parseable logs, use consistent formats:
 
 ```typescript
-import { ConsoleLogger } from '@agent-infra/logger';
+import { ConsoleLogger } from '@aegnt-infra/logger';
 
 const logger = new ConsoleLogger('[API]');
 

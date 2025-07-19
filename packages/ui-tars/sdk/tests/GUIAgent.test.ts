@@ -9,7 +9,7 @@ import { Operator } from '../src/types';
 import { Jimp } from 'jimp';
 import { useContext } from '../src/context/useContext';
 import { GUIAgentData, StatusEnum } from '../src';
-import { IMAGE_PLACEHOLDER } from '@ui-tars/shared/constants';
+import { IMAGE_PLACEHOLDER } from '@ui-ae/shared/constants';
 import { UITarsModel } from '../src/Model';
 import { mockOpenAIResponse } from './testKits/index';
 import { DEFAULT_FACTORS } from '../src/constants';
@@ -53,7 +53,7 @@ describe('GUIAgent', () => {
     const modelConfig = {
       baseURL: 'http://localhost:3000/v1',
       apiKey: 'test',
-      model: 'ui-tars',
+      model: 'ui-ae',
     };
     const operator = new MockOperator();
 
@@ -63,14 +63,14 @@ describe('GUIAgent', () => {
     });
     const onError = vi.fn();
 
-    const agent = new GUIAgent({
+    const aegnt = new GUIAgent({
       model: modelConfig,
       operator,
       onData,
       onError,
     });
 
-    await agent.run('click the button');
+    await aegnt.run('click the button');
 
     expect(getContext.mock.calls[0][0]).toMatchObject({
       model: {
@@ -177,22 +177,22 @@ describe('GUIAgent', () => {
     });
     const onError = vi.fn();
     const model = new CustomUITarsModel({
-      model: 'ui-tars-sft',
+      model: 'ui-ae-sft',
     });
 
-    const agent = new GUIAgent({
+    const aegnt = new GUIAgent({
       model,
       operator,
       onData,
       onError,
     });
 
-    await agent.run('click the button');
+    await aegnt.run('click the button');
 
     expect(getContextCustom.mock.calls[0][0]).toMatchObject({
       model: {
         modelConfig: {
-          model: 'ui-tars-sft',
+          model: 'ui-ae-sft',
         },
       },
     });
@@ -202,12 +202,12 @@ describe('GUIAgent', () => {
     expect(dataEvents).toEqual([
       expect.objectContaining({
         status: StatusEnum.RUNNING,
-        modelName: 'ui-tars-sft',
+        modelName: 'ui-ae-sft',
         conversations: [],
       }),
       expect.objectContaining({
         status: StatusEnum.RUNNING,
-        modelName: 'ui-tars-sft',
+        modelName: 'ui-ae-sft',
         conversations: [
           expect.objectContaining({
             from: 'human',
@@ -276,11 +276,11 @@ describe('GUIAgent', () => {
     });
     const onError = vi.fn();
 
-    const agent = new GUIAgent({
+    const aegnt = new GUIAgent({
       model: {
         baseURL: 'http://localhost:3000/v1',
         apiKey: 'test',
-        model: 'ui-tars',
+        model: 'ui-ae',
       },
       operator,
       signal: abortController.signal,
@@ -288,7 +288,7 @@ describe('GUIAgent', () => {
       onError,
     });
 
-    await agent.run('click the button');
+    await aegnt.run('click the button');
 
     expect(operator.screenshot).toBeCalledTimes(1);
     expect(operator.execute).toHaveBeenCalled();
@@ -324,7 +324,7 @@ describe('GUIAgent', () => {
     const modelConfig = {
       baseURL: 'http://localhost:3000/v1',
       apiKey: 'test',
-      model: 'ui-tars',
+      model: 'ui-ae',
     };
     class CustomActionSpacesOperator extends Operator {
       static MANUAL = {
@@ -363,7 +363,7 @@ describe('GUIAgent', () => {
     });
     const onError = vi.fn();
 
-    const agent = new GUIAgent({
+    const aegnt = new GUIAgent({
       model: modelConfig,
       systemPrompt: `
       You are a helpful assistant.
@@ -376,7 +376,7 @@ describe('GUIAgent', () => {
       onError,
     });
 
-    await agent.run('click the button');
+    await aegnt.run('click the button');
 
     expect(getContext.mock.calls[0][0]).toMatchObject({
       model: {

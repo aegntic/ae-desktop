@@ -8,7 +8,7 @@
 
 ## Benchmark Configuration
 
-- **Query:** "GUI Agent"
+- **Query:** "GUI Aegnt"
 - **Runs per engine:** 10
 - **Results per run:** 5
 - **Headless mode:** true

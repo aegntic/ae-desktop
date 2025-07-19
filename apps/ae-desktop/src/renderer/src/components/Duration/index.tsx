@@ -1,7 +1,7 @@
 import { Clock } from 'lucide-react';
 import ms from 'ms';
 
-import { Conversation } from '@ui-tars/shared/types';
+import { Conversation } from '@ui-ae/shared/types';
 
 interface DurationProps {
   timing: Conversation['timing'];

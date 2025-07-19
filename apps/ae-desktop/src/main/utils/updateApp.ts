@@ -16,7 +16,7 @@ export class AppUpdater {
     const releaseName = releaseInfo?.files?.[0]?.url;
 
     return Boolean(
-      releaseName && /ui[-.\s]?tars/i.test(releaseName.toLowerCase()),
+      releaseName && /ui[-.\s]?ae/i.test(releaseName.toLowerCase()),
     );
   }
 

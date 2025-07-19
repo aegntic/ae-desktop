@@ -1,20 +1,20 @@
 {
-  "name": "@ui-tars/operator-browserbase",
+  "name": "@ui-ae/operator-browserbase",
   "version": "1.2.3",
-  "description": "Operator Browserbase SDK for UI-TARS",
+  "description": "Operator Browserbase SDK for UI-AE",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bytedance/UI-TARS-desktop"
+    "url": "https://github.com/bytedance/UI-AE-desktop"
   },
   "bugs": {
-    "url": "https://github.com/bytedance/UI-TARS-desktop/issues"
+    "url": "https://github.com/bytedance/UI-AE-desktop/issues"
   },
   "keywords": [
     "AI",
     "Core",
     "SDK",
     "Operator",
-    "UI-TARS"
+    "UI-AE"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -35,15 +35,15 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@ui-tars/shared": "workspace:*",
+    "@ui-ae/shared": "workspace:*",
     "@browserbasehq/stagehand": "^1.13.0",
     "big.js": "^6.2.2"
   },
   "peerDependencies": {
-    "@ui-tars/sdk": "workspace:*"
+    "@ui-ae/sdk": "workspace:*"
   },
   "devDependencies": {
-    "@ui-tars/sdk": "workspace:*",
+    "@ui-ae/sdk": "workspace:*",
     "@common/configs": "workspace:*",
     "@rslib/core": "0.10.0",
     "typescript": "^5.7.2",

@@ -1,20 +1,20 @@
 {
-  "name": "@ui-tars/operator-browser",
-  "description": "Native-browser operator for UI-TARS",
+  "name": "@ui-ae/operator-browser",
+  "description": "Native-browser operator for UI-AE",
   "version": "1.2.3",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bytedance/UI-TARS-desktop"
+    "url": "https://github.com/bytedance/UI-AE-desktop"
   },
   "bugs": {
-    "url": "https://github.com/bytedance/UI-TARS-desktop/issues"
+    "url": "https://github.com/bytedance/UI-AE-desktop/issues"
   },
   "keywords": [
     "AI",
     "Core",
     "SDK",
     "Operator",
-    "UI-TARS"
+    "UI-AE"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -35,14 +35,14 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@agent-infra/browser": "workspace:*",
-    "@agent-infra/logger": "workspace:*",
-    "@ui-tars/sdk": "workspace:*"
+    "@aegnt-infra/browser": "workspace:*",
+    "@aegnt-infra/logger": "workspace:*",
+    "@ui-ae/sdk": "workspace:*"
   },
   "devDependencies": {
     "node-notifier": "10.0.1",
-    "@agent-infra/browser": "workspace:*",
-    "@ui-tars/sdk": "workspace:*",
+    "@aegnt-infra/browser": "workspace:*",
+    "@ui-ae/sdk": "workspace:*",
     "@common/configs": "workspace:*",
     "@rslib/core": "0.10.0",
     "typescript": "^5.7.2",

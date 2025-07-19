@@ -6,12 +6,12 @@ component_management:
     - component_id: mcp_server_browser
       name: mcp-server-browser
       paths:
-        - packages/agent-infra/mcp-servers/browser/src/**
-    - component_id: ui_tars_action_parser
-      name: ui-tars-action-parser
+        - packages/aegnt-infra/mcp-servers/browser/src/**
+    - component_id: ui_ae_action_parser
+      name: ui-ae-action-parser
       paths:
-        - packages/ui-tars/action-parser/src/**
-    - component_id: ui_tars_sdk
-      name: ui-tars-sdk
+        - packages/ui-ae/action-parser/src/**
+    - component_id: ui_ae_sdk
+      name: ui-ae-sdk
       paths:
-        - packages/ui-tars/sdk/src/**
+        - packages/ui-ae/sdk/src/**

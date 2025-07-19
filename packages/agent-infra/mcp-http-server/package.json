@@ -3,12 +3,12 @@
   "version": "1.2.2",
   "description": "High performance HTTP Server for MCP",
   "license": "MIT",
-  "homepage": "https://github.com/bytedance/UI-TARS-desktop",
-  "bugs": "https://github.com/bytedance/UI-TARS-desktop/issues",
+  "homepage": "https://github.com/bytedance/UI-AE-desktop",
+  "bugs": "https://github.com/bytedance/UI-AE-desktop/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bytedance/UI-TARS-desktop.git",
-    "directory": "packages/agent-infra/mcp-http-server"
+    "url": "https://github.com/bytedance/UI-AE-desktop.git",
+    "directory": "packages/aegnt-infra/mcp-http-server"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -30,7 +30,7 @@
     "watch": "rslib build --watch"
   },
   "dependencies": {
-    "@agent-infra/logger": "workspace:*",
+    "@aegnt-infra/logger": "workspace:*",
     "@modelcontextprotocol/sdk": "~1.13.1",
     "express": "^5.1.0"
   },

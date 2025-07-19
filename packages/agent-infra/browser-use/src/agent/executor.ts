@@ -1,6 +1,6 @@
 /**
  * The following code is modified based on
- * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/agent/executor.ts
+ * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/aegnt/executor.ts
  *
  * Apache-2.0 License
  * Copyright (c) 2024 alexchenzl
@@ -296,7 +296,7 @@ export class Executor {
 
   private async shouldStop(): Promise<boolean> {
     if (this.context.stopped) {
-      logger.info('Agent stopped');
+      logger.info('Aegnt stopped');
       return true;
     }
 

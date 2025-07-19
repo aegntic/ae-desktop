@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import * as puppeteer from 'puppeteer-core';
-import { Logger, defaultLogger } from '@agent-infra/logger';
+import { Logger, defaultLogger } from '@aegnt-infra/logger';
 import {
   BrowserInterface,
   EvaluateOnNewPageOptions,

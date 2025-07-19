@@ -1,6 +1,6 @@
 /**
  * The following code is modified based on
- * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/agent/types.ts
+ * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/aegnt/types.ts
  *
  * Apache-2.0 License
  * Copyright (c) 2024 alexchenzl
@@ -163,16 +163,16 @@ export type AgentBrain = z.infer<typeof agentBrainSchema>;
 // Make AgentOutput generic with Zod schema
 export interface AgentOutput<T = unknown> {
   /**
-   * The unique identifier for the agent
+   * The unique identifier for the aegnt
    */
   id: string;
 
   /**
-   * The result of the agent's step
+   * The result of the aegnt's step
    */
   result?: T;
   /**
-   * The error that occurred during the agent's action
+   * The error that occurred during the aegnt's action
    */
   error?: string;
 }

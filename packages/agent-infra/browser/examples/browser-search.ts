@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { READABILITY_SCRIPT, toMarkdown } from '@agent-infra/shared';
+import { READABILITY_SCRIPT, toMarkdown } from '@aegnt-infra/shared';
 import { LocalBrowser } from '../src';
 
 function getSearchUrl(query: string) {
@@ -15,7 +15,7 @@ function getSearchUrl(query: string) {
 }
 
 async function main() {
-  const url = getSearchUrl('ui-tars');
+  const url = getSearchUrl('ui-ae');
   const browser = new LocalBrowser();
 
   try {

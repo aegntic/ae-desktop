@@ -1,4 +1,4 @@
-# @agent-infra/mcp-server-search
+# @aegnt-infra/mcp-server-search
 
 ## 1.2.9
 
@@ -52,7 +52,7 @@
 
 - a85ef50: chore: publish
 - Updated dependencies [a85ef50]
-  - @agent-infra/search@0.0.3
+  - @aegnt-infra/search@0.0.3
 
 ## 1.1.6-beta.10
 
@@ -70,7 +70,7 @@
 
 ### Patch Changes
 
-- @agent-infra/search@0.0.3-beta.3
+- @aegnt-infra/search@0.0.3-beta.3
 
 ## 1.1.6-beta.3
 
@@ -80,16 +80,16 @@
 
 - chore: publish
 - Updated dependencies
-  - @agent-infra/search@0.0.3-beta.2
+  - @aegnt-infra/search@0.0.3-beta.2
 
 ## 1.1.6-beta.1
 
 ### Patch Changes
 
-- @agent-infra/search@0.0.3-beta.1
+- @aegnt-infra/search@0.0.3-beta.1
 
 ## 1.1.6-beta.0
 
 ### Patch Changes
 
-- @agent-infra/search@0.0.3-beta.0
+- @aegnt-infra/search@0.0.3-beta.0

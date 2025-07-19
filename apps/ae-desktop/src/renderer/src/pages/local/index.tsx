@@ -17,7 +17,7 @@ import { ScrollArea } from '@renderer/components/ui/scroll-area';
 import { useStore } from '@renderer/hooks/useStore';
 import { useSession } from '@renderer/hooks/useSession';
 import Prompts from '../../components/Prompts';
-import { IMAGE_PLACEHOLDER } from '@ui-tars/shared/constants';
+import { IMAGE_PLACEHOLDER } from '@ui-ae/shared/constants';
 import {
   AssistantTextMessage,
   ErrorMessage,
@@ -28,7 +28,7 @@ import {
 import ThoughtChain from '../../components/ThoughtChain';
 import { api } from '../../api';
 import ImageGallery from '../../components/ImageGallery';
-import { PredictionParsed, StatusEnum } from '@ui-tars/shared/types';
+import { PredictionParsed, StatusEnum } from '@ui-ae/shared/types';
 import { RouterState } from '../../typings';
 import ChatInput from '../../components/ChatInput';
 import { NavDialog } from '../../components/AlertDialog/navDialog';
@@ -36,7 +36,7 @@ import {
   checkVLMSettings,
   LocalSettingsDialog,
 } from '../../components/Settings/local';
-import { sleep } from '@ui-tars/shared/utils';
+import { sleep } from '@ui-ae/shared/utils';
 
 const getFinishedContent = (predictionParsed?: PredictionParsed[]) =>
   predictionParsed?.find(
@@ -273,7 +273,7 @@ const LocalOperator = () => {
       <NavHeader
         title={state.operator}
         onBack={handleBack}
-        docUrl="https://github.com/bytedance/UI-TARS-desktop/"
+        docUrl="https://github.com/bytedance/UI-AE-desktop/"
       ></NavHeader>
       <div className="px-5 pb-5 flex flex-1 gap-5">
         <Card className="flex-1 basis-2/5 px-0 py-4 gap-4 h-[calc(100vh-76px)]">

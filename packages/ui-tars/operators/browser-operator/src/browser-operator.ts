@@ -3,24 +3,24 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { LocalBrowser } from '@agent-infra/browser';
-import { ConsoleLogger, Logger, defaultLogger } from '@agent-infra/logger';
-import { Operator, parseBoxToScreenCoords } from '@ui-tars/sdk/core';
+import { LocalBrowser } from '@aegnt-infra/browser';
+import { ConsoleLogger, Logger, defaultLogger } from '@aegnt-infra/logger';
+import { Operator, parseBoxToScreenCoords } from '@ui-ae/sdk/core';
 import {
   Page,
   KeyInput,
   BrowserType,
   BrowserInterface,
   RemoteBrowser,
-} from '@agent-infra/browser';
+} from '@aegnt-infra/browser';
 import type {
   ScreenshotOutput,
   ExecuteParams,
   ExecuteOutput,
-} from '@ui-tars/sdk/core';
+} from '@ui-ae/sdk/core';
 import { BrowserOperatorOptions, SearchEngine } from './types';
 import { UIHelper } from './ui-helper';
-import { BrowserFinder } from '@agent-infra/browser';
+import { BrowserFinder } from '@aegnt-infra/browser';
 
 import { KEY_MAPPINGS } from './key-map';
 import { shortcuts } from './shortcuts';

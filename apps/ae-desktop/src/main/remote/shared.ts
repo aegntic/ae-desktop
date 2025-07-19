@@ -49,20 +49,20 @@ export abstract class BaseRemoteComputer {
   abstract takeScreenshot(): Promise<string>;
 }
 
-const UI_TARS_PROXY_HOST =
+const UI_AE_PROXY_HOST =
   'https://sd17rrmnhj5i8uvr67j30.apigateway-cn-beijing.volceapi.com';
 
 const VER = '/api/v1';
-const REGISTER_URL = `${UI_TARS_PROXY_HOST}${VER}/register`;
-const PROXY_URL = `${UI_TARS_PROXY_HOST}${VER}/proxy`;
-const BROWSER_URL = `${UI_TARS_PROXY_HOST}${VER}/browsers`;
-const TIME_URL = `${UI_TARS_PROXY_HOST}${VER}/time-balance`;
-const FREE_MODEL_BASE_URL = `${UI_TARS_PROXY_HOST}${VER}`;
+const REGISTER_URL = `${UI_AE_PROXY_HOST}${VER}/register`;
+const PROXY_URL = `${UI_AE_PROXY_HOST}${VER}/proxy`;
+const BROWSER_URL = `${UI_AE_PROXY_HOST}${VER}/browsers`;
+const TIME_URL = `${UI_AE_PROXY_HOST}${VER}/time-balance`;
+const FREE_MODEL_BASE_URL = `${UI_AE_PROXY_HOST}${VER}`;
 
 const COMPUTER_USE_HOST = 'https://computer-use.console.volcengine.com';
 
 export {
-  UI_TARS_PROXY_HOST,
+  UI_AE_PROXY_HOST,
   REGISTER_URL,
   PROXY_URL,
   BROWSER_URL,

@@ -1,6 +1,6 @@
 /**
  * The following code is modified based on
- * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/agent/helper.ts
+ * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/aegnt/helper.ts
  *
  * Apache-2.0 License
  * Copyright (c) 2024 alexchenzl
@@ -17,7 +17,7 @@ import { createLogger } from '../utils';
 
 const logger = createLogger('agent_helper');
 
-// create a chat model based on the agent name, the model name and provider
+// create a chat model based on the aegnt name, the model name and provider
 export function createChatModel(
   agentName: string,
   providerName: LLMProviderEnum,

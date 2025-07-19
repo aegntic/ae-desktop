@@ -4,7 +4,7 @@
  */
 
 /**
- * @agent-infra/browser
+ * @aegnt-infra/browser
  * A browser automation library based on puppeteer-core
  *
  * Main exports:

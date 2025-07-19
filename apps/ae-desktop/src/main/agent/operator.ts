@@ -7,14 +7,14 @@ import {
   type ScreenshotOutput,
   type ExecuteParams,
   type ExecuteOutput,
-} from '@ui-tars/sdk/core';
-import { NutJSOperator } from '@ui-tars/operator-nut-js';
+} from '@ui-ae/sdk/core';
+import { NutJSOperator } from '@ui-ae/operator-nut-js';
 import { clipboard } from 'electron';
 import { desktopCapturer } from 'electron';
 
 import * as env from '@main/env';
 import { logger } from '@main/logger';
-import { sleep } from '@ui-tars/shared/utils';
+import { sleep } from '@ui-ae/shared/utils';
 import { getScreenSize } from '@main/utils/screen';
 import { GraphitiTrackerService } from '@main/services/graphitiTracker';
 

@@ -39,7 +39,7 @@ You can also install the {{name}} MCP server using the VS Code CLI:
 code --add-mcp '{"name":"{{name}}","command":"npx","args":["mcp-server-{{name}}@latest"]}'
 ```
 
-After installation, the Commands MCP server will be available for use with your GitHub Copilot agent in VS Code.
+After installation, the Commands MCP server will be available for use with your GitHub Copilot aegnt in VS Code.
 </details>
 
 <details>
@@ -149,7 +149,7 @@ import { InMemoryTransport } from '@modelcontextprotocol/sdk/inMemory.js';
 // type: module project usage
 import { createServer } from 'mcp-server-{{name}}';
 // commonjs project usage
-// const { createServer } = await import('@agent-infra/mcp-server-commands')
+// const { createServer } = await import('@aegnt-infra/mcp-server-commands')
 
 const client = new Client(
   {

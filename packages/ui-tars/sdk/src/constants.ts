@@ -9,7 +9,7 @@ export type Factors = [number, number];
 export const MAX_SNAPSHOT_ERR_CNT = 10;
 export const DEFAULT_FACTORS: Factors = [1000, 1000];
 export const MAX_PIXELS = 1350 * 28 * 28;
-export const SYSTEM_PROMPT = `You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+export const SYSTEM_PROMPT = `You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Format
 \`\`\`
@@ -35,7 +35,7 @@ call_user() # Submit the task and call the user when the task is unsolvable, or 
 ## User Instruction
 `;
 
-export const SYSTEM_PROMPT_TEMPLATE = `You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+export const SYSTEM_PROMPT_TEMPLATE = `You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Format
 \`\`\`

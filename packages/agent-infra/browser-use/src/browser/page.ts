@@ -11,7 +11,7 @@ import {
   type HTTPResponse,
   type KeyInput,
 } from 'puppeteer-core/lib/esm/puppeteer/puppeteer-core-browser.js';
-import { LocalBrowser } from '@agent-infra/browser';
+import { LocalBrowser } from '@aegnt-infra/browser';
 import {
   Browser,
   Page as PuppeteerPage,

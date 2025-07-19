@@ -5,8 +5,8 @@
 import { Jimp } from 'jimp';
 import { ChatCompletionMessageParam } from 'openai/resources/chat/completions';
 
-import { IMAGE_PLACEHOLDER, MAX_IMAGE_LENGTH } from '@ui-tars/shared/constants';
-import { Conversation, Message } from '@ui-tars/shared/types';
+import { IMAGE_PLACEHOLDER, MAX_IMAGE_LENGTH } from '@ui-ae/shared/constants';
+import { Conversation, Message } from '@ui-ae/shared/types';
 import { DEFAULT_FACTORS, type Factors } from './constants';
 import {
   ResponseInput,

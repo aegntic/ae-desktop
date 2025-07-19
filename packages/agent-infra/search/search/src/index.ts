@@ -2,24 +2,24 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { SearchProvider } from '@agent-infra/shared';
+import { SearchProvider } from '@aegnt-infra/shared';
 import {
   BrowserSearchConfig,
   BrowserSearchOptions,
   BrowserSearch,
   SearchResult as BrowserSearchResult,
-} from '@agent-infra/browser-search';
+} from '@aegnt-infra/browser-search';
 import {
   BingSearchClient,
   BingSearchConfig,
   BingSearchOptions,
-} from '@agent-infra/bing-search';
+} from '@aegnt-infra/bing-search';
 import {
   DuckDuckGoSearchClient,
   DuckDuckGoSearchClientConfig,
   DuckDuckGoSearchOptions,
-} from '@agent-infra/duckduckgo-search';
-import { Logger, defaultLogger } from '@agent-infra/logger';
+} from '@aegnt-infra/duckduckgo-search';
+import { Logger, defaultLogger } from '@aegnt-infra/logger';
 import { TavilySearchConfig, TavilySearchOptions, tavily } from './tavily';
 import { SearXNGSearchConfig, SearXNGSearchOptions, searxng } from './searxng';
 

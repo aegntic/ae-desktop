@@ -1,5 +1,5 @@
-# @ui-tars/operator-browserbase
+# @ui-ae/operator-browserbase
 
-Operator Browserbase SDK for UI-TARS.
+Operator Browserbase SDK for UI-AE.
 
-See [example](https://github.com/bytedance/UI-TARS-desktop/tree/main/operator-browserbase) for usage.
+See [example](https://github.com/bytedance/UI-AE-desktop/tree/main/operator-browserbase) for usage.

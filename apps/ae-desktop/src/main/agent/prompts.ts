@@ -6,7 +6,7 @@ import { NutJSElectronOperator } from './operator';
 
 export const getSystemPrompt = (
   language: 'zh' | 'en',
-) => `You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+) => `You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Format
 \`\`\`
@@ -27,7 +27,7 @@ ${NutJSElectronOperator.MANUAL.ACTION_SPACES.join('\n')}
 export const getSystemPromptV1_5 = (
   language: 'zh' | 'en',
   useCase: 'normal' | 'poki',
-) => `You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+) => `You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Format
 \`\`\`
@@ -57,7 +57,7 @@ call_user() # Submit the task and call the user when the task is unsolvable, or 
 `;
 
 export const getSystemPromptPoki = `
-You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Format
 \`\`\`
@@ -87,7 +87,7 @@ call_user() # Submit the task and call the user when the task is unsolvable, or 
 `;
 
 export const getSystemPromptDoubao_15_15B = (language: 'zh' | 'en') => `
-You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Format
 \`\`\`
@@ -144,7 +144,7 @@ const ThoughtExamplesEN = `- Example1. Thought: A number 2 appears in the first 
 export const getSystemPromptDoubao_15_20B = (
   language: 'zh' | 'en',
   operatorType: 'browser' | 'computer',
-) => `You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+) => `You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Format
 \`\`\`

@@ -4,7 +4,7 @@
 
 set -e
 
-echo "Setting up Graphiti Tracker for UI-TARS Desktop..."
+echo "Setting up Graphiti Tracker for UI-AE Desktop..."
 
 # Check if Docker is installed
 if ! command -v docker &> /dev/null; then
@@ -78,7 +78,7 @@ echo "To view logs: docker-compose logs -f"
 echo "To stop services: docker-compose down"
 echo ""
 echo "Next steps:"
-echo "1. Enable Graphiti tracking in UI-TARS settings"
+echo "1. Enable Graphiti tracking in UI-AE settings"
 echo "2. No API keys needed - everything runs locally for FREE!"
 echo ""
 echo "Models installed:"

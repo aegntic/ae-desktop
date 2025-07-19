@@ -10,7 +10,7 @@ import {
   type ExecuteParams,
   type ExecuteOutput,
   StatusEnum,
-} from '@ui-tars/sdk/core';
+} from '@ui-ae/sdk/core';
 import { command } from 'execa';
 import inquirer from 'inquirer';
 import { readFileSync } from 'fs';
@@ -157,7 +157,7 @@ export class AdbOperator extends Operator {
               imeSet.stderr.includes('cannot be selected')
             ) {
               logger.error(
-                '[AdbOperator] The AdbIME is unavaliable, please install and active it on your Android device and retry if you want UI-TARS use Chniese.',
+                '[AdbOperator] The AdbIME is unavaliable, please install and active it on your Android device and retry if you want UI-AE use Chniese.',
               );
               return { status: StatusEnum.ERROR } as ExecuteOutput;
             } else if (

@@ -23,7 +23,7 @@ import type {
   BuiltInMCPServer,
   MCPServer,
   StdioMCPServer,
-} from '@agent-infra/mcp-shared/client';
+} from '@aegnt-infra/mcp-shared/client';
 import {
   StreamableHTTPClientTransport,
   type StreamableHTTPClientTransportOptions,

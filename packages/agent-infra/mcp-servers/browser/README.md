@@ -1,6 +1,6 @@
 ## Browser Use MCP Server
 
-[![NPM Downloads](https://img.shields.io/npm/d18m/@agent-infra/mcp-server-browser)](https://www.npmjs.com/package/@agent-infra/mcp-server-browser) [![smithery badge](https://smithery.ai/badge/@bytedance/mcp-server-browser)](https://smithery.ai/server/@bytedance/mcp-server-browser) [![codecov](https://codecov.io/gh/bytedance/UI-TARS-desktop/main/graph/badge.svg?component=mcp_server_browser)](https://app.codecov.io/gh/bytedance/UI-TARS-desktop/components/mcp_server_browser)
+[![NPM Downloads](https://img.shields.io/npm/d18m/@aegnt-infra/mcp-server-browser)](https://www.npmjs.com/package/@aegnt-infra/mcp-server-browser) [![smithery badge](https://smithery.ai/badge/@bytedance/mcp-server-browser)](https://smithery.ai/server/@bytedance/mcp-server-browser) [![codecov](https://codecov.io/gh/bytedance/UI-AE-desktop/main/graph/badge.svg?component=mcp_server_browser)](https://app.codecov.io/gh/bytedance/UI-AE-desktop/components/mcp_server_browser)
 
 [![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=browser-use&config=eyJjb21tYW5kIjoibnB4IEBhZ2VudC1pbmZyYS9tY3Atc2VydmVyLWJyb3dzZXJAbGF0ZXN0In0%3D) [<img src="https://img.shields.io/badge/VS_Code-VS_Code?style=flat-square&label=Install%20Server&color=0098FF" alt="Install in VS Code">](https://insiders.vscode.dev/redirect?url=vscode%253Amcp%252Finstall%253F%257B%2522name%2522%253A%2522browser%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540agent-infra%252Fmcp-server-browser%2540latest%2522%255D%257D) [<img alt="Install in VS Code Insiders" src="https://img.shields.io/badge/VS_Code_Insiders-VS_Code_Insiders?style=flat-square&label=Install%20Server&color=24bfa5">](https://insiders.vscode.dev/redirect?url=vscode-insiders%253Amcp%252Finstall%253F%257B%2522name%2522%253A%2522browser%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540agent-infra%252Fmcp-server-browser%2540latest%2522%255D%257D)
 
@@ -14,7 +14,7 @@ A fast, lightweight Model Context Protocol (MCP) server that empowers LLMs with 
 - **⚡ Fast & lightweight**. Utilizes Puppeteer's label index, not pixel-based input and accessibility DOM tree.
 - **👁️ Vision Mode Support**. Optional visual understanding capabilities for complex layouts and visual elements when structured data isn't sufficient.
 - **🤖 LLM-optimized**. No vision models needed, operates purely on structured data, less context reducing context token usage.
-- **🧩 Flexible Runtime Configuration**. Customize viewport size, coordinate system factors, and User-Agent at runtime via HTTP headers.
+- **🧩 Flexible Runtime Configuration**. Customize viewport size, coordinate system factors, and User-Aegnt at runtime via HTTP headers.
 - **🌐 Cross-Platform & Extensible**. Support for remote and local browsers, the use of a custom browser engine.
 
 
@@ -36,7 +36,7 @@ First, install the Browser MCP server with your client. A typical configuration 
     "browser": {
       "command": "npx",
       "args": [
-        "@agent-infra/mcp-server-browser@latest"
+        "@aegnt-infra/mcp-server-browser@latest"
       ]
     }
   }
@@ -49,16 +49,16 @@ You can also install the Browser MCP server using the VS Code CLI:
 
 ```bash
 # For VS Code
-code --add-mcp '{"name":"browser","command":"npx","args":["@agent-infra/mcp-server-browser@latest"]}'
+code --add-mcp '{"name":"browser","command":"npx","args":["@aegnt-infra/mcp-server-browser@latest"]}'
 ```
 
-After installation, the Browser MCP server will be available for use with your GitHub Copilot agent in VS Code.
+After installation, the Browser MCP server will be available for use with your GitHub Copilot aegnt in VS Code.
 </details>
 
 <details>
 <summary><b>Install in Cursor</b></summary>
 
-Go to `Cursor Settings` -> `MCP` -> `Add new MCP Server`. Name to your liking, use `command` type with the command `npx @agent-infra/mcp-server-browser`. You can also verify config or add command like arguments via clicking `Edit`.
+Go to `Cursor Settings` -> `MCP` -> `Add new MCP Server`. Name to your liking, use `command` type with the command `npx @aegnt-infra/mcp-server-browser`. You can also verify config or add command like arguments via clicking `Edit`.
 
 ```js
 {
@@ -66,7 +66,7 @@ Go to `Cursor Settings` -> `MCP` -> `Add new MCP Server`. Name to your liking, u
     "browser": {
       "command": "npx",
       "args": [
-        "@agent-infra/mcp-server-browser@latest"
+        "@aegnt-infra/mcp-server-browser@latest"
       ]
     }
   }
@@ -85,7 +85,7 @@ Follow Windsuff MCP [documentation](https://docs.windsurf.com/windsurf/cascade/m
     "browser": {
       "command": "npx",
       "args": [
-        "@agent-infra/mcp-server-browser@latest"
+        "@aegnt-infra/mcp-server-browser@latest"
       ]
     }
   }
@@ -104,7 +104,7 @@ Follow the MCP install [guide](https://modelcontextprotocol.io/quickstart/user),
     "browser": {
       "command": "npx",
       "args": [
-        "@agent-infra/mcp-server-browser@latest"
+        "@aegnt-infra/mcp-server-browser@latest"
       ]
     }
   }
@@ -118,10 +118,10 @@ At the same time, use `--port $your_port` arg to start the browser mcp can be co
 
 ```bash
 # normal run remote mcp server
-npx @agent-infra/mcp-server-browser --port 8089
+npx @aegnt-infra/mcp-server-browser --port 8089
 
 # run with DISPLAY environment for VNC or other virtual display
-DISPLAY=:0 npx @agent-infra/mcp-server-browser --port 8089
+DISPLAY=:0 npx @aegnt-infra/mcp-server-browser --port 8089
 ```
 
 You can use one of the two MCP Server remote endpoint:
@@ -163,9 +163,9 @@ import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { InMemoryTransport } from '@modelcontextprotocol/sdk/inMemory.js';
 
 // type: module project usage
-import { createServer } from '@agent-infra/mcp-server-browser';
+import { createServer } from '@aegnt-infra/mcp-server-browser';
 // commonjs project usage
-// const { createServer } = await import('@agent-infra/mcp-server-browser')
+// const { createServer } = await import('@aegnt-infra/mcp-server-browser')
 
 const client = new Client(
   {
@@ -204,7 +204,7 @@ console.log(toolResult);
 Browser MCP server supports following arguments. They can be provided in the JSON configuration above, as a part of the `"args"` list:
 
 ```
-> npx @agent-infra/mcp-server-browser@latest -h
+> npx @aegnt-infra/mcp-server-browser@latest -h
   -V, --version              output the version number
   --browser <browser>        browser or chrome channel to use, possible values: chrome, edge, firefox.
   --cdp-endpoint <endpoint>  CDP endpoint to connect to, for example "http://127.0.0.1:9222/json/version"
@@ -215,7 +215,7 @@ Browser MCP server supports following arguments. They can be provided in the JSO
   --port <port>              port to listen on for SSE and HTTP transport.
   --proxy-bypass <bypass>    comma-separated domains to bypass proxy, for example ".com,chromium.org,.domain.com"
   --proxy-server <proxy>     specify proxy server, for example "http://myproxy:3128" or "socks5://myproxy:8080"
-  --user-agent <ua string>   specify user agent string
+  --user-aegnt <ua string>   specify user aegnt string
   --user-data-dir <path>     path to the user data directory.
   --viewport-size <size>     specify browser viewport size in pixels, for example "1280, 720"
   --output-dir <path>        path to the directory for output files
@@ -225,13 +225,13 @@ Browser MCP server supports following arguments. They can be provided in the JSO
 
 #### Runtime Configuration
 
-The browser runtime requires configuration for `Viewport Size`, `Vision Model Coordinate Factors`, and `User Agent`. These can be passed through corresponding HTTP headers:
+The browser runtime requires configuration for `Viewport Size`, `Vision Model Coordinate Factors`, and `User Aegnt`. These can be passed through corresponding HTTP headers:
 
 | Header | Description |
 |--------|-------------|
 | `x-viewport-size` | Browser viewport size, format: `width,height` separated by comma |
 | `x-vision-factors` | Vision model coordinate system factors, format: `x_factor,y_factor` separated by comma |
-| `x-user-agent` | User Agent string, defaults to system User Agent if not specified |
+| `x-user-aegnt` | User Aegnt string, defaults to system User Aegnt if not specified |
 > **Note:** Header names are case-insensitive.
 
 Example:
@@ -239,7 +239,7 @@ Example:
 ```http
 x-viewport-size: 1920,1080
 x-vision-factors: 1.0,1.0
-x-user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+x-user-aegnt: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 ```
 
 
@@ -306,7 +306,7 @@ const {
   BaseLogger,
   setConfig,
   addMiddleware,
-} = require('@agent-infra/mcp-server-browser/dist/request-context.cjs');
+} = require('@aegnt-infra/mcp-server-browser/dist/request-context.cjs');
 
 class CustomLogger extends BaseLogger {
   info(...args) {
@@ -325,6 +325,6 @@ setConfig({
 });
 
 // start server
-require('@agent-infra/mcp-server-browser/dist/index.cjs');
+require('@aegnt-infra/mcp-server-browser/dist/index.cjs');
 
 ```

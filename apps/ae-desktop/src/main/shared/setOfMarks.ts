@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Conversation, PredictionParsed } from '@ui-tars/shared/types';
-import { parseBoxToScreenCoords } from '@ui-tars/sdk/core';
+import { Conversation, PredictionParsed } from '@ui-ae/shared/types';
+import { parseBoxToScreenCoords } from '@ui-ae/sdk/core';
 
 export interface Overlay {
   prediction: PredictionParsed;

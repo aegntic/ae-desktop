@@ -1,19 +1,19 @@
 {
-  "name": "@ui-tars/sdk",
+  "name": "@ui-ae/sdk",
   "version": "1.2.3",
-  "description": "A powerful cross-platform(ANY device/platform) toolkit for building GUI automation agents for UI-TARS",
+  "description": "A powerful cross-platform(ANY device/platform) toolkit for building GUI automation agents for UI-AE",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bytedance/UI-TARS-desktop"
+    "url": "https://github.com/bytedance/UI-AE-desktop"
   },
   "bugs": {
-    "url": "https://github.com/bytedance/UI-TARS-desktop/issues"
+    "url": "https://github.com/bytedance/UI-AE-desktop/issues"
   },
   "keywords": [
     "AI",
     "SDK",
     "Operator",
-    "UI-TARS"
+    "UI-AE"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -61,8 +61,8 @@
     "openai": "^5.5.1",
     "jimp": "1.6.0",
     "async-retry": "1.3.3",
-    "@ui-tars/shared": "workspace:*",
-    "@ui-tars/action-parser": "workspace:*"
+    "@ui-ae/shared": "workspace:*",
+    "@ui-ae/action-parser": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.19.2",

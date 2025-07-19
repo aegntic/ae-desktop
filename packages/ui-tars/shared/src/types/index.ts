@@ -4,6 +4,6 @@
  */
 
 export * from '../constants';
-export * from './agent';
+export * from './aegnt';
 export * from './data';
 export * from './share';

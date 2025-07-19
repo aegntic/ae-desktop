@@ -11,7 +11,7 @@ const isBrowser: boolean =
 // @ts-ignore
 const _globalThis: any = isBrowser ? window : global;
 
-const GLOBAL_CONTEXT_KEY = Symbol.for('@ui-tars/sdk/context');
+const GLOBAL_CONTEXT_KEY = Symbol.for('@ui-ae/sdk/context');
 
 if (!_globalThis[GLOBAL_CONTEXT_KEY]) {
   _globalThis[GLOBAL_CONTEXT_KEY] = DEFAULT_CONTEXT;

@@ -152,7 +152,7 @@ console.log('ignorePattern', ignorePattern);
 
 const config: ForgeConfig = {
   packagerConfig: {
-    name: 'UI TARS',
+    name: 'UI AE',
     icon: 'resources/icon',
     extraResource: ['./resources/app-update.yml'],
     asar: {
@@ -166,7 +166,7 @@ const config: ForgeConfig = {
         ? noopAfterCopy
         : setLanguages([...keepLanguages.values()]),
     ],
-    executableName: 'UI-TARS',
+    executableName: 'UI-AE',
     ...(enableOsxSign
       ? {
           osxSign: {
@@ -188,7 +188,7 @@ const config: ForgeConfig = {
     {
       name: '@electron-forge/publisher-github',
       config: {
-        repository: { owner: 'bytedance', name: 'ui-tars-desktop' },
+        repository: { owner: 'bytedance', name: 'ui-ae-desktop' },
         draft: true,
         force: true,
         generateReleaseNotes: true,
@@ -199,7 +199,7 @@ const config: ForgeConfig = {
     new MakerZIP({}, ['darwin']),
     new MakerSquirrel({
       // CamelCase version without spaces
-      name: 'UiTars',
+      name: 'UiAe',
       setupIcon: 'resources/icon.ico',
     }),
     // https://github.com/electron/forge/issues/3712

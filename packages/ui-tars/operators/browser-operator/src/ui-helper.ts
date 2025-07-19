@@ -2,8 +2,8 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { Page } from '@agent-infra/browser';
-import { Logger } from '@agent-infra/logger';
+import { Page } from '@aegnt-infra/browser';
+import { Logger } from '@aegnt-infra/logger';
 import { ParsedPrediction } from './types';
 
 /**
@@ -11,10 +11,10 @@ import { ParsedPrediction } from './types';
  * Provides visual feedback for actions and information display
  */
 export class UIHelper {
-  private styleId = 'gui-agent-helper-styles';
-  private containerId = 'gui-agent-helper-container';
-  private highlightClass = 'gui-agent-clickable-highlight';
-  private waterFlowId = 'gui-agent-water-flow';
+  private styleId = 'gui-aegnt-helper-styles';
+  private containerId = 'gui-aegnt-helper-container';
+  private highlightClass = 'gui-aegnt-clickable-highlight';
+  private waterFlowId = 'gui-aegnt-water-flow';
 
   /**
    * Creates a new UIHelper instance
@@ -39,7 +39,7 @@ export class UIHelper {
       const style = document.createElement('style');
       style.id = styleId;
       style.textContent = `
-        #gui-agent-helper-container {
+        #gui-aegnt-helper-container {
           position: fixed;
           top: 20px;
           right: 20px;
@@ -55,7 +55,7 @@ export class UIHelper {
           border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .gui-agent-title {
+        .gui-aegnt-title {
           font-size: 14px;
           font-weight: 600;
           margin-bottom: 10px;
@@ -64,20 +64,20 @@ export class UIHelper {
           letter-spacing: 0.5px;
         }
 
-        .gui-agent-content {
+        .gui-aegnt-content {
           font-size: 13px;
           line-height: 1.5;
           color: rgba(255, 255, 255, 0.9);
         }
 
-        .gui-agent-coords {
+        .gui-aegnt-coords {
           margin-top: 8px;
           font-size: 12px;
           color: #00ff9d;
           opacity: 0.8;
         }
 
-        .gui-agent-thought {
+        .gui-aegnt-thought {
           margin-top: 10px;
           padding-top: 10px;
           border-top: 1px solid rgba(255, 255, 255, 0.15);
@@ -86,7 +86,7 @@ export class UIHelper {
           font-size: 12px;
         }
 
-        .gui-agent-click-indicator {
+        .gui-aegnt-click-indicator {
           position: fixed;
           pointer-events: none;
           width: 60px;
@@ -99,7 +99,7 @@ export class UIHelper {
           z-index: 2147483647;
         }
 
-        .gui-agent-click-indicator::before {
+        .gui-aegnt-click-indicator::before {
           content: '';
           position: absolute;
           top: 50%;
@@ -111,13 +111,13 @@ export class UIHelper {
           transform: translate(-50%, -50%);
         }
 
-        .gui-agent-drag-indicator {
+        .gui-aegnt-drag-indicator {
           position: fixed;
           pointer-events: none;
           z-index: 2147483647;
         }
 
-        .gui-agent-drag-start {
+        .gui-aegnt-drag-start {
           width: 40px;
           height: 40px;
           border-radius: 50%;
@@ -127,7 +127,7 @@ export class UIHelper {
           position: absolute;
         }
 
-        .gui-agent-drag-end {
+        .gui-aegnt-drag-end {
           width: 40px;
           height: 40px;
           border-radius: 50%;
@@ -137,7 +137,7 @@ export class UIHelper {
           position: absolute;
         }
 
-        .gui-agent-drag-path {
+        .gui-aegnt-drag-path {
           position: absolute;
           height: 6px;
           background: linear-gradient(to right, #ff6b00, #00c3ff);
@@ -146,7 +146,7 @@ export class UIHelper {
           opacity: 0.7;
         }
 
-        .gui-agent-drag-arrow {
+        .gui-aegnt-drag-arrow {
           position: absolute;
           width: 0;
           height: a0;
@@ -158,7 +158,7 @@ export class UIHelper {
           top: -9px;
         }
 
-        .gui-agent-clickable-highlight {
+        .gui-aegnt-clickable-highlight {
           outline: 3px solid rgba(0, 155, 255, 0.7) !important;
           box-shadow: 0 0 0 3px rgba(0, 155, 255, 0.3) !important;
           background-color: rgba(0, 155, 255, 0.05) !important;
@@ -167,56 +167,56 @@ export class UIHelper {
           position: relative !important;
         }
 
-        .gui-agent-clickable-highlight:hover {
+        .gui-aegnt-clickable-highlight:hover {
           outline: 4px solid rgba(0, 155, 255, 0.9) !important;
           background-color: rgba(0, 155, 255, 0.1) !important;
         }
 
-        .gui-agent-clickable-highlight.gui-highlight-button {
+        .gui-aegnt-clickable-highlight.gui-highlight-button {
           outline: 3px solid rgba(255, 64, 129, 0.8) !important;
           box-shadow: 0 0 0 3px rgba(255, 64, 129, 0.3) !important;
           background-color: rgba(255, 64, 129, 0.05) !important;
         }
 
-        .gui-agent-clickable-highlight.gui-highlight-button:hover {
+        .gui-aegnt-clickable-highlight.gui-highlight-button:hover {
           outline: 4px solid rgba(255, 64, 129, 0.9) !important;
           background-color: rgba(255, 64, 129, 0.1) !important;
         }
 
-        .gui-agent-clickable-highlight.gui-highlight-link {
+        .gui-aegnt-clickable-highlight.gui-highlight-link {
           outline: 3px solid rgba(124, 77, 255, 0.8) !important;
           box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.3) !important;
           background-color: rgba(124, 77, 255, 0.05) !important;
         }
 
-        .gui-agent-clickable-highlight.gui-highlight-link:hover {
+        .gui-aegnt-clickable-highlight.gui-highlight-link:hover {
           outline: 4px solid rgba(124, 77, 255, 0.9) !important;
           background-color: rgba(124, 77, 255, 0.1) !important;
         }
 
-        .gui-agent-clickable-highlight.gui-highlight-input {
+        .gui-aegnt-clickable-highlight.gui-highlight-input {
           outline: 3px solid rgba(0, 230, 118, 0.8) !important;
           box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.3) !important;
           background-color: rgba(0, 230, 118, 0.05) !important;
         }
 
-        .gui-agent-clickable-highlight.gui-highlight-input:hover {
+        .gui-aegnt-clickable-highlight.gui-highlight-input:hover {
           outline: 4px solid rgba(0, 230, 118, 0.9) !important;
           background-color: rgba(0, 230, 118, 0.1) !important;
         }
 
-        .gui-agent-clickable-highlight.gui-highlight-other {
+        .gui-aegnt-clickable-highlight.gui-highlight-other {
           outline: 3px solid rgba(255, 171, 0, 0.8) !important;
           box-shadow: 0 0 0 3px rgba(255, 171, 0, 0.3) !important;
           background-color: rgba(255, 171, 0, 0.05) !important;
         }
 
-        .gui-agent-clickable-highlight.gui-highlight-other:hover {
+        .gui-aegnt-clickable-highlight.gui-highlight-other:hover {
           outline: 4px solid rgba(255, 171, 0, 0.9) !important;
           background-color: rgba(255, 171, 0, 0.1) !important;
         }
 
-        .gui-agent-legend {
+        .gui-aegnt-legend {
           position: fixed;
           bottom: 20px;
           left: 20px;
@@ -235,19 +235,19 @@ export class UIHelper {
           gap: 8px;
         }
 
-        .gui-agent-legend-title {
+        .gui-aegnt-legend-title {
           font-weight: 600;
           margin-bottom: 4px;
           font-size: 13px;
         }
 
-        .gui-agent-legend-item {
+        .gui-aegnt-legend-item {
           display: flex;
           align-items: center;
           gap: 8px;
         }
 
-        .gui-agent-legend-icon {
+        .gui-aegnt-legend-icon {
           display: inline-block;
           width: 14px;
           height: 14px;
@@ -326,9 +326,9 @@ export class UIHelper {
         const actionText = actionMap[action_type] || action_type;
 
         container.innerHTML = `
-          <div class="gui-agent-title">Next Action</div>
-          <div class="gui-agent-content">${actionText}</div>
-          ${thought ? `<div class="gui-agent-thought">${thought}</div>` : ''}
+          <div class="gui-aegnt-title">Next Action</div>
+          <div class="gui-aegnt-content">${actionText}</div>
+          ${thought ? `<div class="gui-aegnt-thought">${thought}</div>` : ''}
         `;
       },
       { containerId: this.containerId, action_type, action_inputs, thought },
@@ -351,13 +351,13 @@ export class UIHelper {
       ({ x, y, containerId }) => {
         // Remove any existing indicators
         const existingIndicators = document.querySelectorAll(
-          '.gui-agent-click-indicator',
+          '.gui-aegnt-click-indicator',
         );
         existingIndicators.forEach((el) => el.remove());
 
         // Create new indicator
         const indicator = document.createElement('div');
-        indicator.className = 'gui-agent-click-indicator';
+        indicator.className = 'gui-aegnt-click-indicator';
         indicator.style.left = `${x}px`;
         indicator.style.top = `${y}px`;
         document.body.appendChild(indicator);
@@ -366,10 +366,10 @@ export class UIHelper {
         const container = document.getElementById(containerId);
         if (container) {
           const coordsDiv = document.createElement('div');
-          coordsDiv.className = 'gui-agent-coords';
+          coordsDiv.className = 'gui-aegnt-coords';
           coordsDiv.textContent = `Click at: (${Math.round(x)}, ${Math.round(y)})`;
 
-          const existingCoords = container.querySelector('.gui-agent-coords');
+          const existingCoords = container.querySelector('.gui-aegnt-coords');
           if (existingCoords) {
             existingCoords.remove();
           }
@@ -501,24 +501,24 @@ export class UIHelper {
       // Create a legend to explain the highlighting
       const createLegend = () => {
         const legend = document.createElement('div');
-        legend.className = 'gui-agent-legend';
-        legend.id = 'gui-agent-clickable-legend';
+        legend.className = 'gui-aegnt-legend';
+        legend.id = 'gui-aegnt-clickable-legend';
         legend.innerHTML = `
-          <div class="gui-agent-legend-title">Clickable Elements</div>
-          <div class="gui-agent-legend-item">
-            <span class="gui-agent-legend-icon gui-legend-button"></span>
+          <div class="gui-aegnt-legend-title">Clickable Elements</div>
+          <div class="gui-aegnt-legend-item">
+            <span class="gui-aegnt-legend-icon gui-legend-button"></span>
             <span>Buttons</span>
           </div>
-          <div class="gui-agent-legend-item">
-            <span class="gui-agent-legend-icon gui-legend-link"></span>
+          <div class="gui-aegnt-legend-item">
+            <span class="gui-aegnt-legend-icon gui-legend-link"></span>
             <span>Links</span>
           </div>
-          <div class="gui-agent-legend-item">
-            <span class="gui-agent-legend-icon gui-legend-input"></span>
+          <div class="gui-aegnt-legend-item">
+            <span class="gui-aegnt-legend-icon gui-legend-input"></span>
             <span>Input Fields</span>
           </div>
-          <div class="gui-agent-legend-item">
-            <span class="gui-agent-legend-icon gui-legend-other"></span>
+          <div class="gui-aegnt-legend-item">
+            <span class="gui-aegnt-legend-icon gui-legend-other"></span>
             <span>Other Clickables</span>
           </div>
         `;
@@ -655,7 +655,7 @@ export class UIHelper {
         });
 
         // Remove the legend if it exists
-        const legend = document.getElementById('gui-agent-clickable-legend');
+        const legend = document.getElementById('gui-aegnt-clickable-legend');
         if (legend) {
           legend.remove();
         }
@@ -729,32 +729,32 @@ export class UIHelper {
       ({ startX, startY, endX, endY, containerId }) => {
         // Remove any existing indicators
         const existingIndicators = document.querySelectorAll(
-          '.gui-agent-drag-indicator',
+          '.gui-aegnt-drag-indicator',
         );
         existingIndicators.forEach((el) => el.remove());
 
         // Create container for the drag indicator
         const dragIndicator = document.createElement('div');
-        dragIndicator.className = 'gui-agent-drag-indicator';
+        dragIndicator.className = 'gui-aegnt-drag-indicator';
         document.body.appendChild(dragIndicator);
 
         // Create start point indicator
         const startPoint = document.createElement('div');
-        startPoint.className = 'gui-agent-drag-start';
+        startPoint.className = 'gui-aegnt-drag-start';
         startPoint.style.left = `${startX}px`;
         startPoint.style.top = `${startY}px`;
         dragIndicator.appendChild(startPoint);
 
         // Create end point indicator
         const endPoint = document.createElement('div');
-        endPoint.className = 'gui-agent-drag-end';
+        endPoint.className = 'gui-aegnt-drag-end';
         endPoint.style.left = `${endX}px`;
         endPoint.style.top = `${endY}px`;
         dragIndicator.appendChild(endPoint);
 
         // Create drag path
         const dragPath = document.createElement('div');
-        dragPath.className = 'gui-agent-drag-path';
+        dragPath.className = 'gui-aegnt-drag-path';
 
         // Calculate path position and rotation
         const dx = endX - startX;
@@ -769,7 +769,7 @@ export class UIHelper {
 
         // Add arrow for direction
         const arrow = document.createElement('div');
-        arrow.className = 'gui-agent-drag-arrow';
+        arrow.className = 'gui-aegnt-drag-arrow';
         dragPath.appendChild(arrow);
 
         dragIndicator.appendChild(dragPath);
@@ -778,10 +778,10 @@ export class UIHelper {
         const container = document.getElementById(containerId);
         if (container) {
           const coordsDiv = document.createElement('div');
-          coordsDiv.className = 'gui-agent-coords';
+          coordsDiv.className = 'gui-aegnt-coords';
           coordsDiv.textContent = `Drag from: (${Math.round(startX)}, ${Math.round(startY)}) to (${Math.round(endX)}, ${Math.round(endY)})`;
 
-          const existingCoords = container.querySelector('.gui-agent-coords');
+          const existingCoords = container.querySelector('.gui-aegnt-coords');
           if (existingCoords) {
             existingCoords.remove();
           }

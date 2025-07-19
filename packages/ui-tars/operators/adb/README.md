@@ -1,6 +1,6 @@
-# @ui-tars/operator-adb
+# @ui-ae/operator-adb
 
-Operator Android SDK for UI-TARS using ADB.
+Operator Android SDK for UI-AE using ADB.
 
 ## Features
 

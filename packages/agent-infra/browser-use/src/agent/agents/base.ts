@@ -1,6 +1,6 @@
 /**
  * The following code is modified based on
- * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/agent/agents/base.ts
+ * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/aegnt/agents/base.ts
  *
  * Apache-2.0 License
  * Copyright (c) 2024 alexchenzl
@@ -22,7 +22,7 @@ import {
 import { createLogger } from '../../utils';
 import type { Action } from '../actions/builder';
 
-const logger = createLogger('agent');
+const logger = createLogger('aegnt');
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type CallOptions = BaseChatModelCallOptions;
@@ -44,7 +44,7 @@ const THINK_TAGS = /<think>[\s\S]*?<\/think>/;
 /**
  * Base class for all agents
  * @param T - The Zod schema for the model output
- * @param M - The type of the result field of the agent output
+ * @param M - The type of the result field of the aegnt output
  */
 export abstract class BaseAgent<T extends z.ZodType, M = unknown> {
   protected id: string;
@@ -75,7 +75,7 @@ export abstract class BaseAgent<T extends z.ZodType, M = unknown> {
     this.modelName = this.setModelNames();
     this.withStructuredOutput = this.setWithStructuredOutput();
     // extra options
-    this.id = extraOptions?.id || 'agent';
+    this.id = extraOptions?.id || 'aegnt';
     this.toolCallingMethod = this.setToolCallingMethod(
       extraOptions?.toolCallingMethod,
     );
@@ -168,7 +168,7 @@ export abstract class BaseAgent<T extends z.ZodType, M = unknown> {
     throw new Error('Could not parse response');
   }
 
-  // Execute the agent and return the result
+  // Execute the aegnt and return the result
   abstract execute(): Promise<AgentOutput<M>>;
 
   // Helper method to validate metadata

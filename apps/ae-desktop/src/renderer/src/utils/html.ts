@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { ComputerUseUserData } from '@ui-tars/shared/types';
+import { ComputerUseUserData } from '@ui-ae/shared/types';
 
 function replaceStringWithFirstAppearance(
   str: string,
@@ -26,17 +26,17 @@ export function reportHTMLContent(
     reportContent = replaceStringWithFirstAppearance(
       tpl,
       '{{dump}}',
-      `<script type="ui_tars_web_dump" type="application/json"></script>`,
+      `<script type="ui_ae_web_dump" type="application/json"></script>`,
     );
   } else if (typeof dumpData === 'string') {
     reportContent = replaceStringWithFirstAppearance(
       tpl,
       '{{dump}}',
-      `<script type="ui_tars_web_dump" type="application/json">${dumpData}</script>`,
+      `<script type="ui_ae_web_dump" type="application/json">${dumpData}</script>`,
     );
   } else {
     const dumps = dumpData.map((data) => {
-      return `<script type="ui_tars_web_dump" type="application/json">${JSON.stringify(data)}\n</script>`;
+      return `<script type="ui_ae_web_dump" type="application/json">${JSON.stringify(data)}\n</script>`;
     });
     reportContent = replaceStringWithFirstAppearance(
       tpl,

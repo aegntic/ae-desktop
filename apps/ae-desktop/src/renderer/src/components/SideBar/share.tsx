@@ -18,12 +18,12 @@ import {
   AlertDialogTitle,
 } from '@renderer/components/ui/alert-dialog';
 import { DropdownMenuItem } from '@renderer/components/ui/dropdown-menu';
-import { ComputerUseUserData } from '@ui-tars/shared/types';
+import { ComputerUseUserData } from '@ui-ae/shared/types';
 import { reportHTMLContent } from '@renderer/utils/html';
 import { uploadReport } from '@renderer/utils/share';
 import { useStore } from '@renderer/hooks/useStore';
 import { useSetting } from '@renderer/hooks/useSetting';
-import { IMAGE_PLACEHOLDER } from '@ui-tars/shared/constants';
+import { IMAGE_PLACEHOLDER } from '@ui-ae/shared/constants';
 import { useSession } from '@renderer/hooks/useSession';
 import { chatManager } from '@renderer/db/chat';
 
@@ -69,7 +69,7 @@ export function ShareOptions({ sessionId }: { sessionId: string }) {
       }, SHARE_TIMEOUT);
 
       const response = await fetch(
-        'https://lf3-static.bytednsdoc.com/obj/eden-cn/eojfrzeh7vhouloj/ai_labs/ui_tars_desktop/share/v011/index.html',
+        'https://lf3-static.bytednsdoc.com/obj/eden-cn/eojfrzeh7vhouloj/ai_labs/ui_ae_desktop/share/v011/index.html',
       );
       const html = await response.text();
 
@@ -199,7 +199,7 @@ export function ShareOptions({ sessionId }: { sessionId: string }) {
             <AlertDialogTitle>Share Report</AlertDialogTitle>
             <AlertDialogDescription>
               📢 Would you like to share your report to help us improve{' '}
-              <b>UI-TARS</b>? This includes your screen recordings and actions.
+              <b>UI-AE</b>? This includes your screen recordings and actions.
               <br />
               <br />
               💡 We encourage you to create a clean and privacy-free desktop

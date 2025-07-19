@@ -1,14 +1,14 @@
 {
-  "name": "@agent-infra/mcp-shared",
+  "name": "@aegnt-infra/mcp-shared",
   "version": "1.2.9",
   "description": "MCP shared",
   "license": "MIT",
-  "homepage": "https://github.com/bytedance/UI-TARS-desktop",
-  "bugs": "https://github.com/bytedance/UI-TARS-desktop/issues",
+  "homepage": "https://github.com/bytedance/UI-AE-desktop",
+  "bugs": "https://github.com/bytedance/UI-AE-desktop/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bytedance/UI-TARS-desktop.git",
-    "directory": "packages/agent-infra/mcp-shared"
+    "url": "https://github.com/bytedance/UI-AE-desktop.git",
+    "directory": "packages/aegnt-infra/mcp-shared"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -44,7 +44,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@agent-infra/logger": "workspace:*",
+    "@aegnt-infra/logger": "workspace:*",
     "cross-fetch": "4.1.0",
     "@rslib/core": "0.5.3",
     "tsx": "^4.19.3",

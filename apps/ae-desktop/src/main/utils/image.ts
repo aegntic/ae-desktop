@@ -4,7 +4,7 @@
  */
 import sharp from 'sharp';
 
-import { Conversation, type PredictionParsed } from '@ui-tars/shared/types';
+import { Conversation, type PredictionParsed } from '@ui-ae/shared/types';
 
 import { logger } from '@main/logger';
 import { setOfMarksOverlays } from '@main/shared/setOfMarks';

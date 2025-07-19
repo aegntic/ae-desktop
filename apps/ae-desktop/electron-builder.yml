@@ -1,5 +1,5 @@
 appId: com.electron.app
-productName: UI-TARS
+productName: UI-AE
 directories:
   buildResources: build
 files:
@@ -12,7 +12,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: UI-TARS
+  executableName: UI-AE
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
@@ -42,4 +42,4 @@ npmRebuild: false
 publish:
   provider: generic
   url: https://example.com/auto-updates
-  updaterCacheDirName: ui-tars-updater
+  updaterCacheDirName: ui-ae-updater

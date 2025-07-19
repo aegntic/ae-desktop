@@ -2,11 +2,11 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { initIpc, createServer } from '@ui-tars/electron-ipc/main';
+import { initIpc, createServer } from '@ui-ae/electron-ipc/main';
 import { screenRoute } from './screen';
 import { windowRoute } from './window';
 import { permissionRoute } from './permission';
-import { agentRoute } from './agent';
+import { aegntRoute } from './aegnt';
 import { browserRoute } from './browser';
 import { remoteResourceRouter } from './remoteResource';
 import { settingRoute } from './setting';
@@ -17,7 +17,7 @@ export const ipcRoutes = t.router({
   ...screenRoute,
   ...windowRoute,
   ...permissionRoute,
-  ...agentRoute,
+  ...aegntRoute,
   ...remoteResourceRouter,
   ...browserRoute,
   ...settingRoute,

@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { Page } from '@agent-infra/browser';
+import { Page } from '@aegnt-infra/browser';
 import { SearchResult } from '../types';
 
 /**
@@ -21,7 +21,7 @@ export async function applyStealthScripts(page: Page) {
   await page.evaluate(() => {
     /**
      * Override the navigator.webdriver property
-     * The webdriver read-only property of the navigator interface indicates whether the user agent is controlled by automation.
+     * The webdriver read-only property of the navigator interface indicates whether the user aegnt is controlled by automation.
      * @see https://developer.mozilla.org/en-US/docs/Web/API/Navigator/webdriver
      */
     Object.defineProperty(navigator, 'webdriver', {

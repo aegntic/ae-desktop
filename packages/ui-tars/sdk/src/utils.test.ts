@@ -11,7 +11,7 @@ import {
   toVlmModelFormat,
 } from './utils';
 import { DEFAULT_FACTORS } from './constants';
-import { IMAGE_PLACEHOLDER, MAX_IMAGE_LENGTH } from '@ui-tars/shared/constants';
+import { IMAGE_PLACEHOLDER, MAX_IMAGE_LENGTH } from '@ui-ae/shared/constants';
 
 describe('parseBoxToScreenCoords', () => {
   it('should correctly parse single point coordinates', () => {
@@ -216,7 +216,7 @@ describe('toVlmModelFormat', () => {
           value: 'user-instruction',
         },
       ],
-      systemPrompt: `You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+      systemPrompt: `You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Examples
 Thought: Write your thoughts here in English, your thinking style should follow the Thought Examples above...
@@ -230,7 +230,7 @@ Action: click(point='<point>10 20</point>')
       conversations: [
         {
           from: 'human',
-          value: `You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+          value: `You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Examples
 Thought: Write your thoughts here in English, your thinking style should follow the Thought Examples above...
@@ -277,7 +277,7 @@ user-instruction`,
           value: 'user-instruction',
         },
       ],
-      systemPrompt: `You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+      systemPrompt: `You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Examples
 Thought: Write your thoughts here in English, your thinking style should follow the Thought Examples above...
@@ -290,7 +290,7 @@ Action: click(point='<point>10 20</point>')
       conversations: [
         {
           from: 'human',
-          value: `You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+          value: `You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Examples
 Thought: Write your thoughts here in English, your thinking style should follow the Thought Examples above...
@@ -337,7 +337,7 @@ user-instruction`,
           value: 'user-instruction',
         },
       ],
-      systemPrompt: `You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+      systemPrompt: `You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Examples
 Thought: Write your thoughts here in English, your thinking style should follow the Thought Examples above...
@@ -349,7 +349,7 @@ Action: click(point='<point>10 20</point>')
       conversations: [
         {
           from: 'human',
-          value: `You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
+          value: `You are a GUI aegnt. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.
 
 ## Output Examples
 Thought: Write your thoughts here in English, your thinking style should follow the Thought Examples above...

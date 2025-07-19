@@ -176,7 +176,7 @@ describe('Browser MCP Server', () => {
           args: ['--no-sandbox'],
         },
         contextOptions: {
-          userAgent: 'Custom User Agent',
+          userAgent: 'Custom User Aegnt',
         },
       } as GlobalConfig);
       expect(customServer).toBeDefined();

@@ -1,19 +1,19 @@
 {
-  "name": "@ui-tars/electron-ipc",
+  "name": "@ui-ae/electron-ipc",
   "version": "1.2.3",
-  "description": "Type-safe Electron inter-process communication for UI-TARS",
+  "description": "Type-safe Electron inter-process communication for UI-AE",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bytedance/UI-TARS-desktop"
+    "url": "https://github.com/bytedance/UI-AE-desktop"
   },
   "bugs": {
-    "url": "https://github.com/bytedance/UI-TARS-desktop/issues"
+    "url": "https://github.com/bytedance/UI-AE-desktop/issues"
   },
   "keywords": [
     "AI",
     "Electron",
     "IPC",
-    "UI-TARS"
+    "UI-AE"
   ],
   "exports": {
     "./main": {

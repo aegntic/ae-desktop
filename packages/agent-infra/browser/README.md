@@ -1,12 +1,12 @@
-# @agent-infra/browser
+# @aegnt-infra/browser
 
-A tiny Browser Control library based on [puppeteer](https://github.com/puppeteer/puppeteer), built for **Agent Tars**.
+A tiny Browser Control library based on [puppeteer](https://github.com/puppeteer/puppeteer), built for **Aegnt Ae**.
 
 <p>
-  <a href="https://npmjs.com/package/@agent-infra/browser?activeTab=readme"><img src="https://img.shields.io/npm/v/@agent-infra/browser?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" /></a>
-  <a href="https://npmcharts.com/compare/@agent-infra/browser?minimal=true"><img src="https://img.shields.io/npm/dm/@agent-infra/browser.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="downloads" /></a>
-  <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/@agent-infra/browser.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="node version"></a>
-  <a href="https://github.com/bytedance/UI-TARS-desktop/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="license" /></a>
+  <a href="https://npmjs.com/package/@aegnt-infra/browser?activeTab=readme"><img src="https://img.shields.io/npm/v/@aegnt-infra/browser?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" /></a>
+  <a href="https://npmcharts.com/compare/@aegnt-infra/browser?minimal=true"><img src="https://img.shields.io/npm/dm/@aegnt-infra/browser.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="downloads" /></a>
+  <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/@aegnt-infra/browser.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="node version"></a>
+  <a href="https://github.com/bytedance/UI-AE-desktop/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="license" /></a>
 </p>
 
 ## Features
@@ -31,17 +31,17 @@ graph TD
 ## Installation
 
 ```bash
-npm install @agent-infra/browser
+npm install @aegnt-infra/browser
 # or
-yarn add @agent-infra/browser
+yarn add @aegnt-infra/browser
 # or
-pnpm add @agent-infra/browser
+pnpm add @aegnt-infra/browser
 ```
 
 ## Quick Start
 
 ```typescript
-import { LocalBrowser } from '@agent-infra/browser';
+import { LocalBrowser } from '@aegnt-infra/browser';
 
 async function main() {
   // Initialize browser

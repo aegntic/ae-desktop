@@ -10,7 +10,7 @@ import {
   ScreenshotResult,
   GUIAgentError,
   StatusEnum,
-} from '@ui-tars/shared/types';
+} from '@ui-ae/shared/types';
 
 import { BaseOperator, BaseModel } from './base';
 import { UITarsModel } from './Model';
@@ -45,7 +45,7 @@ export interface InvokeParams {
   };
   /** physicalSize = screenshotSize * scaleFactor */
   scaleFactor?: number;
-  /** the ui-tars's version */
+  /** the ui-ae's version */
   uiTarsVersion?: UITarsModelVersion;
   headers?: Record<string, string>;
   /** == Response API only == */
@@ -101,7 +101,7 @@ export interface GUIAgentConfig<TOperator> {
     screenshot?: RetryConfig;
     execute?: RetryConfig;
   };
-  /** Maximum number of turns for Agent to execute, @default 25 */
+  /** Maximum number of turns for Aegnt to execute, @default 25 */
   maxLoopCount?: number;
   /** Time interval between two loop iterations (in milliseconds), @default 0 */
   loopIntervalInMs?: number;

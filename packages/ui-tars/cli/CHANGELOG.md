@@ -1,12 +1,12 @@
-# @ui-tars/cli
+# @ui-ae/cli
 
 ## 1.2.3
 
 ### Patch Changes
 
-- @ui-tars/sdk@1.2.3
-- @ui-tars/operator-adb@1.2.3
-- @ui-tars/operator-nut-js@1.2.3
+- @ui-ae/sdk@1.2.3
+- @ui-ae/operator-adb@1.2.3
+- @ui-ae/operator-nut-js@1.2.3
 
 ## 1.2.2
 
@@ -14,17 +14,17 @@
 
 - a85ef50: chore: publish
 - Updated dependencies [a85ef50]
-  - @ui-tars/operator-nut-js@1.2.2
-  - @ui-tars/operator-adb@1.2.2
-  - @ui-tars/sdk@1.2.2
+  - @ui-ae/operator-nut-js@1.2.2
+  - @ui-ae/operator-adb@1.2.2
+  - @ui-ae/sdk@1.2.2
 
 ## 1.2.2-beta.3
 
 ### Patch Changes
 
-- @ui-tars/operator-adb@1.2.2-beta.3
-- @ui-tars/operator-nut-js@1.2.2-beta.3
-- @ui-tars/sdk@1.2.2-beta.3
+- @ui-ae/operator-adb@1.2.2-beta.3
+- @ui-ae/operator-nut-js@1.2.2-beta.3
+- @ui-ae/sdk@1.2.2-beta.3
 
 ## 1.2.2-beta.2
 
@@ -32,41 +32,41 @@
 
 - chore: publish
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.2-beta.2
-  - @ui-tars/operator-adb@1.2.2-beta.2
-  - @ui-tars/sdk@1.2.2-beta.2
+  - @ui-ae/operator-nut-js@1.2.2-beta.2
+  - @ui-ae/operator-adb@1.2.2-beta.2
+  - @ui-ae/sdk@1.2.2-beta.2
 
 ## 1.2.2-beta.1
 
 ### Patch Changes
 
-- @ui-tars/operator-adb@1.2.2-beta.1
-- @ui-tars/operator-nut-js@1.2.2-beta.1
-- @ui-tars/sdk@1.2.2-beta.1
+- @ui-ae/operator-adb@1.2.2-beta.1
+- @ui-ae/operator-nut-js@1.2.2-beta.1
+- @ui-ae/sdk@1.2.2-beta.1
 
 ## 1.2.2-beta.0
 
 ### Patch Changes
 
-- @ui-tars/operator-adb@1.2.2-beta.0
-- @ui-tars/operator-nut-js@1.2.2-beta.0
-- @ui-tars/sdk@1.2.2-beta.0
+- @ui-ae/operator-adb@1.2.2-beta.0
+- @ui-ae/operator-nut-js@1.2.2-beta.0
+- @ui-ae/sdk@1.2.2-beta.0
 
 ## 1.2.1
 
 ### Patch Changes
 
-- @ui-tars/operator-adb@1.2.1
-- @ui-tars/operator-nut-js@1.2.1
-- @ui-tars/sdk@1.2.1
+- @ui-ae/operator-adb@1.2.1
+- @ui-ae/operator-nut-js@1.2.1
+- @ui-ae/sdk@1.2.1
 
 ## 1.2.1-beta.0
 
 ### Patch Changes
 
-- @ui-tars/operator-adb@1.2.1-beta.0
-- @ui-tars/operator-nut-js@1.2.1-beta.0
-- @ui-tars/sdk@1.2.1-beta.0
+- @ui-ae/operator-adb@1.2.1-beta.0
+- @ui-ae/operator-nut-js@1.2.1-beta.0
+- @ui-ae/sdk@1.2.1-beta.0
 
 ## 1.2.0
 
@@ -83,8 +83,8 @@
 - d80285d: chore: publish adb
 - 2b9c631: chore: changeset
 - d169e46: chore: node-fetch
-- d80285d: feat: ui-tars add adb operator
-- 5fb2821: feat: ui-tars 1.5
+- d80285d: feat: ui-ae add adb operator
+- 5fb2821: feat: ui-ae 1.5
 - d169e46: update
 - Updated dependencies [c050e6a]
 - Updated dependencies [4e0883f]
@@ -102,9 +102,9 @@
 - Updated dependencies [d80285d]
 - Updated dependencies [5fb2821]
 - Updated dependencies [d169e46]
-  - @ui-tars/operator-nut-js@1.2.0
-  - @ui-tars/sdk@1.2.0
-  - @ui-tars/operator-adb@1.2.0
+  - @ui-ae/operator-nut-js@1.2.0
+  - @ui-ae/sdk@1.2.0
+  - @ui-ae/operator-adb@1.2.0
 
 ## 1.2.0-beta.24
 
@@ -112,19 +112,19 @@
 
 - chore: publish adb
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.24
-  - @ui-tars/operator-adb@1.2.0-beta.24
-  - @ui-tars/sdk@1.2.0-beta.24
+  - @ui-ae/operator-nut-js@1.2.0-beta.24
+  - @ui-ae/operator-adb@1.2.0-beta.24
+  - @ui-ae/sdk@1.2.0-beta.24
 
 ## 1.2.0-beta.23
 
 ### Patch Changes
 
-- feat: ui-tars add adb operator
+- feat: ui-ae add adb operator
 - Updated dependencies
-  - @ui-tars/operator-adb@1.2.0-beta.23
-  - @ui-tars/operator-nut-js@1.2.0-beta.23
-  - @ui-tars/sdk@1.2.0-beta.23
+  - @ui-ae/operator-adb@1.2.0-beta.23
+  - @ui-ae/operator-nut-js@1.2.0-beta.23
+  - @ui-ae/sdk@1.2.0-beta.23
 
 ## 1.2.0-beta.22
 
@@ -132,8 +132,8 @@
 
 - chore: changeset
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.22
-  - @ui-tars/sdk@1.2.0-beta.22
+  - @ui-ae/operator-nut-js@1.2.0-beta.22
+  - @ui-ae/sdk@1.2.0-beta.22
 
 ## 1.2.0-beta.21
 
@@ -141,8 +141,8 @@
 
 - fix: test
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.21
-  - @ui-tars/sdk@1.2.0-beta.21
+  - @ui-ae/operator-nut-js@1.2.0-beta.21
+  - @ui-ae/sdk@1.2.0-beta.21
 
 ## 1.2.0-beta.20
 
@@ -150,8 +150,8 @@
 
 - feat(sdk): action parser add start_coords, end_coords
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.20
-  - @ui-tars/sdk@1.2.0-beta.20
+  - @ui-ae/operator-nut-js@1.2.0-beta.20
+  - @ui-ae/sdk@1.2.0-beta.20
 
 ## 1.2.0-beta.19
 
@@ -159,8 +159,8 @@
 
 - chore: screenshot bug
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.19
-  - @ui-tars/sdk@1.2.0-beta.19
+  - @ui-ae/operator-nut-js@1.2.0-beta.19
+  - @ui-ae/sdk@1.2.0-beta.19
 
 ## 1.2.0-beta.18
 
@@ -168,8 +168,8 @@
 
 - refactor: operator no need return width and height
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.18
-  - @ui-tars/sdk@1.2.0-beta.18
+  - @ui-ae/operator-nut-js@1.2.0-beta.18
+  - @ui-ae/sdk@1.2.0-beta.18
 
 ## 1.2.0-beta.17
 
@@ -177,8 +177,8 @@
 
 - chore: same version
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.17
-  - @ui-tars/sdk@1.2.0-beta.17
+  - @ui-ae/operator-nut-js@1.2.0-beta.17
+  - @ui-ae/sdk@1.2.0-beta.17
 
 ## 1.2.0-beta.16
 
@@ -186,24 +186,24 @@
 
 - feat: sdk factors version
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.15
-  - @ui-tars/sdk@1.2.0-beta.16
+  - @ui-ae/operator-nut-js@1.2.0-beta.15
+  - @ui-ae/sdk@1.2.0-beta.16
 
 ## 1.2.0-beta.15
 
 ### Patch Changes
 
 - Updated dependencies
-  - @ui-tars/sdk@1.2.0-beta.15
-  - @ui-tars/operator-nut-js@1.2.0-beta.14
+  - @ui-ae/sdk@1.2.0-beta.15
+  - @ui-ae/operator-nut-js@1.2.0-beta.14
 
 ## 1.2.0-beta.14
 
 ### Patch Changes
 
 - Updated dependencies
-  - @ui-tars/sdk@1.2.0-beta.13
-  - @ui-tars/operator-nut-js@1.2.0-beta.13
+  - @ui-ae/sdk@1.2.0-beta.13
+  - @ui-ae/operator-nut-js@1.2.0-beta.13
 
 ## 1.2.0-beta.13
 
@@ -211,16 +211,16 @@
 
 - chore: open-operator
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.12
-  - @ui-tars/sdk@1.2.0-beta.12
+  - @ui-ae/operator-nut-js@1.2.0-beta.12
+  - @ui-ae/sdk@1.2.0-beta.12
 
 ## 1.2.0-beta.12
 
 ### Patch Changes
 
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.11
-  - @ui-tars/sdk@1.2.0-beta.11
+  - @ui-ae/operator-nut-js@1.2.0-beta.11
+  - @ui-ae/sdk@1.2.0-beta.11
 
 ## 1.2.0-beta.11
 
@@ -234,8 +234,8 @@
 
 - update
 - Updated dependencies
-  - @ui-tars/sdk@1.2.0-beta.10
-  - @ui-tars/operator-nut-js@1.2.0-beta.10
+  - @ui-ae/sdk@1.2.0-beta.10
+  - @ui-ae/operator-nut-js@1.2.0-beta.10
 
 ## 1.2.0-beta.9
 
@@ -243,8 +243,8 @@
 
 - bump: sdk support
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.9
-  - @ui-tars/sdk@1.2.0-beta.9
+  - @ui-ae/operator-nut-js@1.2.0-beta.9
+  - @ui-ae/sdk@1.2.0-beta.9
 
 ## 1.2.0-beta.8
 
@@ -252,16 +252,16 @@
 
 - fix: useConfig to useContext
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.8
-  - @ui-tars/sdk@1.2.0-beta.8
+  - @ui-ae/operator-nut-js@1.2.0-beta.8
+  - @ui-ae/sdk@1.2.0-beta.8
 
 ## 1.2.0-beta.7
 
 ### Patch Changes
 
 - Updated dependencies
-  - @ui-tars/sdk@1.2.0-beta.7
-  - @ui-tars/operator-nut-js@1.2.0-beta.7
+  - @ui-ae/sdk@1.2.0-beta.7
+  - @ui-ae/operator-nut-js@1.2.0-beta.7
 
 ## 1.2.0-beta.6
 
@@ -269,8 +269,8 @@
 
 - feat: new sdk
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.6
-  - @ui-tars/sdk@1.2.0-beta.6
+  - @ui-ae/operator-nut-js@1.2.0-beta.6
+  - @ui-ae/sdk@1.2.0-beta.6
 
 ## 1.2.0-beta.5
 
@@ -278,8 +278,8 @@
 
 - chore: update sdk
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.5
-  - @ui-tars/sdk@1.2.0-beta.5
+  - @ui-ae/operator-nut-js@1.2.0-beta.5
+  - @ui-ae/sdk@1.2.0-beta.5
 
 ## 1.2.0-beta.4
 
@@ -287,8 +287,8 @@
 
 - chore: new version
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.4
-  - @ui-tars/sdk@1.2.0-beta.4
+  - @ui-ae/operator-nut-js@1.2.0-beta.4
+  - @ui-ae/sdk@1.2.0-beta.4
 
 ## 1.2.0-beta.3
 
@@ -296,8 +296,8 @@
 
 - chore: add retry
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.3
-  - @ui-tars/sdk@1.2.0-beta.3
+  - @ui-ae/operator-nut-js@1.2.0-beta.3
+  - @ui-ae/sdk@1.2.0-beta.3
 
 ## 1.2.0-beta.2
 
@@ -305,8 +305,8 @@
 
 - chore: publish
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.2
-  - @ui-tars/sdk@1.2.0-beta.2
+  - @ui-ae/operator-nut-js@1.2.0-beta.2
+  - @ui-ae/sdk@1.2.0-beta.2
 
 ## 1.2.0-beta.1
 
@@ -314,17 +314,17 @@
 
 - chore: remove unused code
 - Updated dependencies
-  - @ui-tars/operator-nut-js@1.2.0-beta.1
-  - @ui-tars/sdk@1.2.0-beta.1
+  - @ui-ae/operator-nut-js@1.2.0-beta.1
+  - @ui-ae/sdk@1.2.0-beta.1
 
 ## 1.2.0-beta.0
 
 ### Minor Changes
 
-- a062e03: feat: ui-tars agent sdk support
+- a062e03: feat: ui-ae aegnt sdk support
 
 ### Patch Changes
 
 - Updated dependencies [a062e03]
-  - @ui-tars/operator-nut-js@1.2.0-beta.0
-  - @ui-tars/sdk@1.2.0-beta.0
+  - @ui-ae/operator-nut-js@1.2.0-beta.0
+  - @ui-ae/sdk@1.2.0-beta.0

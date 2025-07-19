@@ -1,5 +1,5 @@
 /**
- * Graphiti Tracker - Knowledge Graph Integration for UI-TARS
+ * Graphiti Tracker - Knowledge Graph Integration for UI-AE
  */
 
 export * from './tracker';

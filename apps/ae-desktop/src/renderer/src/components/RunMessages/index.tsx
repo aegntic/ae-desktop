@@ -7,7 +7,7 @@ import { ChevronRight } from 'lucide-react';
 import { cn } from '@renderer/utils';
 import { Button } from '@renderer/components/ui/button';
 
-import { IMAGE_PLACEHOLDER } from '@ui-tars/shared/constants';
+import { IMAGE_PLACEHOLDER } from '@ui-ae/shared/constants';
 import Prompts from '../Prompts';
 import ThoughtChain from '../ThoughtChain';
 import { api } from '@renderer/api';

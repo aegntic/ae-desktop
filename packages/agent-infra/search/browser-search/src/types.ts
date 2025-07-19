@@ -2,9 +2,9 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { BrowserInterface, LaunchOptions, Page } from '@agent-infra/browser';
-import { Logger } from '@agent-infra/logger';
-import { LocalBrowserSearchEngine } from '@agent-infra/shared';
+import { BrowserInterface, LaunchOptions, Page } from '@aegnt-infra/browser';
+import { Logger } from '@aegnt-infra/logger';
+import { LocalBrowserSearchEngine } from '@aegnt-infra/shared';
 
 export type { LocalBrowserSearchEngine };
 

@@ -1,9 +1,9 @@
-# @agent-infra/bing-search
+# @aegnt-infra/bing-search
 
 <p>
-  <a href="https://npmjs.com/package/@agent-infra/bing-search?activeTab=readme"><img src="https://img.shields.io/npm/v/@agent-infra/bing-search?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" /></a>
-  <a href="https://npmcharts.com/compare/@agent-infra/bing-search?minimal=true"><img src="https://img.shields.io/npm/dm/@agent-infra/bing-search.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="downloads" /></a>
-  <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/@agent-infra/bing-search.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="node version"></a>
+  <a href="https://npmjs.com/package/@aegnt-infra/bing-search?activeTab=readme"><img src="https://img.shields.io/npm/v/@aegnt-infra/bing-search?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" /></a>
+  <a href="https://npmcharts.com/compare/@aegnt-infra/bing-search?minimal=true"><img src="https://img.shields.io/npm/dm/@aegnt-infra/bing-search.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="downloads" /></a>
+  <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/@aegnt-infra/bing-search.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="node version"></a>
   <a href="https://github.com/web-infra-dev/rsbuild/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="license" /></a>
 </p>
 
@@ -19,11 +19,11 @@ A lightweight TypeScript client for Bing Search API, designed for AI application
 ## Installation
 
 ```bash
-npm install @agent-infra/bing-search
+npm install @aegnt-infra/bing-search
 # or
-yarn add @agent-infra/bing-search
+yarn add @aegnt-infra/bing-search
 # or
-pnpm add @agent-infra/bing-search
+pnpm add @aegnt-infra/bing-search
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ pnpm add @agent-infra/bing-search
 ### Basic Search
 
 ```typescript
-import { BingSearchClient } from '@agent-infra/bing-search';
+import { BingSearchClient } from '@aegnt-infra/bing-search';
 
 const client = new BingSearchClient({
   apiKey: 'YOUR_API_KEY',
@@ -51,7 +51,7 @@ console.log(results.webPages?.value);
 // Set in your environment:
 // BING_SEARCH_API_KEY=your-api-key
 
-import { BingSearchClient } from '@agent-infra/bing-search';
+import { BingSearchClient } from '@aegnt-infra/bing-search';
 
 const client = new BingSearchClient();
 const results = await client.search({ q: 'renewable energy' });
@@ -60,8 +60,8 @@ const results = await client.search({ q: 'renewable energy' });
 ### With Custom Logger
 
 ```typescript
-import { ConsoleLogger } from '@agent-infra/logger';
-import { BingSearchClient } from '@agent-infra/bing-search';
+import { ConsoleLogger } from '@aegnt-infra/logger';
+import { BingSearchClient } from '@aegnt-infra/bing-search';
 
 const logger = new ConsoleLogger('[BingSearch]');
 const client = new BingSearchClient({

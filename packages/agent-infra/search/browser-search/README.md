@@ -1,9 +1,9 @@
-# @agent-infra/browser-search
+# @aegnt-infra/browser-search
 
 <p>
-  <a href="https://npmjs.com/package/@agent-infra/browser-search?activeTab=readme"><img src="https://img.shields.io/npm/v/@agent-infra/browser-search?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" /></a>
-  <a href="https://npmcharts.com/compare/@agent-infra/browser-search?minimal=true"><img src="https://img.shields.io/npm/dm/@agent-infra/browser-search.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="downloads" /></a>
-  <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/@agent-infra/browser-search.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="node version"></a>
+  <a href="https://npmjs.com/package/@aegnt-infra/browser-search?activeTab=readme"><img src="https://img.shields.io/npm/v/@aegnt-infra/browser-search?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" /></a>
+  <a href="https://npmcharts.com/compare/@aegnt-infra/browser-search?minimal=true"><img src="https://img.shields.io/npm/dm/@aegnt-infra/browser-search.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="downloads" /></a>
+  <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/@aegnt-infra/browser-search.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="node version"></a>
   <a href="https://github.com/web-infra-dev/rsbuild/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="license" /></a>
 </p>
 
@@ -23,18 +23,18 @@ A tiny stealth-mode web search and content extraction library built on top of Pu
 ## Installation
 
 ```bash
-npm install @agent-infra/browser-search
+npm install @aegnt-infra/browser-search
 # or
-yarn add @agent-infra/browser-search
+yarn add @aegnt-infra/browser-search
 # or
-pnpm add @agent-infra/browser-search
+pnpm add @aegnt-infra/browser-search
 ```
 
 ## Quick Start
 
 ```typescript
-import { BrowserSearch } from '@agent-infra/browser-search';
-import { ConsoleLogger } from '@agent-infra/logger';
+import { BrowserSearch } from '@aegnt-infra/browser-search';
+import { ConsoleLogger } from '@aegnt-infra/logger';
 
 // Create a logger (optional)
 const logger = new ConsoleLogger('[BrowserSearch]');
@@ -151,8 +151,8 @@ const results = await browserSearch.perform({
 ### Using with Custom Browser Instance
 
 ```typescript
-import { ChromeBrowser } from '@agent-infra/browser';
-import { BrowserSearch } from '@agent-infra/browser-search';
+import { ChromeBrowser } from '@aegnt-infra/browser';
+import { BrowserSearch } from '@aegnt-infra/browser-search';
 
 const browser = new ChromeBrowser({
   // Custom browser configuration

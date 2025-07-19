@@ -4,14 +4,14 @@
  */
 import { toast } from 'sonner';
 
-import { Conversation } from '@ui-tars/shared/types';
+import { Conversation } from '@ui-ae/shared/types';
 import { getState } from '@renderer/hooks/useStore';
 
 import { usePermissions } from './usePermissions';
 import { useSetting } from './useSetting';
 import { api } from '@renderer/api';
 import { ConversationWithSoM } from '@/main/shared/types';
-import { Message } from '@ui-tars/shared/types';
+import { Message } from '@ui-ae/shared/types';
 import { Operator } from '@/main/store/types';
 
 const filterAndTransformWithMap = (
@@ -52,7 +52,7 @@ const filterAndTransformWithMap = (
     .filter((msg): msg is Message => msg !== undefined);
 };
 
-export const useRunAgent = () => {
+export const useRunAegnt = () => {
   // const dispatch = useDispatch();
   const { settings } = useSetting();
   const { ensurePermissions } = usePermissions();
@@ -102,15 +102,15 @@ export const useRunAgent = () => {
       }),
     ]);
 
-    await api.runAgent();
+    await api.runAegnt();
 
     callback();
   };
 
-  const stopAgentRuning = async (callback: () => void = () => {}) => {
+  const stopAegntRuning = async (callback: () => void = () => {}) => {
     await api.stopRun();
     callback();
   };
 
-  return { run, stopAgentRuning };
+  return { run, stopAegntRuning };
 };

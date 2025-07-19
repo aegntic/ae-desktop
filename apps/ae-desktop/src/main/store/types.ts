@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { GUIAgentData, Message } from '@ui-tars/shared/types';
+import { GUIAegntData, Message } from '@ui-ae/shared/types';
 
 import { LocalStore, PresetSource } from './validate';
 import { ConversationWithSoM } from '@main/shared/types';
@@ -25,8 +25,8 @@ export type AppState = {
   theme: 'dark' | 'light';
   ensurePermissions: { screenCapture?: boolean; accessibility?: boolean };
   instructions: string | null;
-  restUserData: Omit<GUIAgentData, 'status' | 'conversations'> | null;
-  status: GUIAgentData['status'];
+  restUserData: Omit<GUIAegntData, 'status' | 'conversations'> | null;
+  status: GUIAegntData['status'];
   errorMsg: string | null;
   sessionHistoryMessages: Message[];
   messages: ConversationWithSoM[];
@@ -42,9 +42,9 @@ export enum VlmProvider {
 }
 
 export enum VLMProviderV2 {
-  ui_tars_1_0 = 'Hugging Face for UI-TARS-1.0',
-  ui_tars_1_5 = 'Hugging Face for UI-TARS-1.5',
-  doubao_1_5 = 'VolcEngine Ark for Doubao-1.5-UI-TARS',
+  ui_ae_1_0 = 'Hugging Face for UI-AE-1.0',
+  ui_ae_1_5 = 'Hugging Face for UI-AE-1.5',
+  doubao_1_5 = 'VolcEngine Ark for Doubao-1.5-UI-AE',
   doubao_1_5_vl = 'VolcEngine Ark for Doubao-1.5-thinking-vision-pro',
 }
 

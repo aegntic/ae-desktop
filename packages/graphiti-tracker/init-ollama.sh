@@ -15,15 +15,15 @@ echo "Ollama is ready!"
 
 # Pull the required models
 echo "Pulling Gemma 3n e2b model..."
-docker exec ui-tars-ollama ollama pull gemma3n:e2b
+docker exec ui-ae-ollama ollama pull gemma3n:e2b
 
 echo "Pulling nomic-embed-text embedding model..."
-docker exec ui-tars-ollama ollama pull nomic-embed-text
+docker exec ui-ae-ollama ollama pull nomic-embed-text
 
 # List available models
 echo ""
 echo "Available models:"
-docker exec ui-tars-ollama ollama list
+docker exec ui-ae-ollama ollama list
 
 echo ""
 echo "Ollama initialization complete!"

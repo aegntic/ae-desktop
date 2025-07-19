@@ -9,7 +9,7 @@
  */
 import { startSseAndStreamableHttpMcpServer } from 'mcp-http-server';
 import { program } from 'commander';
-import { BaseLogger } from '@agent-infra/logger';
+import { BaseLogger } from '@aegnt-infra/logger';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { createServer, getBrowser, setConfig, getConfig } from './server.js';
 import { ContextOptions } from './typings.js';
@@ -98,7 +98,7 @@ program
   //   '--storage-state <path>',
   //   'path to the storage state file for isolated sessions.',
   // )
-  .option('--user-agent <ua string>', 'specify user agent string')
+  .option('--user-aegnt <ua string>', 'specify user aegnt string')
   .option('--user-data-dir <path>', 'path to the user data directory.')
   .option(
     '--viewport-size <size>',
@@ -160,7 +160,7 @@ program
           createMcpServer: async (req) => {
             setRequestContext(req);
 
-            const userAgent = req?.headers?.['x-user-agent'] as string;
+            const userAgent = req?.headers?.['x-user-aegnt'] as string;
 
             // header priority: req.headers > process.env.VISION_FACTOR
             const factors =

@@ -1,5 +1,5 @@
 {
-  "name": "@agent-infra/logger",
+  "name": "@aegnt-infra/logger",
   "description": "An tiny isomorphic logger",
   "version": "0.0.1",
   "main": "dist/index.js",

@@ -1,6 +1,6 @@
-## @agent-infra/mcp-client
+## @aegnt-infra/mcp-client
 
-[![NPM Downloads](https://img.shields.io/npm/d18m/@agent-infra/mcp-client)](https://www.npmjs.com/package/@agent-infra/mcp-client)
+[![NPM Downloads](https://img.shields.io/npm/d18m/@aegnt-infra/mcp-client)](https://www.npmjs.com/package/@aegnt-infra/mcp-client)
 
 ✨ A unified MCP Client implemented in TypeScript, supporting four major transports out of the box: **In-memory**, Stdio, SSE (Server-Sent Events), and **Streamable HTTP**.
 
@@ -18,12 +18,12 @@
 ### ⚡ Quick Start
 
 ```ts
-import { MCPClient } from '@agent-infra/mcp-client';
+import { MCPClient } from '@aegnt-infra/mcp-client';
 
 // type: module project usage
-import { createServer as createFileSystemServer } from '@agent-infra/mcp-server-filesystem';
+import { createServer as createFileSystemServer } from '@aegnt-infra/mcp-server-filesystem';
 // commonjs project usage
-// const { createServer as createFileSystemServer } = await import('@agent-infra/mcp-server-filesystem')
+// const { createServer as createFileSystemServer } = await import('@aegnt-infra/mcp-server-filesystem')
 
 const mcpClient = new MCPClient([
   // In-memory
@@ -43,7 +43,7 @@ const mcpClient = new MCPClient([
     command: 'npx',
     args: [
       '-y',
-      '@agent-infra/mcp-server-filesystem'
+      '@aegnt-infra/mcp-server-filesystem'
     ]
   },
   // sse
@@ -78,4 +78,4 @@ const result = await mcpClient.callTool({
 Thanks to:
 
 - [kangfenmao](https://github.com/kangfenmao) for creating a great AI chatbot product [Cherry Studio](https://github.com/CherryHQ/cherry-studio) from which we draw a lot of inspiration for browser detection functionality.
-- The [@modelcontextprotocol/sdk](https://github.com/modelcontextprotocol/typescript-sdk) project which helps us develop and use the agent tools better.
+- The [@modelcontextprotocol/sdk](https://github.com/modelcontextprotocol/typescript-sdk) project which helps us develop and use the aegnt tools better.

@@ -1,4 +1,4 @@
-# @agent-infra/mcp-benchmark
+# @aegnt-infra/mcp-benchmark
 
 ## 1.1.3
 

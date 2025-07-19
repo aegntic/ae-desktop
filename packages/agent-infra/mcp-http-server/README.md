@@ -182,7 +182,7 @@ await startSseAndStreamableHttpMcpServer({
   },
   middlewares: [authMiddleware],
   createMcpServer: async (context) => {
-    console.log('User agent:', context.headers['user-agent']);
+    console.log('User aegnt:', context.headers['user-aegnt']);
     return createServer();
   },
 });
@@ -212,7 +212,7 @@ program
             prefix: options.prefix,
           },
           createMcpServer: async (params) => {
-            console.log('HTTP request from:', params.headers['user-agent']);
+            console.log('HTTP request from:', params.headers['user-aegnt']);
             return createServer();
           },
         });

@@ -1,6 +1,6 @@
 ## FileSystem MCP Server
 
-[![NPM Downloads](https://img.shields.io/npm/d18m/@agent-infra/mcp-server-filesystem)](https://www.npmjs.com/package/@agent-infra/mcp-server-filesystem)
+[![NPM Downloads](https://img.shields.io/npm/d18m/@aegnt-infra/mcp-server-filesystem)](https://www.npmjs.com/package/@aegnt-infra/mcp-server-filesystem)
 
 [![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=filesystem&config=eyJjb21tYW5kIjoibnB4IEBhZ2VudC1pbmZyYS9tY3Atc2VydmVyLWZpbGVzeXN0ZW1AbGF0ZXN0In0%3D) [<img src="https://img.shields.io/badge/VS_Code-VS_Code?style=flat-square&label=Install%20Server&color=0098FF" alt="Install in VS Code">](https://insiders.vscode.dev/redirect?url=vscode%253Amcp%252Finstall%253F%257B%2522name%2522%253A%2522filesystem%2522%252C%2522filesystem%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540agent-infra%252Fmcp-server-filesystem%2540latest%2522%255D%257D) [<img alt="Install in VS Code Insiders" src="https://img.shields.io/badge/VS_Code_Insiders-VS_Code_Insiders?style=flat-square&label=Install%20Server&color=24bfa5">](https://insiders.vscode.dev/redirect?url=vscode-insiders%253Amcp%252Finstall%253F%257B%2522name%2522%253A%2522filesystem%2522%252C%2522filesystem%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540agent-infra%252Fmcp-server-filesystem%2540latest%2522%255D%257D)
 
@@ -28,7 +28,7 @@ First, install the Filesystem MCP server with your client. A typical configurati
     "filesystem": {
       "command": "npx",
       "args": [
-        "@agent-infra/mcp-server-filesystem@latest"
+        "@aegnt-infra/mcp-server-filesystem@latest"
       ]
     }
   }
@@ -42,16 +42,16 @@ You can also install the Filesystem MCP server using the VS Code CLI:
 
 ```bash
 # For VS Code
-code --add-mcp '{"name":"filesystem","command":"npx","args":["@agent-infra/mcp-server-filesystem@latest"]}'
+code --add-mcp '{"name":"filesystem","command":"npx","args":["@aegnt-infra/mcp-server-filesystem@latest"]}'
 ```
 
-After installation, the Filesystem MCP server will be available for use with your GitHub Copilot agent in VS Code.
+After installation, the Filesystem MCP server will be available for use with your GitHub Copilot aegnt in VS Code.
 </details>
 
 <details>
 <summary><b>Install in Cursor</b></summary>
 
-Go to `Cursor Settings` -> `MCP` -> `Add new MCP Server`. Name to your liking, use `command` type with the command `npx @agent-infra/mcp-server-filesystem`. You can also verify config or add command like arguments via clicking `Edit`.
+Go to `Cursor Settings` -> `MCP` -> `Add new MCP Server`. Name to your liking, use `command` type with the command `npx @aegnt-infra/mcp-server-filesystem`. You can also verify config or add command like arguments via clicking `Edit`.
 
 ```js
 {
@@ -59,7 +59,7 @@ Go to `Cursor Settings` -> `MCP` -> `Add new MCP Server`. Name to your liking, u
     "filesystem": {
       "command": "npx",
       "args": [
-        "@agent-infra/mcp-server-filesystem@latest",
+        "@aegnt-infra/mcp-server-filesystem@latest",
         "--allowed-directories /tmp"
       ]
     }
@@ -79,7 +79,7 @@ Follow Windsuff MCP [documentation](https://docs.windsurf.com/windsurf/cascade/m
     "filesystem": {
       "command": "npx",
       "args": [
-        "@agent-infra/mcp-server-filesystem@latest",
+        "@aegnt-infra/mcp-server-filesystem@latest",
         "--allowed-directories /tmp"
       ]
     }
@@ -99,7 +99,7 @@ Follow the MCP install [guide](https://modelcontextprotocol.io/quickstart/user),
     "filesystem": {
       "command": "npx",
       "args": [
-        "@agent-infra/mcp-server-filesystem@latest",
+        "@aegnt-infra/mcp-server-filesystem@latest",
         "--allowed-directories /tmp"
       ]
     }
@@ -115,7 +115,7 @@ At the same time, use `--port $your_port` arg to start the browser mcp can be co
 
 ```bash
 # normal run remote mcp server
-npx @agent-infra/mcp-server-filesystem --port 8089 --allowed-directories <dir>
+npx @aegnt-infra/mcp-server-filesystem --port 8089 --allowed-directories <dir>
 ```
 
 You can use one of the two MCP Server remote endpoint:
@@ -157,9 +157,9 @@ import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { InMemoryTransport } from '@modelcontextprotocol/sdk/inMemory.js';
 
 // type: module project usage
-import { createServer } from '@agent-infra/mcp-server-filesystem';
+import { createServer } from '@aegnt-infra/mcp-server-filesystem';
 // commonjs project usage
-// const { createServer } = await import('@agent-infra/mcp-server-filesystem')
+// const { createServer } = await import('@aegnt-infra/mcp-server-filesystem')
 
 const client = new Client(
   {

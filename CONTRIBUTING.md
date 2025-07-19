@@ -1,4 +1,4 @@
-# Contributing to UI-TARS Desktop
+# Contributing to UI-AE Desktop
 
 First off, thanks for taking the time to contribute! ❤️
 
@@ -15,11 +15,11 @@ All types of contributions are encouraged and valued. Please make sure to read t
 
 > If you want to ask a question or report a bug, we assume that you have read the available Documentation.
 
-Before you ask a question, it is best to search for existing [Issues](https://github.com/bytedance/ui-tars-desktop/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue. It is also advisable to search the internet for answers first.
+Before you ask a question, it is best to search for existing [Issues](https://github.com/bytedance/ui-ae-desktop/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue. It is also advisable to search the internet for answers first.
 
 If you then still feel the need to ask a question and need clarification, we recommend the following:
 
-- Open an [Issue](https://github.com/bytedance/ui-tars-desktop/issues/new).
+- Open an [Issue](https://github.com/bytedance/ui-ae-desktop/issues/new).
 - Provide as much context as you can about what you're running into.
 - Provide project and platform versions (nodejs, npm, etc), depending on what seems relevant.
 
@@ -42,7 +42,7 @@ This is a [Monorepo](https://pnpm.io/workspaces) project including the following
   - [Vite](https://vitejs.dev/)
 - State management and communication:
   - [Zustand](https://zustand.docs.pmnd.rs/)
-  - [@ui-tars/electron-ipc](https://github.com/bytedance/UI-TARS-desktop/tree/main/packages/ui-tars/electron-ipc)
+  - [@ui-ae/electron-ipc](https://github.com/bytedance/UI-AE-desktop/tree/main/packages/ui-ae/electron-ipc)
 - Automation framework/toolkit:
   - [nut.js](https://nutjs.dev/)
 - Test framework
@@ -55,14 +55,14 @@ This is a [Monorepo](https://pnpm.io/workspaces) project including the following
 .
 ├── README.md
 ├── apps
-│   └── ui-tars
+│   └── ui-ae
 │       └── src
 │           ├── main
 │           ├── preload
 │           └── renderer
 │ 
 ├── packages
-│   ├── agent-infra
+│   ├── aegnt-infra
 │   │   ├── browser
 │   │   ├── browser-use
 │   │   ├── logger
@@ -73,7 +73,7 @@ This is a [Monorepo](https://pnpm.io/workspaces) project including the following
 │   ├── common
 │   │   ├── configs
 │   │   └── electron-build
-│   └── ui-tars
+│   └── ui-ae
 │       ├── action-parser
 │       ├── cli
 │       ├── electron-ipc
@@ -92,8 +92,8 @@ This is a [Monorepo](https://pnpm.io/workspaces) project including the following
 #### Clone the repository
 
 ```bash
-$ git clone https://github.com/bytedance/ui-tars-desktop.git
-$ cd ui-tars-desktop
+$ git clone https://github.com/bytedance/ui-ae-desktop.git
+$ cd ui-ae-desktop
 ```
 
 ### Development
@@ -107,10 +107,10 @@ $ pnpm install
 #### Run the application
 
 ```bash
-$ pnpm run dev:ui-tars    # Start UI-TARS Desktop
+$ pnpm run dev:ui-ae    # Start UI-AE Desktop
 ```
 
-After the application starts, you can see the UI-TARS interface within the application.
+After the application starts, you can see the UI-AE interface within the application.
 
 > **Note**: On MacOS, you need to grant permissions to the app (e.g., iTerm2, Terminal) you are using to run commands.
 
@@ -140,7 +140,7 @@ The CI pipeline to execute is [.github/workflows/release.yml](.github/workflows/
 
 1. Edit the `version` in `package.json`
 2. Git commit and push to the `release/${version}` branch, create a PR targeting `main` branch, titled `release(app): ${version}`
-3. Trigger the release [workflow](https://github.com/bytedance/UI-TARS-desktop/actions/workflows/release.yml) manually after the PR is merged
+3. Trigger the release [workflow](https://github.com/bytedance/UI-AE-desktop/actions/workflows/release.yml) manually after the PR is merged
 
 Currently, the release workflow supports the following platforms:
 

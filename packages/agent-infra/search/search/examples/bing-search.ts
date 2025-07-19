@@ -16,7 +16,7 @@ export async function bingSearch() {
 
   const results = await client.search(
     {
-      query: 'UI-TARS',
+      query: 'UI-AE',
       count: 5,
     },
     {

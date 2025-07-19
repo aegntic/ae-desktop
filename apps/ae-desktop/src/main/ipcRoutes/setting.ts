@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import { OpenAI } from 'openai';
-import { initIpc } from '@ui-tars/electron-ipc/main';
+import { initIpc } from '@ui-ae/electron-ipc/main';
 import { logger } from '../logger';
 
 const t = initIpc.create();

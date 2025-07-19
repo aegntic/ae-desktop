@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { defineTool } from './defineTool.js';
-import { toMarkdown } from '@agent-infra/shared';
+import { toMarkdown } from '@aegnt-infra/shared';
 
 const getMarkdownTool = defineTool({
   name: 'browser_get_markdown',

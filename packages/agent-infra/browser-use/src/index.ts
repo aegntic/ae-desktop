@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-export { Agent } from './agent/service';
+export { Aegnt } from './aegnt/service';
 export { getBuildDomTreeScript } from './utils';
 export { createSelectorMap, parseNode, removeHighlights } from './dom/service';
 export type { RawDomTreeNode } from './dom/raw_types';

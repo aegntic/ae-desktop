@@ -19,12 +19,12 @@ import { useSession } from '@renderer//hooks/useSession';
 
 import { NavHistory } from './nav-history';
 import { NavSettings } from './nav-footer';
-import { UITarsHeader } from './nav-header';
+import { UIAeHeader } from './nav-header';
 
 import { Operator } from '@main/store/types';
 import { useGlobalSettings, GlobalSettings } from '../Settings/global';
 import { useStore } from '../../hooks/useStore';
-import { StatusEnum } from '@ui-tars/sdk';
+import { StatusEnum } from '@ui-ae/sdk';
 import { NavDialog } from '../AlertDialog/navDialog';
 import { api } from '../../api';
 
@@ -143,7 +143,7 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
       <Sidebar collapsible="icon" className="select-none" {...props}>
         <DragArea></DragArea>
         <SidebarHeader>
-          <UITarsHeader showTrigger={location.pathname === '/'} />
+          <UIAeHeader showTrigger={location.pathname === '/'} />
           <SidebarMenu className="items-center">
             <SidebarMenuButton
               className="font-medium"

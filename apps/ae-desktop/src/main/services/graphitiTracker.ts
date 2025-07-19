@@ -1,11 +1,11 @@
 /**
- * Graphiti Tracker Service for UI-TARS Desktop
+ * Graphiti Tracker Service for UI-AE Desktop
  */
 
 import { logger } from '@main/logger';
-import { getGraphitiTracker, GraphitiTracker } from '@ui-tars/graphiti-tracker';
+import { getGraphitiTracker, GraphitiTracker } from '@ui-ae/graphiti-tracker';
 import { SettingStore } from '@main/store/setting';
-import type { UIAction } from '@ui-tars/graphiti-tracker';
+import type { UIAction } from '@ui-ae/graphiti-tracker';
 
 export class GraphitiTrackerService {
   private static instance: GraphitiTrackerService;

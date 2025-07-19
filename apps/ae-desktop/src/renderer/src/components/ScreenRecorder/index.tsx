@@ -6,7 +6,7 @@ interface ScreenRecorderProps {
 
 export const ScreenRecorder: React.FC<ScreenRecorderProps> = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { watermarkText = `© ${new Date().getFullYear()} UI-TARS Desktop` } =
+  const { watermarkText = `© ${new Date().getFullYear()} UI-AE Desktop` } =
     props;
   const {
     isRecording,

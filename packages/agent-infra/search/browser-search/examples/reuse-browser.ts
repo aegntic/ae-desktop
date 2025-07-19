@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { ConsoleLogger } from '@agent-infra/logger';
+import { ConsoleLogger } from '@aegnt-infra/logger';
 import { BrowserSearch } from '../src';
 
 async function main() {
@@ -18,7 +18,7 @@ async function main() {
     // First search, keep browser open
     logger.info('Performing first search');
     const results1 = await browserSearch.perform({
-      query: 'ui-tars',
+      query: 'ui-ae',
       count: 3,
       keepBrowserOpen: true, // Keep browser open
     });

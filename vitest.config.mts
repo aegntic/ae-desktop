@@ -21,7 +21,7 @@ export default defineConfig({
         'apps/**/*.ts',
         'packages/**/*.ts',
         '!packages/visualizer',
-        '!packages/agent-infra/create-new-mcp',
+        '!packages/aegnt-infra/create-new-mcp',
       ],
       provider: 'istanbul',
       all: true,

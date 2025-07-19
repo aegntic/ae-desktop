@@ -12,7 +12,7 @@ import {
   type RawDomTreeNode,
   DOMElementNode,
   createSelectorMap,
-} from '@agent-infra/browser-use';
+} from '@aegnt-infra/browser-use';
 
 export class Context {
   async getResourceContext(): Promise<ResourceContext> {

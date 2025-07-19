@@ -1,4 +1,4 @@
-# @ui-tars/shared
+# @ui-ae/shared
 
 ## 1.2.3
 
@@ -38,8 +38,8 @@
 - 107c049: bump: sdk support
 - d80285d: chore: publish adb
 - 2b9c631: chore: changeset
-- d80285d: feat: ui-tars add adb operator
-- 5fb2821: feat: ui-tars 1.5
+- d80285d: feat: ui-ae add adb operator
+- 5fb2821: feat: ui-ae 1.5
 
 ## 1.2.0-beta.24
 
@@ -51,7 +51,7 @@
 
 ### Patch Changes
 
-- feat: ui-tars add adb operator
+- feat: ui-ae add adb operator
 
 ## 1.2.0-beta.22
 
@@ -149,7 +149,7 @@
 
 ### Minor Changes
 
-- a062e03: feat: ui-tars agent sdk support
+- a062e03: feat: ui-ae aegnt sdk support
 
 ## 1.1.0
 
@@ -167,4 +167,4 @@
 
 ### Major Changes
 
-- dcabd45: feat: initial publish ui-tars action-parser and shared pkgs
+- dcabd45: feat: initial publish ui-ae action-parser and shared pkgs

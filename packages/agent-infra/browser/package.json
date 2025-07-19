@@ -1,6 +1,6 @@
 {
-  "name": "@agent-infra/browser",
-  "description": "A tiny Browser Control library, built for Agent Tars.",
+  "name": "@aegnt-infra/browser",
+  "description": "A tiny Browser Control library, built for Aegnt Ae.",
   "version": "0.1.1",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -30,8 +30,8 @@
     "puppeteer-core": "24.7.2",
     "which": "5.0.0",
     "edge-paths": "3.0.5",
-    "@agent-infra/logger": "workspace:*",
-    "@agent-infra/shared": "workspace:*"
+    "@aegnt-infra/logger": "workspace:*",
+    "@aegnt-infra/shared": "workspace:*"
   },
   "devDependencies": {
     "@types/which": "3.0.4",

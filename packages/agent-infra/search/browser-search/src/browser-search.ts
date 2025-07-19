@@ -6,14 +6,14 @@ import {
   LocalBrowser,
   RemoteBrowser,
   type BrowserInterface,
-} from '@agent-infra/browser';
-import { READABILITY_SCRIPT } from '@agent-infra/shared';
-import { Logger, defaultLogger } from '@agent-infra/logger';
+} from '@aegnt-infra/browser';
+import { READABILITY_SCRIPT } from '@aegnt-infra/shared';
+import { Logger, defaultLogger } from '@aegnt-infra/logger';
 import {
   PromiseQueue,
   extractPageInformation,
   toMarkdown,
-} from '@agent-infra/shared';
+} from '@aegnt-infra/shared';
 import { shouldSkipDomain } from './utils/url';
 import { interceptRequest } from './utils/misc';
 import { getSearchEngine } from './engines';
@@ -63,7 +63,7 @@ export class BrowserSearch {
 
     try {
       // FIXME: We should not 100% launch browser here,
-      // Remove `isBrowserOpen` using state from `@agent-infra/browser`.
+      // Remove `isBrowserOpen` using state from `@aegnt-infra/browser`.
       if (!this.isBrowserOpen) {
         this.logger.info('Launching browser');
         await this.browser.launch(this.config.browserOptions);

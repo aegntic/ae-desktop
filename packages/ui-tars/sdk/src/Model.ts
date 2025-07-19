@@ -8,7 +8,7 @@ import {
   type ChatCompletionCreateParamsBase,
   type ChatCompletionMessageParam,
 } from 'openai/resources/chat/completions';
-import { actionParser } from '@ui-tars/action-parser';
+import { actionParser } from '@ui-ae/action-parser';
 
 import { useContext } from './context/useContext';
 import { Model, type InvokeParams, type InvokeOutput } from './types';
@@ -25,7 +25,7 @@ import {
   MAX_PIXELS_V1_0,
   MAX_PIXELS_V1_5,
   MAX_PIXELS_DOUBAO,
-} from '@ui-tars/shared/types';
+} from '@ui-ae/shared/types';
 import type {
   ResponseCreateParamsNonStreaming,
   ResponseInputItem,

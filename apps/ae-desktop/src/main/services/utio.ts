@@ -6,7 +6,7 @@ import os from 'node:os';
 
 import { screen } from 'electron';
 
-import { UTIO, UTIOPayload } from '@ui-tars/utio';
+import { UTIO, UTIOPayload } from '@ui-ae/utio';
 
 import { logger } from '../logger';
 import { SettingStore } from '@main/store/setting';

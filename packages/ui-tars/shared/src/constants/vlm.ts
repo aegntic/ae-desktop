@@ -16,7 +16,7 @@ export const MAX_RATIO = 200;
 
 export enum VlmModeEnum {
   Chat = 'chat',
-  Agent = 'agent',
+  Aegnt = 'aegnt',
 }
 
 export enum UITarsModelVersion {
@@ -27,6 +27,6 @@ export enum UITarsModelVersion {
 }
 
 export const VlmModeEnumOptions = {
-  [VlmModeEnum.Agent]: 'Agent 模式',
+  [VlmModeEnum.Aegnt]: 'Aegnt 模式',
   [VlmModeEnum.Chat]: 'Chat 模式',
 };

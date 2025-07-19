@@ -17,4 +17,4 @@ export {
   preprocessResizeImage,
   convertToOpenAIMessages,
 } from './utils';
-export { StatusEnum } from '@ui-tars/shared/types';
+export { StatusEnum } from '@ui-ae/shared/types';

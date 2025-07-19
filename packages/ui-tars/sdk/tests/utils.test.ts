@@ -4,8 +4,8 @@
  */
 import { describe, expect, it } from 'vitest';
 
-import { IMAGE_PLACEHOLDER, MAX_IMAGE_LENGTH } from '@ui-tars/shared/constants';
-import type { Message } from '@ui-tars/shared/types';
+import { IMAGE_PLACEHOLDER, MAX_IMAGE_LENGTH } from '@ui-ae/shared/constants';
+import type { Message } from '@ui-ae/shared/types';
 
 import {
   convertToOpenAIMessages,

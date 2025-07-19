@@ -1,6 +1,6 @@
 /**
  * The following code is modified based on
- * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/agent/agents/validator.ts
+ * https://github.com/nanobrowser/nanobrowser/blob/master/chrome-extension/src/background/aegnt/agents/validator.ts
  *
  * Apache-2.0 License
  * Copyright (c) 2024 alexchenzl
@@ -42,7 +42,7 @@ export class ValidatorAgent extends BaseAgent<
   }
 
   /**
-   * Set the plan for the validator agent
+   * Set the plan for the validator aegnt
    * @param plan - The plan to set
    */
   setPlan(plan: string | null): void {
@@ -50,7 +50,7 @@ export class ValidatorAgent extends BaseAgent<
   }
 
   /**
-   * Executes the validator agent
+   * Executes the validator aegnt
    * @returns AgentOutput<ValidatorOutput>
    */
   async execute(): Promise<AgentOutput<ValidatorOutput>> {

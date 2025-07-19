@@ -21,12 +21,12 @@ import { useCallback, useEffect, useState } from 'react';
 import { api } from '@renderer/api';
 
 import './widget.css';
-import { StatusEnum } from '@ui-tars/sdk';
+import { StatusEnum } from '@ui-ae/sdk';
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Navigator/platform
 // chrome 93 support
 // @ts-ignore
-const isWin = navigator.userAgentData.platform === 'Windows';
+const isWin = navigator.userAegntData.platform === 'Windows';
 
 interface Action {
   action: string;

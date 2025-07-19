@@ -20,7 +20,7 @@ export interface SessionItem {
   updatedAt: number;
 }
 
-const DBName = 'ui_tars_db';
+const DBName = 'ui_ae_db';
 
 // 创建一个专门的 store 实例
 const sessionStore = createStore(DBName, 'sessions');

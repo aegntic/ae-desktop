@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-// /apps/ui-tars/src/renderer/src/db/chat.ts
+// /apps/ui-ae/src/renderer/src/db/chat.ts
 import { get, set, del, createStore } from 'idb-keyval';
 import { ConversationWithSoM } from '@/main/shared/types';
 
@@ -10,7 +10,7 @@ export interface ChatMetaInfo {
   [key: string]: any;
 }
 
-const DBName = 'ui_tars_db_chat';
+const DBName = 'ui_ae_db_chat';
 const chatStore = createStore(DBName, 'chats');
 
 export class ChatManager {

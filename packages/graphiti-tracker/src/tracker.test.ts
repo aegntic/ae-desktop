@@ -22,7 +22,7 @@ vi.mock('./client', () => {
 });
 
 // Mock logger
-vi.mock('@ui-tars/shared/logger', () => ({
+vi.mock('@ui-ae/shared/logger', () => ({
   logger: {
     info: vi.fn(),
     error: vi.fn(),

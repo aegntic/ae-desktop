@@ -1,17 +1,17 @@
 <p align="center">
-  <img alt="UI-TARS" width="260" src="../../apps/ui-tars/resources/icon.png">
+  <img alt="UI-AE" width="260" src="../../apps/ui-ae/resources/icon.png">
 </p>
 
-# UI-TARS Desktop
+# UI-AE Desktop
 
-UI-TARS Desktop is a GUI Agent application based on [UI-TARS (Vision-Language Model)](https://github.com/bytedance/UI-TARS) that allows you to control your computer using natural language.
+UI-AE Desktop is a GUI Aegnt application based on [UI-AE (Vision-Language Model)](https://github.com/bytedance/UI-AE) that allows you to control your computer using natural language.
 
 
 <p align="center">
         &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2501.12326">Paper</a> &nbsp&nbsp
-        | 🤗 <a href="https://huggingface.co/bytedance-research/UI-TARS-7B-DPO">Hugging Face Models</a>&nbsp&nbsp
+        | 🤗 <a href="https://huggingface.co/bytedance-research/UI-AE-7B-DPO">Hugging Face Models</a>&nbsp&nbsp
         | &nbsp&nbsp🫨 <a href="https://discord.gg/pTXwYVjfcs">Discord</a>&nbsp&nbsp
-        | &nbsp&nbsp🤖 <a href="https://www.modelscope.cn/models/bytedance-research/UI-TARS-7B-DPO">ModelScope</a>&nbsp&nbsp
+        | &nbsp&nbsp🤖 <a href="https://www.modelscope.cn/models/bytedance-research/UI-AE-7B-DPO">ModelScope</a>&nbsp&nbsp
 <br>
 🖥️ Desktop Application &nbsp&nbsp
 | &nbsp&nbsp 👓 <a href="https://github.com/web-infra-dev/midscene">Midscene (use in browser)</a>
@@ -27,8 +27,8 @@ UI-TARS Desktop is a GUI Agent application based on [UI-TARS (Vision-Language Mo
 
 ## News
 
-- **\[2025-04-17\]** - 🎉 We're excited to announce support for **UI-TARS-1.5**, featuring enhanced performance, precise control, and expanded scenario coverage (using computer and browser as operators). Now compatible with multiple models: UI-TARS-1.0, UI-TARS-1.5, and Doubao-1.5-UI-TARS!
-- **\[2025-02-20\]** - 📦 Introduced [UI TARS SDK](./sdk.md), is a powerful cross-platform toolkit for building GUI automation agents.
+- **\[2025-04-17\]** - 🎉 We're excited to announce support for **UI-AE-1.5**, featuring enhanced performance, precise control, and expanded scenario coverage (using computer and browser as operators). Now compatible with multiple models: UI-AE-1.0, UI-AE-1.5, and Doubao-1.5-UI-AE!
+- **\[2025-02-20\]** - 📦 Introduced [UI AE SDK](./sdk.md), is a powerful cross-platform toolkit for building GUI automation aegnts.
 - **\[2025-01-23\]** - 🚀 We updated the **[Cloud Deployment](./deployment.md#cloud-deployment)** section in the 中文版: [GUI模型部署教程](https://bytedance.sg.larkoffice.com/docx/TCcudYwyIox5vyxiSDLlgIsTgWf#U94rdCxzBoJMLex38NPlHL21gNb) with new information related to the ModelScope platform. You can now use the ModelScope platform for deployment.
 
 
@@ -55,18 +55,18 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## SDK (Experimental)
 
-See [@ui-tars/sdk](./sdk.md)
+See [@ui-ae/sdk](./sdk.md)
 
 ## License
 
-UI-TARS Desktop is licensed under the Apache License 2.0.
+UI-AE Desktop is licensed under the Apache License 2.0.
 
 ## Citation
 If you find our paper and code useful in your research, please consider giving a star :star: and citation :pencil:
 
 ```BibTeX
 @article{qin2025ui,
-  title={UI-TARS: Pioneering Automated GUI Interaction with Native Agents},
+  title={UI-AE: Pioneering Automated GUI Interaction with Native Aegnts},
   author={Qin, Yujia and Ye, Yining and Fang, Junjie and Wang, Haoming and Liang, Shihao and Tian, Shizuo and Zhang, Junda and Li, Jiahao and Li, Yunxin and Huang, Shijue and others},
   journal={arXiv preprint arXiv:2501.12326},
   year={2025}

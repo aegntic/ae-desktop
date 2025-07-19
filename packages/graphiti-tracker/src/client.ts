@@ -2,7 +2,7 @@
  * Graphiti Service Client
  */
 
-import { logger } from '@ui-tars/shared/logger';
+import { logger } from '@ui-ae/shared/logger';
 import type {
   UIAction,
   ActionResult,

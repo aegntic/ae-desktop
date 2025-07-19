@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import os from 'os';
-import type { KeyInput } from '@agent-infra/browser';
+import type { KeyInput } from '@aegnt-infra/browser';
 
 const isMac = os.platform() === 'darwin';
 

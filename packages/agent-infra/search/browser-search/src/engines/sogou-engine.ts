@@ -1,4 +1,4 @@
-import type { Page } from '@agent-infra/browser';
+import type { Page } from '@aegnt-infra/browser';
 import type { SearchEngineAdapter, SearchResult } from '../types';
 
 export class SogouSearchEngine implements SearchEngineAdapter {

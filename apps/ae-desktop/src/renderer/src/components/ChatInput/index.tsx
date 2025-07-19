@@ -4,10 +4,10 @@
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
-import { IMAGE_PLACEHOLDER } from '@ui-tars/shared/constants';
-import { StatusEnum } from '@ui-tars/shared/types';
+import { IMAGE_PLACEHOLDER } from '@ui-ae/shared/constants';
+import { StatusEnum } from '@ui-ae/shared/types';
 
-import { useRunAgent } from '@renderer/hooks/useRunAgent';
+import { useRunAegnt } from '@renderer/hooks/useRunAegnt';
 import { useStore } from '@renderer/hooks/useStore';
 
 import {
@@ -45,7 +45,7 @@ const ChatInput = ({
     restUserData,
   } = useStore();
   const [localInstructions, setLocalInstructions] = useState('');
-  const { run, stopAgentRuning } = useRunAgent();
+  const { run, stopAegntRuning } = useRunAegnt();
   const { getSession, updateSession, chatMessages } = useSession();
   const { settings, updateSetting } = useSetting();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -151,7 +151,7 @@ const ChatInput = ({
       ?.value || '';
 
   const stopRun = async () => {
-    await stopAgentRuning(() => {
+    await stopAegntRuning(() => {
       setLocalInstructions('');
     });
     await api.clearHistory();
@@ -188,7 +188,7 @@ const ChatInput = ({
             </TooltipTrigger>
             <TooltipContent>
               <p className="whitespace-pre-line">
-                send last instructions when you done for ui-tars&apos;s
+                send last instructions when you done for ui-ae&apos;s
                 &apos;CALL_USER&apos;
               </p>
             </TooltipContent>

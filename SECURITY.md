@@ -10,7 +10,7 @@ Here are the versions are currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-If you find any vulnerability issue, please report it to https://github.com/bytedance/UI-TARS-desktop/security.
+If you find any vulnerability issue, please report it to https://github.com/bytedance/UI-AE-desktop/security.
 We will get touch with you shortly.
 
 ## Security Advisories

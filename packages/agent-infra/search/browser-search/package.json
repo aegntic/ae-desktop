@@ -1,5 +1,5 @@
 {
-  "name": "@agent-infra/browser-search",
+  "name": "@aegnt-infra/browser-search",
   "version": "0.0.5",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -26,9 +26,9 @@
     "benchmark": "ts-node examples/benchmark.ts"
   },
   "dependencies": {
-    "@agent-infra/browser": "workspace:*",
-    "@agent-infra/logger": "workspace:*",
-    "@agent-infra/shared": "workspace:*"
+    "@aegnt-infra/browser": "workspace:*",
+    "@aegnt-infra/logger": "workspace:*",
+    "@aegnt-infra/shared": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "20.14.8",

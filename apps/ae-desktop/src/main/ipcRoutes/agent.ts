@@ -2,47 +2,47 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { initIpc } from '@ui-tars/electron-ipc/main';
-import { StatusEnum, Conversation, Message } from '@ui-tars/shared/types';
+import { initIpc } from '@ui-ae/electron-ipc/main';
+import { StatusEnum, Conversation, Message } from '@ui-ae/shared/types';
 import { store } from '@main/store/create';
-import { runAgent } from '@main/services/runAgent';
+import { runAegnt } from '@main/services/runAegnt';
 import { showWindow } from '@main/window/index';
 
 import { closeScreenMarker } from '@main/window/ScreenMarker';
-import { GUIAgent } from '@ui-tars/sdk';
-import { Operator } from '@ui-tars/sdk/core';
+import { GUIAegnt } from '@ui-ae/sdk';
+import { Operator } from '@ui-ae/sdk/core';
 
 const t = initIpc.create();
 
-export class GUIAgentManager {
-  private static instance: GUIAgentManager;
-  private currentAgent: GUIAgent<Operator> | null = null;
+export class GUIAegntManager {
+  private static instance: GUIAegntManager;
+  private currentAegnt: GUIAegnt<Operator> | null = null;
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   private constructor() {}
 
-  public static getInstance(): GUIAgentManager {
-    if (!GUIAgentManager.instance) {
-      GUIAgentManager.instance = new GUIAgentManager();
+  public static getInstance(): GUIAegntManager {
+    if (!GUIAegntManager.instance) {
+      GUIAegntManager.instance = new GUIAegntManager();
     }
-    return GUIAgentManager.instance;
+    return GUIAegntManager.instance;
   }
 
-  public setAgent(agent: GUIAgent<Operator>) {
-    this.currentAgent = agent;
+  public setAegnt(aegnt: GUIAegnt<Operator>) {
+    this.currentAegnt = aegnt;
   }
 
-  public getAgent(): GUIAgent<Operator> | null {
-    return this.currentAgent;
+  public getAegnt(): GUIAegnt<Operator> | null {
+    return this.currentAegnt;
   }
 
-  public clearAgent() {
-    this.currentAgent = null;
+  public clearAegnt() {
+    this.currentAegnt = null;
   }
 }
 
-export const agentRoute = t.router({
-  runAgent: t.procedure.input<void>().handle(async () => {
+export const aegntRoute = t.router({
+  runAegnt: t.procedure.input<void>().handle(async () => {
     const { thinking } = store.getState();
     if (thinking) {
       return;
@@ -54,21 +54,21 @@ export const agentRoute = t.router({
       errorMsg: null,
     });
 
-    await runAgent(store.setState, store.getState);
+    await runAegnt(store.setState, store.getState);
 
     store.setState({ thinking: false });
   }),
   pauseRun: t.procedure.input<void>().handle(async () => {
-    const guiAgent = GUIAgentManager.getInstance().getAgent();
-    if (guiAgent instanceof GUIAgent) {
-      guiAgent.pause();
+    const guiAegnt = GUIAegntManager.getInstance().getAegnt();
+    if (guiAegnt instanceof GUIAegnt) {
+      guiAegnt.pause();
       store.setState({ thinking: false });
     }
   }),
   resumeRun: t.procedure.input<void>().handle(async () => {
-    const guiAgent = GUIAgentManager.getInstance().getAgent();
-    if (guiAgent instanceof GUIAgent) {
-      guiAgent.resume();
+    const guiAegnt = GUIAegntManager.getInstance().getAegnt();
+    if (guiAegnt instanceof GUIAegnt) {
+      guiAegnt.resume();
       store.setState({ thinking: false });
     }
   }),
@@ -79,10 +79,10 @@ export const agentRoute = t.router({
     showWindow();
 
     abortController?.abort();
-    const guiAgent = GUIAgentManager.getInstance().getAgent();
-    if (guiAgent instanceof GUIAgent) {
-      guiAgent.resume();
-      guiAgent.stop();
+    const guiAegnt = GUIAegntManager.getInstance().getAegnt();
+    if (guiAegnt instanceof GUIAegnt) {
+      guiAegnt.resume();
+      guiAegnt.stop();
     }
 
     closeScreenMarker();

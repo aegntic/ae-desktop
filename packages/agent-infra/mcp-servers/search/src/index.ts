@@ -7,7 +7,7 @@ import { program } from 'commander';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { createServer, setSearchConfig } from './server.js';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { SearchProvider } from '@agent-infra/search';
+import { SearchProvider } from '@aegnt-infra/search';
 
 program
   .name(process.env.NAME || 'mcp-server-search')

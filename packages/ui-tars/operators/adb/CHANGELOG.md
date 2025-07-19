@@ -1,10 +1,10 @@
-# @ui-tars/operator-adb
+# @ui-ae/operator-adb
 
 ## 1.2.3
 
 ### Patch Changes
 
-- @ui-tars/shared@1.2.3
+- @ui-ae/shared@1.2.3
 
 ## 1.2.2
 
@@ -12,13 +12,13 @@
 
 - a85ef50: chore: publish
 - Updated dependencies [a85ef50]
-  - @ui-tars/shared@1.2.2
+  - @ui-ae/shared@1.2.2
 
 ## 1.2.2-beta.3
 
 ### Patch Changes
 
-- @ui-tars/shared@1.2.2-beta.3
+- @ui-ae/shared@1.2.2-beta.3
 
 ## 1.2.2-beta.2
 
@@ -26,39 +26,39 @@
 
 - chore: publish
 - Updated dependencies
-  - @ui-tars/shared@1.2.2-beta.2
+  - @ui-ae/shared@1.2.2-beta.2
 
 ## 1.2.2-beta.1
 
 ### Patch Changes
 
-- @ui-tars/shared@1.2.2-beta.1
+- @ui-ae/shared@1.2.2-beta.1
 
 ## 1.2.2-beta.0
 
 ### Patch Changes
 
-- @ui-tars/shared@1.2.2-beta.0
+- @ui-ae/shared@1.2.2-beta.0
 
 ## 1.2.1
 
 ### Patch Changes
 
-- @ui-tars/shared@1.2.1
+- @ui-ae/shared@1.2.1
 
 ## 1.2.1-beta.0
 
 ### Patch Changes
 
-- @ui-tars/shared@1.2.1-beta.0
+- @ui-ae/shared@1.2.1-beta.0
 
 ## 1.2.0
 
 ### Patch Changes
 
 - d80285d: chore: publish adb
-- d80285d: feat: ui-tars add adb operator
-- 5fb2821: feat: ui-tars 1.5
+- d80285d: feat: ui-ae add adb operator
+- 5fb2821: feat: ui-ae 1.5
 - Updated dependencies [c050e6a]
 - Updated dependencies [4e0883f]
 - Updated dependencies [2bf2f4a]
@@ -71,7 +71,7 @@
 - Updated dependencies [2b9c631]
 - Updated dependencies [d80285d]
 - Updated dependencies [5fb2821]
-  - @ui-tars/shared@1.2.0
+  - @ui-ae/shared@1.2.0
 
 ## 1.2.0-beta.24
 
@@ -79,12 +79,12 @@
 
 - chore: publish adb
 - Updated dependencies
-  - @ui-tars/shared@1.2.0-beta.24
+  - @ui-ae/shared@1.2.0-beta.24
 
 ## 1.2.0-beta.23
 
 ### Patch Changes
 
-- feat: ui-tars add adb operator
+- feat: ui-ae add adb operator
 - Updated dependencies
-  - @ui-tars/shared@1.2.0-beta.23
+  - @ui-ae/shared@1.2.0-beta.23

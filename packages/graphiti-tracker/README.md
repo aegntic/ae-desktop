@@ -1,6 +1,6 @@
-# Graphiti Tracker for UI-TARS Desktop
+# Graphiti Tracker for UI-AE Desktop
 
-This package integrates [Graphiti](https://github.com/getzep/graphiti), a temporal knowledge graph system, to track all actions performed within the UI-TARS Desktop application.
+This package integrates [Graphiti](https://github.com/getzep/graphiti), a temporal knowledge graph system, to track all actions performed within the UI-AE Desktop application.
 
 ## Features
 
@@ -15,7 +15,7 @@ This package integrates [Graphiti](https://github.com/getzep/graphiti), a tempor
 
 ```
 ┌─────────────────┐     ┌──────────────────┐     ┌─────────────┐
-│  UI-TARS App    │────▶│ Graphiti Tracker │────▶│  Graphiti   │
+│  UI-AE App    │────▶│ Graphiti Tracker │────▶│  Graphiti   │
 │  (Electron)     │     │   (TypeScript)   │     │  Service    │
 └─────────────────┘     └──────────────────┘     │  (Python)   │
                                                   └──────┬──────┘
@@ -53,9 +53,9 @@ This package integrates [Graphiti](https://github.com/getzep/graphiti), a tempor
 
 ## Configuration
 
-Enable Graphiti tracking in UI-TARS Desktop settings:
+Enable Graphiti tracking in UI-AE Desktop settings:
 
-1. Open UI-TARS Desktop
+1. Open UI-AE Desktop
 2. Go to Settings
 3. Enable "Graphiti Tracking"
 4. Configure the service URL (default: http://localhost:8100)

@@ -2,11 +2,11 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { Agent } from '../src/agent/service';
+import { Aegnt } from '../src/aegnt/service';
 import { AzureBedrockChat } from './azureBedrockChat';
 
 async function main() {
-  const agent = new Agent(
+  const aegnt = new Aegnt(
     new AzureBedrockChat({
       azureOpenAIEndpoint: process.env.AZURE_OPENAI_ENDPOINT,
       azureOpenAIApiVersion: process.env.AZURE_OPENAI_API_VERSION,
@@ -22,7 +22,7 @@ async function main() {
     },
   );
 
-  await agent.run(
+  await aegnt.run(
     'Open https://news.ycombinator.com/ then find the latest post.',
   );
 }

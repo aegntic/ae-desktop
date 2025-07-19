@@ -19,7 +19,7 @@
 [![Electron](https://img.shields.io/badge/electron-34.1.1-9FEAF9.svg)](https://www.electronjs.org/)
 [![TypeScript](https://img.shields.io/badge/typescript-5.7.2-blue.svg)](https://www.typescriptlang.org/)
 
-**AI-Enhanced Desktop Agent with Knowledge Graph Tracking and SuperClaude Integration**
+**AI-Enhanced Desktop Aegnt with Knowledge Graph Tracking and SuperClaude Integration**
 
 [Features](#-features) • [Quick Start](#-quick-start) • [Architecture](#-architecture) • [Development](#-development) • [Contributing](#-contributing)
 
@@ -105,7 +105,7 @@ graph TB
     
     subgraph "AI Models"
         E[Ollama<br/>Gemma 3n]
-        F[Vision Model<br/>UI-TARS-1.5]
+        F[Vision Model<br/>UI-AE-1.5]
     end
     
     subgraph "Storage"
@@ -143,7 +143,7 @@ graph TB
 <details>
 <summary><b>🧠 AI Integration</b></summary>
 
-- **Vision-Language Model**: UI-TARS-1.5 compatible models for understanding screenshots
+- **Vision-Language Model**: UI-AE-1.5 compatible models for understanding screenshots
 - **Local LLM**: Gemma 3n via Ollama for natural language processing
 - **SuperClaude Framework**: Advanced command processing with personas and workflows
 - **Model-agnostic**: Adapts to different model capabilities automatically
@@ -180,7 +180,7 @@ ae-desktop/
 │   └── ae-desktop/          # Main Electron application
 ├── packages/
 │   ├── graphiti-tracker/    # Knowledge graph integration
-│   ├── agent-infra/         # MCP servers and tools
+│   ├── aegnt-infra/         # MCP servers and tools
 │   ├── operators/           # Computer/browser control
 │   └── shared/              # Common utilities
 └── scripts/                 # Build and setup scripts
@@ -221,10 +221,10 @@ NEO4J_URI=bolt://localhost:7687
 NEO4J_USER=neo4j
 NEO4J_PASSWORD=ae-desktop-neo4j
 
-# Vision Model (UI-TARS compatible)
+# Vision Model (UI-AE compatible)
 VISION_MODEL_BASE_URL=your-model-endpoint
 VISION_MODEL_API_KEY=your-api-key
-VISION_MODEL_NAME=UI-TARS-1.5
+VISION_MODEL_NAME=UI-AE-1.5
 ```
 
 ## 🤝 Contributing
@@ -252,7 +252,7 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## 🙏 Acknowledgments
 
-- Built on [UI-TARS](https://github.com/showlab/UI-TARS) vision-language models
+- Built on [UI-AE](https://github.com/showlab/UI-AE) vision-language models
 - Powered by [Graphiti](https://github.com/getzep/graphiti) for knowledge graphs
 - Enhanced with [SuperClaude](https://github.com/aegntic/souprcld) framework
 - Uses [Ollama](https://ollama.ai) for local model inference

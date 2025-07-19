@@ -2,7 +2,7 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { DefaultBrowserOperator } from '@ui-tars/operator-browser';
+import { DefaultBrowserOperator } from '@ui-ae/operator-browser';
 import { logger } from '@main/logger';
 import { store } from '@main/store/create';
 

@@ -2,9 +2,9 @@
  * Copyright (c) 2025 Bytedance, Inc. and its affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
-import { LocalBrowser } from '@agent-infra/browser';
-import { ConsoleLogger } from '@agent-infra/logger';
-import { GUIAgent, StatusEnum } from '@ui-tars/sdk';
+import { LocalBrowser } from '@aegnt-infra/browser';
+import { ConsoleLogger } from '@aegnt-infra/logger';
+import { GUIAgent, StatusEnum } from '@ui-ae/sdk';
 import { BrowserOperator, DefaultBrowserOperator } from '../src';
 
 async function main() {
@@ -36,7 +36,7 @@ async function main() {
   });
 
   // 4. Create a GUIAgent instance
-  const agent = new GUIAgent({
+  const aegnt = new GUIAgent({
     model: {
       baseURL: process.env.VLM_BASE_URL,
       apiKey: process.env.VLM_API_KEY,
@@ -45,14 +45,14 @@ async function main() {
     operator,
   });
 
-  // 5. Run the agent
+  // 5. Run the aegnt
   // const instruction =
-  //   'Tell me what is the latest Pull Request of UI-TARS-Desktop';
-  const instruction = `Review the code of latest Pull Request of UI-TARS-Desktop,
+  //   'Tell me what is the latest Pull Request of UI-AE-Desktop';
+  const instruction = `Review the code of latest Pull Request of UI-AE-Desktop,
     and give me a 500-word summary
     `;
   try {
-    await agent.run(instruction);
+    await aegnt.run(instruction);
   } catch (error) {
     logger.error('Error:', error);
   } finally {

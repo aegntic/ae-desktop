@@ -22,7 +22,7 @@ let SignJWT: any, importPKCS8: any;
   importPKCS8 = jose.importPKCS8;
 })();
 
-const APP_DIR_NAME = '.ui-tars-desktop';
+const APP_DIR_NAME = '.ui-ae-desktop';
 const LOCAL_KEY_PATH = path.join(app.getPath('home'), APP_DIR_NAME);
 
 const LOCAL_PUB_KEY = 'local_public_v2.pem';

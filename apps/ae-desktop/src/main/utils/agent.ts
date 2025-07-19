@@ -1,4 +1,4 @@
-import { UITarsModelVersion } from '@ui-tars/shared/constants';
+import { UIAeModelVersion } from '@ui-ae/shared/constants';
 import {
   Operator,
   SearchEngineForSettings,
@@ -9,7 +9,7 @@ import {
   getSystemPromptDoubao_15_15B,
   getSystemPromptDoubao_15_20B,
   getSystemPromptV1_5,
-} from '../agent/prompts';
+} from '../aegnt/prompts';
 import {
   closeScreenMarker,
   hideScreenWaterFlow,
@@ -18,36 +18,36 @@ import {
   showWidgetWindow,
 } from '../window/ScreenMarker';
 import { hideMainWindow, showMainWindow } from '../window';
-import { SearchEngine } from '@ui-tars/operator-browser';
+import { SearchEngine } from '@ui-ae/operator-browser';
 
 export const getModelVersion = (
   provider: VLMProviderV2 | undefined,
-): UITarsModelVersion => {
+): UIAeModelVersion => {
   switch (provider) {
-    case VLMProviderV2.ui_tars_1_5:
-      return UITarsModelVersion.V1_5;
-    case VLMProviderV2.ui_tars_1_0:
-      return UITarsModelVersion.V1_0;
+    case VLMProviderV2.ui_ae_1_5:
+      return UIAeModelVersion.V1_5;
+    case VLMProviderV2.ui_ae_1_0:
+      return UIAeModelVersion.V1_0;
     case VLMProviderV2.doubao_1_5:
-      return UITarsModelVersion.DOUBAO_1_5_15B;
+      return UIAeModelVersion.DOUBAO_1_5_15B;
     case VLMProviderV2.doubao_1_5_vl:
-      return UITarsModelVersion.DOUBAO_1_5_20B;
+      return UIAeModelVersion.DOUBAO_1_5_20B;
     default:
-      return UITarsModelVersion.V1_0;
+      return UIAeModelVersion.V1_0;
   }
 };
 
 export const getSpByModelVersion = (
-  modelVersion: UITarsModelVersion,
+  modelVersion: UIAeModelVersion,
   language: 'zh' | 'en',
   operatorType: 'browser' | 'computer',
 ) => {
   switch (modelVersion) {
-    case UITarsModelVersion.DOUBAO_1_5_20B:
+    case UIAeModelVersion.DOUBAO_1_5_20B:
       return getSystemPromptDoubao_15_20B(language, operatorType);
-    case UITarsModelVersion.DOUBAO_1_5_15B:
+    case UIAeModelVersion.DOUBAO_1_5_15B:
       return getSystemPromptDoubao_15_15B(language);
-    case UITarsModelVersion.V1_5:
+    case UIAeModelVersion.V1_5:
       return getSystemPromptV1_5(language, 'normal');
     default:
       return getSystemPrompt(language);
@@ -60,7 +60,7 @@ export const getLocalBrowserSearchEngine = (
   return (engine || SearchEngineForSettings.GOOGLE) as unknown as SearchEngine;
 };
 
-export const beforeAgentRun = async (operator: Operator) => {
+export const beforeAegntRun = async (operator: Operator) => {
   switch (operator) {
     case Operator.RemoteComputer:
       break;
@@ -80,7 +80,7 @@ export const beforeAgentRun = async (operator: Operator) => {
   }
 };
 
-export const afterAgentRun = (operator: Operator) => {
+export const afterAegntRun = (operator: Operator) => {
   switch (operator) {
     case Operator.RemoteComputer:
       break;

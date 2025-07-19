@@ -15,7 +15,7 @@ import {
   TIME_URL,
   FREE_MODEL_BASE_URL,
 } from './shared';
-import { UITarsModelVersion } from '@ui-tars/shared/constants';
+import { UIAeModelVersion } from '@ui-ae/shared/constants';
 
 const FREE_TRIAL_DURATION_MS = 30 * 60 * 1000;
 
@@ -574,25 +574,25 @@ export class ProxyClient {
     }
   }
 
-  public static async getRemoteVLMProvider(): Promise<UITarsModelVersion> {
+  public static async getRemoteVLMProvider(): Promise<UIAeModelVersion> {
     try {
       const res = await this.instance.getRemoteVLMProvider();
-      let modelVer = UITarsModelVersion.DOUBAO_1_5_20B;
+      let modelVer = UIAeModelVersion.DOUBAO_1_5_20B;
       switch (res) {
-        case 'UI-TARS-1.5':
-          modelVer = UITarsModelVersion.V1_5;
+        case 'UI-AE-1.5':
+          modelVer = UIAeModelVersion.V1_5;
           break;
-        case 'UI-TARS-1.0':
-          modelVer = UITarsModelVersion.V1_0;
+        case 'UI-AE-1.0':
+          modelVer = UIAeModelVersion.V1_0;
           break;
-        case 'Doubao-1.5-UI-TARS':
-          modelVer = UITarsModelVersion.DOUBAO_1_5_15B;
+        case 'Doubao-1.5-UI-AE':
+          modelVer = UIAeModelVersion.DOUBAO_1_5_15B;
           break;
         case 'Doubao-1.5-thinking-vision-pro':
-          modelVer = UITarsModelVersion.DOUBAO_1_5_20B;
+          modelVer = UIAeModelVersion.DOUBAO_1_5_20B;
           break;
         default:
-          modelVer = UITarsModelVersion.DOUBAO_1_5_20B;
+          modelVer = UIAeModelVersion.DOUBAO_1_5_20B;
       }
       return modelVer;
     } catch (error) {
@@ -600,7 +600,7 @@ export class ProxyClient {
         '[ProxyClient] Get Remote VLM Provider Error:',
         (error as Error).message,
       );
-      return UITarsModelVersion.DOUBAO_1_5_20B;
+      return UIAeModelVersion.DOUBAO_1_5_20B;
     }
   }
 

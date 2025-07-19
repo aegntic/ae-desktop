@@ -1,4 +1,4 @@
-# @agent-infra/browser-use
+# @aegnt-infra/browser-use
 
 A browser automation and interaction library for AI agents, providing structured DOM access and browser control capabilities.
 

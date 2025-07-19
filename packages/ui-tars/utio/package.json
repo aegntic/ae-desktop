@@ -1,7 +1,7 @@
 {
-  "name": "@ui-tars/utio",
+  "name": "@ui-ae/utio",
   "version": "1.2.3",
-  "description": "UTIO (UI-TARS Insights and Observation)",
+  "description": "UTIO (UI-AE Insights and Observation)",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -12,7 +12,7 @@
     "build:watch": "rslib build --watch"
   },
   "keywords": [
-    "UI-TARS"
+    "UI-AE"
   ],
   "license": "Apache-2.0",
   "publishConfig": {

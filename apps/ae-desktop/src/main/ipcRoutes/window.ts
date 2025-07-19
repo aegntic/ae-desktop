@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import { app } from 'electron';
-import { initIpc } from '@ui-tars/electron-ipc/main';
+import { initIpc } from '@ui-ae/electron-ipc/main';
 import { appUpdater } from '@main/window/createWindow';
 import { logger } from '../logger';
 import { showWindow } from '@main/window/index';

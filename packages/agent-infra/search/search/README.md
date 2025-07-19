@@ -1,10 +1,10 @@
-# @agent-infra/search
+# @aegnt-infra/search
 
 <p>
-  <a href="https://npmjs.com/package/@agent-infra/search?activeTab=readme"><img src="https://img.shields.io/npm/v/@agent-infra/search?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" /></a>
-  <a href="https://npmcharts.com/compare/@agent-infra/search?minimal=true"><img src="https://img.shields.io/npm/dm/@agent-infra/search.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="downloads" /></a>
-  <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/@agent-infra/search.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="node version"></a>
-  <a href="https://github.com/bytedance/open-agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="license" /></a>
+  <a href="https://npmjs.com/package/@aegnt-infra/search?activeTab=readme"><img src="https://img.shields.io/npm/v/@aegnt-infra/search?style=flat-square&colorA=564341&colorB=EDED91" alt="npm version" /></a>
+  <a href="https://npmcharts.com/compare/@aegnt-infra/search?minimal=true"><img src="https://img.shields.io/npm/dm/@aegnt-infra/search.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="downloads" /></a>
+  <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/@aegnt-infra/search.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="node version"></a>
+  <a href="https://github.com/bytedance/open-aegnt/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square&colorA=564341&colorB=EDED91" alt="license" /></a>
 </p>
 
 An isomorphic search client that unifies multiple search providers into a single API.
@@ -19,11 +19,11 @@ An isomorphic search client that unifies multiple search providers into a single
 ## Installation
 
 ```bash
-npm install @agent-infra/search
+npm install @aegnt-infra/search
 # or
-yarn add @agent-infra/search
+yarn add @aegnt-infra/search
 # or
-pnpm add @agent-infra/search
+pnpm add @aegnt-infra/search
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ pnpm add @agent-infra/search
 ### Basic Search
 
 ```typescript
-import { Search, SearchProvider } from '@agent-infra/search';
+import { Search, SearchProvider } from '@aegnt-infra/search';
 
 // Create a search client with your preferred provider
 const client = new SearchClient({
@@ -53,7 +53,7 @@ console.log(results);
 ### Switch Between Providers
 
 ```typescript
-import { Search, SearchProvider } from '@agent-infra/search';
+import { Search, SearchProvider } from '@aegnt-infra/search';
 
 // Create search instances for different providers
 const bingSearch = new SearchClient({
@@ -80,7 +80,7 @@ const browserSearch = new SearchClient({
 
 // Use the appropriate client based on your needs
 const results = await bingSearch.search({
-  query: 'UI-TARS',
+  query: 'UI-AE',
 });
 ```
 
@@ -91,14 +91,14 @@ const results = await bingSearch.search({
 // BING_SEARCH_API_KEY=your-api-key
 // BING_SEARCH_API_BASE_URL=your-api-base-url
 
-import { Search, SearchProvider } from '@agent-infra/search';
+import { Search, SearchProvider } from '@aegnt-infra/search';
 
 const client = new SearchClient({
   provider: SearchProvider.BingSearch,
 });
 
 const results = await client.search({
-  query: 'UI-TARS',
+  query: 'UI-AE',
 });
 ```
 
@@ -181,7 +181,7 @@ const client = new SearchClient({
 
 const results = await client.search(
   {
-    query: 'UI-TARS',
+    query: 'UI-AE',
     count: 5,
   },
   // Pass Bing-specific parameter via 2nd parameter
@@ -223,7 +223,7 @@ const client = new SearchClient({
 
 const results = await client.search(
   {
-    query: 'UI-TARS',
+    query: 'UI-AE',
     count: 5,
   },
   // BrowserSearch-specific parameters

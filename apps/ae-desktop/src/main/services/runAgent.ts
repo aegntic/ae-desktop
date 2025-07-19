@@ -5,12 +5,12 @@
 import assert from 'assert';
 
 import { logger } from '@main/logger';
-import { StatusEnum } from '@ui-tars/shared/types';
+import { StatusEnum } from '@ui-ae/shared/types';
 import { type ConversationWithSoM } from '@main/shared/types';
-import { GUIAgent, type GUIAgentConfig } from '@ui-tars/sdk';
+import { GUIAegnt, type GUIAegntConfig } from '@ui-ae/sdk';
 import { markClickPosition } from '@main/utils/image';
 import { UTIOService } from '@main/services/utio';
-import { NutJSElectronOperator } from '../agent/operator';
+import { NutJSElectronOperator } from '../aegnt/operator';
 import {
   createRemoteBrowserOperator,
   RemoteComputerOperator,
@@ -18,29 +18,29 @@ import {
 import {
   DefaultBrowserOperator,
   RemoteBrowserOperator,
-} from '@ui-tars/operator-browser';
+} from '@ui-ae/operator-browser';
 import { showPredictionMarker } from '@main/window/ScreenMarker';
 import { SettingStore } from '@main/store/setting';
 import { AppState, Operator } from '@main/store/types';
-import { GUIAgentManager } from '../ipcRoutes/agent';
+import { GUIAegntManager } from '../ipcRoutes/aegnt';
 import { checkBrowserAvailability } from './browserCheck';
 import {
   getModelVersion,
   getSpByModelVersion,
-  beforeAgentRun,
-  afterAgentRun,
+  beforeAegntRun,
+  afterAegntRun,
   getLocalBrowserSearchEngine,
-} from '../utils/agent';
+} from '../utils/aegnt';
 import { FREE_MODEL_BASE_URL } from '../remote/shared';
 import { getAuthHeader } from '../remote/auth';
 import { ProxyClient } from '../remote/proxyClient';
-import { UITarsModelConfig } from '@ui-tars/sdk/core';
+import { UIAeModelConfig } from '@ui-ae/sdk/core';
 
-export const runAgent = async (
+export const runAegnt = async (
   setState: (state: AppState) => void,
   getState: () => AppState,
 ) => {
-  logger.info('runAgent');
+  logger.info('runAegnt');
   const settings = SettingStore.getStore();
   const { instructions, abortController } = getState();
   assert(instructions, 'instructions is required');
@@ -49,12 +49,12 @@ export const runAgent = async (
 
   logger.info('settings.operator', settings.operator);
 
-  const handleData: GUIAgentConfig<NutJSElectronOperator>['onData'] = async ({
+  const handleData: GUIAegntConfig<NutJSElectronOperator>['onData'] = async ({
     data,
   }) => {
     const lastConv = getState().messages[getState().messages.length - 1];
     const { status, conversations, ...restUserData } = data;
-    logger.info('[onGUIAgentData] status', status, conversations.length);
+    logger.info('[onGUIAegntData] status', status, conversations.length);
 
     // add SoM to conversations
     const conversationsWithSoM: ConversationWithSoM[] = await Promise.all(
@@ -93,7 +93,7 @@ export const runAgent = async (
       ...rest
     } = conversationsWithSoM?.[conversationsWithSoM.length - 1] || {};
     logger.info(
-      '[onGUIAgentData] ======data======\n',
+      '[onGUIAegntData] ======data======\n',
       predictionParsed,
       screenshotContext,
       rest,
@@ -165,7 +165,7 @@ export const runAgent = async (
   }
 
   let modelVersion = getModelVersion(settings.vlmProvider);
-  let modelConfig: UITarsModelConfig = {
+  let modelConfig: UIAeModelConfig = {
     baseURL: settings.vlmBaseUrl,
     apiKey: settings.vlmApiKey,
     model: settings.vlmModelName,
@@ -194,7 +194,7 @@ export const runAgent = async (
     operatorType,
   );
 
-  const guiAgent = new GUIAgent({
+  const guiAegnt = new GUIAegnt({
     model: modelConfig,
     systemPrompt: systemPrompt,
     logger,
@@ -203,7 +203,7 @@ export const runAgent = async (
     onData: handleData,
     onError: (params) => {
       const { error } = params;
-      logger.error('[onGUIAgentError]', settings, error);
+      logger.error('[onGUIAegntError]', settings, error);
       setState({
         ...getState(),
         status: StatusEnum.ERROR,
@@ -227,22 +227,22 @@ export const runAgent = async (
     },
     maxLoopCount: settings.maxLoopCount,
     loopIntervalInMs: settings.loopIntervalInMs,
-    uiTarsVersion: modelVersion,
+    uiAeVersion: modelVersion,
   });
 
-  GUIAgentManager.getInstance().setAgent(guiAgent);
+  GUIAegntManager.getInstance().setAegnt(guiAegnt);
   UTIOService.getInstance().sendInstruction(instructions);
 
   const { sessionHistoryMessages } = getState();
 
-  beforeAgentRun(settings.operator);
+  beforeAegntRun(settings.operator);
 
   const startTime = Date.now();
 
-  await guiAgent
+  await guiAegnt
     .run(instructions, sessionHistoryMessages, modelAuthHdrs)
     .catch((e) => {
-      logger.error('[runAgentLoop error]', e);
+      logger.error('[runAegntLoop error]', e);
       setState({
         ...getState(),
         status: StatusEnum.ERROR,
@@ -250,7 +250,7 @@ export const runAgent = async (
       });
     });
 
-  logger.info('[runAgent Totoal cost]: ', (Date.now() - startTime) / 1000, 's');
+  logger.info('[runAegnt Totoal cost]: ', (Date.now() - startTime) / 1000, 's');
 
-  afterAgentRun(settings.operator);
+  afterAegntRun(settings.operator);
 };

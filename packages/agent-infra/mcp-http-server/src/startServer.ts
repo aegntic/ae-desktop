@@ -9,7 +9,7 @@ import {
   isInitializeRequest,
   type JSONRPCError,
 } from '@modelcontextprotocol/sdk/types.js';
-import { Logger, ConsoleLogger, BaseLogger } from '@agent-infra/logger';
+import { Logger, ConsoleLogger, BaseLogger } from '@aegnt-infra/logger';
 import { SSEServerTransport } from '@modelcontextprotocol/sdk/server/sse.js';
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import type { Server } from '@modelcontextprotocol/sdk/server/index.js';

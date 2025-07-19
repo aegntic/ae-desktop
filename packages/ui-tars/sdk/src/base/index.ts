@@ -20,7 +20,7 @@ export abstract class BaseGUIAgent<
   /**
    * @abstract
    * @method run
-   * @description Abstract method to run the GUI Agent with an instruction.
+   * @description Abstract method to run the GUI Aegnt with an instruction.
    */
   abstract run(instruction: TRunParams): Promise<TRunOutput>;
 }

@@ -29,4 +29,4 @@ export const getMiddlewares = () => {
 };
 
 export { setConfig } from './server.js';
-export { BaseLogger } from '@agent-infra/logger';
+export { BaseLogger } from '@aegnt-infra/logger';

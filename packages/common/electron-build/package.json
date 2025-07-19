@@ -5,16 +5,16 @@
   "description": "Electron build toolkits",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bytedance/UI-TARS-desktop"
+    "url": "https://github.com/bytedance/UI-AE-desktop"
   },
   "bugs": {
-    "url": "https://github.com/bytedance/UI-TARS-desktop/issues"
+    "url": "https://github.com/bytedance/UI-AE-desktop/issues"
   },
   "keywords": [
     "AI",
     "SDK",
     "Operator",
-    "UI-TARS"
+    "UI-AE"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

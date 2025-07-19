@@ -68,7 +68,7 @@ const screenClickTool = defineTool({
       logger.info('[vision] factors', factors);
 
       if (Array.isArray(factors) && factors.length > 0) {
-        const actionParserModule = await import('@ui-tars/action-parser');
+        const actionParserModule = await import('@ui-ae/action-parser');
         const { actionParser } = actionParserModule.default;
 
         const viewport = page.viewport();

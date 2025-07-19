@@ -1,7 +1,7 @@
 import { Browser, Page } from 'puppeteer-core';
-import { LocalBrowser, RemoteBrowser } from '@agent-infra/browser';
+import { LocalBrowser, RemoteBrowser } from '@aegnt-infra/browser';
 import { PuppeteerBlocker } from '@ghostery/adblocker-puppeteer';
-import { getBuildDomTreeScript } from '@agent-infra/browser-use';
+import { getBuildDomTreeScript } from '@aegnt-infra/browser-use';
 import { parseProxyUrl, delayReject } from '../utils/utils.js';
 import fetch from 'cross-fetch';
 import { store } from '../store.js';
