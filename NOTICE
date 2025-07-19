@@ -1,0 +1,43 @@
+ae-desktop
+Copyright 2025 aegntic
+
+This product is a fork of UI-TARS Desktop (https://github.com/bytedance/UI-TARS-desktop)
+Copyright 2024 ByteDance
+
+This product includes software developed by ByteDance and the ShowLab team.
+The original UI-TARS Desktop project laid the foundation for ae-desktop's
+multimodal AI agent capabilities.
+
+================================================================================
+
+Portions of this software were originally developed as part of the UI-TARS project:
+- Vision-Language Model integration
+- Computer and Browser operators
+- Action parsing framework
+- Desktop application architecture
+
+The following components were added or significantly modified in ae-desktop:
+- Graphiti knowledge graph integration
+- SuperClaude framework integration
+- Ollama local model support
+- Automatic service management
+- Aegnt branding and terminology
+
+================================================================================
+
+This product includes the following third-party software:
+
+Graphiti (https://github.com/getzep/graphiti)
+Copyright Zep AI
+Licensed under the Apache License 2.0
+
+Neo4j (https://neo4j.com)
+Copyright Neo4j, Inc.
+Licensed under GPL v3 (Community Edition)
+
+Ollama (https://ollama.ai)
+Copyright Ollama, Inc.
+Licensed under the MIT License
+
+For a complete list of dependencies and their licenses, see package.json files
+throughout the project.

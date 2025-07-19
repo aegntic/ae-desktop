@@ -252,10 +252,24 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## 🙏 Acknowledgments
 
-- Built on [UI-AE](https://github.com/showlab/UI-AE) vision-language models
-- Powered by [Graphiti](https://github.com/getzep/graphiti) for knowledge graphs
-- Enhanced with [SuperClaude](https://github.com/aegntic/souprcld) framework
-- Uses [Ollama](https://ollama.ai) for local model inference
+This project is a fork of the excellent [UI-TARS Desktop](https://github.com/bytedance/UI-TARS-desktop) by ByteDance/ShowLab. We are grateful for their pioneering work in multimodal AI agents.
+
+### Credits
+
+- **Original Project**: [UI-TARS Desktop](https://github.com/bytedance/UI-TARS-desktop) - The foundation of ae-desktop
+- **Vision Models**: Based on [UI-TARS](https://github.com/showlab/UI-TARS) vision-language models
+- **Knowledge Graphs**: Powered by [Graphiti](https://github.com/getzep/graphiti) for temporal knowledge tracking
+- **AI Framework**: Enhanced with [SuperClaude](https://github.com/aegntic/souprcld) for advanced capabilities
+- **Local Inference**: Uses [Ollama](https://ollama.ai) for privacy-preserving local model execution
+
+### What's New in ae-desktop
+
+While ae-desktop builds upon UI-TARS, we've added:
+- 🧠 Automatic knowledge graph tracking with Graphiti
+- 🤖 SuperClaude framework integration for enhanced AI capabilities
+- 🔓 Default support for free, local models (Gemma 3n)
+- 🚀 Automatic service management for seamless startup
+- 🎯 Unique "aegnt" branding and terminology
 
 ---
 
