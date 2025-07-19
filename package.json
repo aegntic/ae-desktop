@@ -5,7 +5,7 @@
   "packageManager": "pnpm@9.10.0",
   "description": "ae-desktop: AI-Enhanced Desktop monorepo with integrated Graphiti knowledge graph and SuperClaude framework",
   "main": "./dist/main/main.js",
-  "author": "ae-desktop contributors",
+  "author": "aegntic <contact@aegntic.ai>",
   "scripts": {
     "commit": "oco",
     "bootstrap": "pnpm i",

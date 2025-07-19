@@ -1,302 +1,268 @@
-# ae-desktop (AI-Enhanced Desktop)
+# 
+```
+     ███████╗ ███████╗    ██████╗  ███████╗██╗  ██╗████████╗██████╗ 
+    ██╔═══██╗██╔════╝    ██╔══██╗██╔════╝██║ ██╔╝╚══██╔══╝██╔══██╗
+    ████████║█████╗█████╗██║  ██║███████╗█████╔╝    ██║   ██████╔╝
+    ██╔═══██║██╔══╝╚════╝██║  ██║╚════██║██╔═██╗    ██║   ██╔═══╝ 
+    ██║   ██║███████╗    ██████╔╝███████║██║  ██╗   ██║   ██║     
+    ╚═╝   ╚═╝╚══════╝    ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝     
+                                                    ┌─────────────────┐
+                                                    │ aegnt-desktop   │
+                                                    └─────────────────┘
+```
 
-<br/>
+<div align="center">
 
-## Introduction
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![Node](https://img.shields.io/badge/node-%3E%3D20.x-brightgreen.svg)](https://nodejs.org)
+[![pnpm](https://img.shields.io/badge/pnpm-9.10.0-orange.svg)](https://pnpm.io)
+[![Electron](https://img.shields.io/badge/electron-34.1.1-9FEAF9.svg)](https://www.electronjs.org/)
+[![TypeScript](https://img.shields.io/badge/typescript-5.7.2-blue.svg)](https://www.typescriptlang.org/)
 
-English | [简体中文](./README.zh-CN.md)
+**AI-Enhanced Desktop Agent with Knowledge Graph Tracking and SuperClaude Integration**
 
-**ae-desktop** is an AI-Enhanced Desktop application that brings multimodal AI agents to your computer with integrated knowledge graph tracking and the SuperClaude framework. It automatically tracks all actions in a temporal knowledge graph using Graphiti and enhances AI interactions with SuperClaude principles - all running locally with free models.
+[Features](#-features) • [Quick Start](#-quick-start) • [Architecture](#-architecture) • [Development](#-development) • [Contributing](#-contributing)
 
-## Key Features
+</div>
 
-### 🤖 Multimodal AI Agent
-- Control your computer using natural language
-- Vision-based understanding of your screen
-- Support for multiple VLM providers (Gemma, Llama, GPT, etc.)
-- Local and remote operators for computer and browser control
+---
 
-### 📊 Integrated Knowledge Graph (Graphiti)
-- Automatically tracks all actions in a temporal knowledge graph
-- Build relationships between actions over time
-- Query past interactions and patterns
-- Completely local - no data leaves your machine
-- Uses FREE models (Gemma 3n e2b via Ollama)
+## 🚀 Features
 
-### 🧠 SuperClaude Framework Integration
-- Adapts SuperClaude principles to any VLM model
-- 16 specialized commands for development tasks
-- Smart personas that activate based on context
-- Model-agnostic implementation
-- Works seamlessly in the background
+<table>
+<tr>
+<td width="50%">
 
-### 🔒 Privacy & Performance
-- All AI processing happens locally
-- No API keys required (uses Ollama)
-- Automatic service management
-- Graceful startup and shutdown
+### 🎯 **Natural Language Control**
+Control your computer using conversational commands. Just tell ae-desktop what you want to do, and it will execute the actions for you.
 
-## Quick Start
+</td>
+<td width="50%">
+
+### 🧠 **Knowledge Graph Tracking**
+Every action is tracked using Graphiti, building a temporal knowledge graph of your interactions and system state.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🤖 **SuperClaude Integration**
+Enhanced with SuperClaude framework for advanced command processing, personas, and intelligent task orchestration.
+
+</td>
+<td width="50%">
+
+### 🔓 **Free & Local Models**
+Runs on free models like Gemma 3n via Ollama. No expensive API keys required - everything runs locally.
+
+</td>
+</tr>
+</table>
+
+## 📦 Quick Start
+
+### Prerequisites
+
+- **Node.js** >= 20.x
+- **pnpm** 9.10.0 (required)
+- **Docker** (for Neo4j and services)
+- **macOS/Windows/Linux** with appropriate permissions
+
+### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ae-desktop.git
+git clone https://github.com/aegntic/ae-desktop.git
 cd ae-desktop
 
 # Install dependencies
 pnpm install
 
-# Start ae-desktop (all services start automatically!)
-pnpm dev
+# Start the desktop app
+pnpm run dev:ae-desktop
 ```
 
-That's it! ae-desktop will automatically:
-- Start Ollama and download Gemma 3n e2b model
-- Launch Neo4j and Graphiti for action tracking  
-- Initialize SuperClaude framework integration
-- Open the desktop application
+The first run will automatically:
+- 🐳 Set up Docker containers for Neo4j
+- 🤖 Install Ollama and pull required models
+- 🧠 Initialize Graphiti knowledge graph
+- ⚡ Configure SuperClaude framework
 
-No API keys or additional setup required!
+## 🏗️ Architecture
 
-## Architecture
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                    ae-desktop App                        │
-│  ┌─────────────┐  ┌──────────────┐  ┌────────────────┐ │
-│  │   VLM Agent  │  │  SuperClaude │  │    Graphiti    │ │
-│  │   (Gemma 3n) │  │   Framework  │  │    Tracker     │ │
-│  └──────┬──────┘  └──────┬───────┘  └───────┬────────┘ │
-│         │                 │                   │          │
-│  ┌──────▼─────────────────▼───────────────────▼───────┐ │
-│  │              Service Manager                        │ │
-│  └──────┬─────────────────┬───────────────────┬───────┘ │
-└─────────┼─────────────────┼───────────────────┼─────────┘
-          │                 │                   │
-     ┌────▼────┐      ┌─────▼─────┐      ┌─────▼─────┐
-     │  Ollama │      │   Neo4j   │      │ Graphiti  │
-     │  (LLM)  │      │ (GraphDB) │      │ Service   │
-     └─────────┘      └───────────┘      └───────────┘
-```
-
-<br>
-
-## Agent TARS
-
-<p>
-    <a href="https://npmjs.com/package/@agent-tars/cli?activeTab=readme"><img src="https://img.shields.io/npm/v/@agent-tars/cli?style=for-the-badge&colorA=1a1a2e&colorB=3B82F6&logo=npm&logoColor=white" alt="npm version" /></a>
-    <a href="https://npmcharts.com/compare/@agent-tars/cli?minimal=true"><img src="https://img.shields.io/npm/dm/@agent-tars/cli.svg?style=for-the-badge&colorA=1a1a2e&colorB=0EA5E9&logo=npm&logoColor=white" alt="downloads" /></a>
-    <a href="https://nodejs.org/en/about/previous-releases"><img src="https://img.shields.io/node/v/@agent-tars/cli.svg?style=for-the-badge&colorA=1a1a2e&colorB=06B6D4&logo=node.js&logoColor=white" alt="node version"></a>
-    <a href="https://discord.gg/HnKcSBgTVx"><img src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Community" /></a>
-    <a href="https://twitter.com/agent_tars"><img src="https://img.shields.io/badge/Twitter-Follow%20%40agent__tars-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Official Twitter" /></a>
-    <a href="https://applink.larkoffice.com/client/chat/chatter/add_by_link?link_token=279h3365-b0fa-407f-89f3-0f96f36cd4d8"><img src="https://img.shields.io/badge/飞书群-加入交流群-00D4AA?style=for-the-badge&logo=lark&logoColor=white" alt="飞书交流群" /></a>
-    <a href="https://deepwiki.com/bytedance/UI-TARS-desktop"><img src="https://img.shields.io/badge/DeepWiki-Ask%20AI-8B5CF6?style=for-the-badge&logo=gitbook&logoColor=white" alt="Ask DeepWiki" /></a>
-</p>
-
-<b>Agent TARS</b> is a general multimodal AI Agent stack, it brings the power of GUI Agent and Vision into your terminal, computer, browser and product. <br> <br>
-It primarily ships with a <a href="https://agent-tars.com/guide/basic/cli.html" target="_blank">CLI</a> and <a href="https://agent-tars.com/guide/basic/web-ui.html" target="_blank">Web UI</a> for usage.
-It aims to provide a workflow that is closer to human-like task completion through cutting-edge multimodal LLMs and seamless integration with various real-world <a href="https://agent-tars.com/guide/basic/mcp.html" target="_blank">MCP</a> tools.
-
-
-### Showcase
-
-```
-Please help me book the earliest flight from San Jose to New York on September 1st and the last return flight on September 6th on Priceline
+```mermaid
+graph TB
+    subgraph "Frontend"
+        A[ae-desktop App<br/>Electron + React]
+    end
+    
+    subgraph "Core Services"
+        B[Service Manager]
+        C[SuperClaude<br/>Integration]
+        D[Graphiti Tracker]
+    end
+    
+    subgraph "AI Models"
+        E[Ollama<br/>Gemma 3n]
+        F[Vision Model<br/>UI-TARS-1.5]
+    end
+    
+    subgraph "Storage"
+        G[Neo4j<br/>Knowledge Graph]
+    end
+    
+    subgraph "Operators"
+        H[Computer<br/>Operator]
+        I[Browser<br/>Operator]
+    end
+    
+    A --> B
+    B --> C
+    B --> D
+    C --> E
+    D --> E
+    D --> G
+    A --> F
+    A --> H
+    A --> I
 ```
 
-https://github.com/user-attachments/assets/772b0eef-aef7-4ab9-8cb0-9611820539d8
+### Key Components
 
-<br>
+<details>
+<summary><b>🖥️ Desktop Application</b></summary>
 
-<table>
-  <thead>
-    <tr>
-      <th width="50%" align="center">Booking Hotel</th>
-      <th width="50%" align="center">Generate Chart with extra MCP Servers</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center">
-        <video src="https://github.com/user-attachments/assets/c9489936-afdc-4d12-adda-d4b90d2a869d" width="50%"></video>
-      </td>
-      <td align="center">
-        <video src="https://github.com/user-attachments/assets/a9fd72d0-01bb-4233-aa27-ca95194bbce9" width="50%"></video>
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <b>Instruction:</b> <i>I am in Los Angeles from September 1st to September 6th, with a budget of $5,000. Please help me book a Ritz-Carlton hotel closest to the airport on booking.com and compile a transportation guide for me</i>
-      </td>
-      <td align="left">
-        <b>Instruction:</b> <i>Draw me a chart of Hangzhou's weather for one month</i>
-      </td>
-    </tr>
-  </tbody>
-</table>
+- **Electron-based** desktop app with React frontend
+- **Multi-platform** support (macOS, Windows, Linux)
+- **Screen capture** and computer control capabilities
+- **Natural language** interface for user commands
 
-For more use cases, please check out [#842](https://github.com/bytedance/UI-TARS-desktop/issues/842).
+</details>
 
-### Core Features
+<details>
+<summary><b>🧠 AI Integration</b></summary>
 
-- 🖱️ **One-Click Out-of-the-box CLI** - Supports both **headful** [Web UI](https://agent-tars.com/guide/basic/web-ui.html) and **headless** [server](https://agent-tars.com/guide/advanced/server.html)) [execution](https://agent-tars.com/guide/basic/cli.html).
-- 🌐 **Hybrid Browser Agent** - Control browsers using [GUI Agent](https://agent-tars.com/guide/basic/browser.html#visual-grounding), [DOM](https://agent-tars.com/guide/basic/browser.html#dom), or a hybrid strategy.
-- 🔄 **Event Stream** - Protocol-driven Event Stream drives [Context Engineering](https://agent-tars.com/beta#context-engineering) and [Agent UI](https://agent-tars.com/blog/2025-06-25-introducing-agent-tars-beta.html#easy-to-build-applications).
-- 🧰 **MCP Integration** - The kernel is built on MCP and also supports mounting [MCP Servers](https://agent-tars.com/guide/basic/mcp.html) to connect to real-world tools.
+- **Vision-Language Model**: UI-TARS-1.5 compatible models for understanding screenshots
+- **Local LLM**: Gemma 3n via Ollama for natural language processing
+- **SuperClaude Framework**: Advanced command processing with personas and workflows
+- **Model-agnostic**: Adapts to different model capabilities automatically
 
-### Quick Start
+</details>
 
-<img alt="Agent TARS CLI" src="https://agent-tars.com/agent-tars-cli.png">
+<details>
+<summary><b>📊 Knowledge Graph</b></summary>
+
+- **Graphiti**: Temporal knowledge graph for tracking all actions
+- **Neo4j**: Graph database for persistent storage
+- **Automatic tracking**: Every action is recorded with context
+- **Relationship mapping**: Builds understanding of system interactions
+
+</details>
+
+<details>
+<summary><b>🔧 Operators</b></summary>
+
+- **Computer Operator**: Controls desktop applications via NutJS
+- **Browser Operator**: Automates web browsers
+- **Action Parser**: Converts natural language to executable actions
+- **Error handling**: Graceful recovery and user feedback
+
+</details>
+
+## 💻 Development
+
+### Project Structure
+
+```
+ae-desktop/
+├── apps/
+│   └── ae-desktop/          # Main Electron application
+├── packages/
+│   ├── graphiti-tracker/    # Knowledge graph integration
+│   ├── agent-infra/         # MCP servers and tools
+│   ├── operators/           # Computer/browser control
+│   └── shared/              # Common utilities
+└── scripts/                 # Build and setup scripts
+```
+
+### Commands
 
 ```bash
-# Luanch with `npx`.
-npx @agent-tars/cli@latest
+# Development
+pnpm dev                     # Start in development mode
+pnpm dev:w                   # Start with watch mode
+pnpm debug                   # Start with debugging
 
-# Install globally, required Node.js >= 22
-npm install @agent-tars/cli@latest -g
+# Testing
+pnpm test                    # Run unit tests
+pnpm test:e2e               # Run end-to-end tests
+pnpm coverage               # Generate coverage report
 
-# Run with your preferred model provider
-agent-tars --provider volcengine --model doubao-1-5-thinking-vision-pro-250428 --apiKey your-api-key
-agent-tars --provider anthropic --model claude-3-7-sonnet-latest --apiKey your-api-key
+# Building
+pnpm build                   # Build for production
+pnpm package                # Package Electron app
+pnpm publish:mac-arm64      # Publish for Mac M1/M2
+pnpm publish:win32          # Publish for Windows
 ```
 
-Visit the comprehensive [Quick Start](https://agent-tars.com/guide/get-started/quick-start.html) guide for detailed setup instructions.
+### Environment Setup
 
-### Documentation
+Create a `.env` file in the root:
 
-> 🌟 **Explore Agent TARS Universe** 🌟
+```env
+# Ollama Configuration
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_LLM_MODEL=gemma3n:e2b
+OLLAMA_EMBEDDING_MODEL=nomic-embed-text
 
-<table>
-  <thead>
-    <tr>
-      <th width="20%" align="center">Category</th>
-      <th width="30%" align="center">Resource Link</th>
-      <th width="50%" align="left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center">🏠 <strong>Central Hub</strong></td>
-      <td align="center">
-        <a href="https://agent-tars.com">
-          <img src="https://img.shields.io/badge/Visit-Website-4F46E5?style=for-the-badge&logo=globe&logoColor=white" alt="Website" />
-        </a>
-      </td>
-      <td align="left">Your gateway to Agent TARS ecosystem</td>
-    </tr>
-      <tr>
-      <td align="center">📚 <strong>Quick Start</strong></td>
-      <td align="center">
-        <a href="https://agent-tars.com/guide/get-started/quick-start.html">
-          <img src="https://img.shields.io/badge/Get-Started-06B6D4?style=for-the-badge&logo=rocket&logoColor=white" alt="Quick Start" />
-        </a>
-      </td>
-      <td align="left">Zero to hero in 5 minutes</td>
-    </tr>
-    <tr>
-      <td align="center">🚀 <strong>What's New</strong></td>
-      <td align="center">
-        <a href="https://agent-tars.com/beta">
-          <img src="https://img.shields.io/badge/Read-Blog-F59E0B?style=for-the-badge&logo=rss&logoColor=white" alt="Blog" />
-        </a>
-      </td>
-      <td align="left">Discover cutting-edge features & vision</td>
-    </tr>
-    <tr>
-      <td align="center">🛠️ <strong>Developer Zone</strong></td>
-      <td align="center">
-        <a href="https://agent-tars.com/guide/get-started/introduction.html">
-          <img src="https://img.shields.io/badge/View-Docs-10B981?style=for-the-badge&logo=gitbook&logoColor=white" alt="Docs" />
-        </a>
-      </td>
-      <td align="left">Master every command & features</td>
-    </tr>
-    <tr>
-      <td align="center">🎯 <strong>Showcase</strong></td>
-      <td align="center">
-        <a href="https://github.com/bytedance/UI-TARS-desktop/issues/842">
-          <img src="https://img.shields.io/badge/View-Examples-8B5CF6?style=for-the-badge&logo=github&logoColor=white" alt="Examples" />
-        </a>
-      </td>
-      <td align="left">View use cases built by the official and community</td>
-    </tr>
-    <tr>
-      <td align="center">🔧 <strong>Reference</strong></td>
-      <td align="center">
-        <a href="https://agent-tars.com/api/">
-          <img src="https://img.shields.io/badge/API-Reference-EF4444?style=for-the-badge&logo=book&logoColor=white" alt="API" />
-        </a>
-      </td>
-      <td align="left">Complete technical reference</td>
-    </tr>
-  </tbody>
-</table>
+# Neo4j Configuration
+NEO4J_URI=bolt://localhost:7687
+NEO4J_USER=neo4j
+NEO4J_PASSWORD=ae-desktop-neo4j
 
-<br/>
-<br/>
-<br/>
+# Vision Model (UI-TARS compatible)
+VISION_MODEL_BASE_URL=your-model-endpoint
+VISION_MODEL_API_KEY=your-api-key
+VISION_MODEL_NAME=UI-TARS-1.5
+```
 
-## UI-TARS Desktop
+## 🤝 Contributing
 
-<p align="center">
-  <img alt="UI-TARS" width="260" src="./apps/ui-tars/resources/icon.png">
-</p>
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
-UI-TARS Desktop is a native GUI agent driven by [UI-TARS](https://github.com/bytedance/UI-TARS) and Seed-1.5-VL/1.6 series models, available on your local computer and remote VM sandbox on cloud.
+### Development Workflow
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Code Style
+
+- **TypeScript** for all new code
+- **ESLint** + **Prettier** for formatting
+- **Conventional Commits** for commit messages
+- **Test Coverage** required for new features
+
+## 📄 License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built on [UI-TARS](https://github.com/showlab/UI-TARS) vision-language models
+- Powered by [Graphiti](https://github.com/getzep/graphiti) for knowledge graphs
+- Enhanced with [SuperClaude](https://github.com/aegntic/souprcld) framework
+- Uses [Ollama](https://ollama.ai) for local model inference
+
+---
 
 <div align="center">
-<p>
-        &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2501.12326">Paper</a> &nbsp&nbsp
-        | 🤗 <a href="https://huggingface.co/ByteDance-Seed/UI-TARS-1.5-7B">Hugging Face Models</a>&nbsp&nbsp
-        | &nbsp&nbsp🫨 <a href="https://discord.gg/pTXwYVjfcs">Discord</a>&nbsp&nbsp
-        | &nbsp&nbsp🤖 <a href="https://www.modelscope.cn/collections/UI-TARS-bccb56fa1ef640">ModelScope</a>&nbsp&nbsp
-<br>
-🖥️ Desktop Application &nbsp&nbsp
-| &nbsp&nbsp 👓 <a href="https://github.com/web-infra-dev/midscene">Midscene (use in browser)</a> &nbsp&nbsp
-</p>
+
+**Built with ❤️ by [aegntic](https://github.com/aegntic)**
+
+[Report Bug](https://github.com/aegntic/ae-desktop/issues) • [Request Feature](https://github.com/aegntic/ae-desktop/issues)
 
 </div>
-
-### Showcase
-
-<!-- // FIXME: Choose only two demo, one local computer and one remote computer showcase. -->
-
-|                                                          Instruction                                                           |                                                Local Operator                                                |                                               Remote Operator                                                |
-| :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
-| Please help me open the autosave feature of VS Code and delay AutoSave operations for 500 milliseconds in the VS Code setting. | <video src="https://github.com/user-attachments/assets/e0914ce9-ad33-494b-bdec-0c25c1b01a27" height="300" /> | <video src="https://github.com/user-attachments/assets/01e49b69-7070-46c8-b3e3-2aaaaec71800" height="300" /> |
-|                    Could you help me check the latest open issue of the UI-TARS-Desktop project on GitHub?                     | <video src="https://github.com/user-attachments/assets/3d159f54-d24a-4268-96c0-e149607e9199" height="300" /> | <video src="https://github.com/user-attachments/assets/072fb72d-7394-4bfa-95f5-4736e29f7e58" height="300" /> |
-
-### Features
-
-- 🤖 Natural language control powered by Vision-Language Model
-- 🖥️ Screenshot and visual recognition support
-- 🎯 Precise mouse and keyboard control
-- 💻 Cross-platform support (Windows/MacOS/Browser)
-- 🔄 Real-time feedback and status display
-- 🔐 Private and secure - fully local processing
-- 🛠️ Effortless setup and intuitive remote operators
-
-### Quick Start
-
-See [Quick Start](./docs/quick-start.md)
-
-## Contributing
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the Apache License 2.0.
-
-## Citation
-
-If you find our paper and code useful in your research, please consider giving a star :star: and citation :pencil:
-
-```BibTeX
-@article{qin2025ui,
-  title={UI-TARS: Pioneering Automated GUI Interaction with Native Agents},
-  author={Qin, Yujia and Ye, Yining and Fang, Junjie and Wang, Haoming and Liang, Shihao and Tian, Shizuo and Zhang, Junda and Li, Jiahao and Li, Yunxin and Huang, Shijue and others},
-  journal={arXiv preprint arXiv:2501.12326},
-  year={2025}
-}
-```
