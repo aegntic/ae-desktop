@@ -30,6 +30,12 @@ export const DEFAULT_SETTING: LocalStore = {
   operator: Operator.LocalComputer,
   reportStorageBaseUrl: '',
   utioBaseUrl: '',
+  graphitiEnabled: true,
+  graphitiServiceUrl: 'http://localhost:8100',
+  graphitiApiKey: '',
+  backgroundServicesEnabled: true,
+  superClaudeIntegrationEnabled: true,
+  autoStartOllama: true,
 };
 
 export class SettingStore {

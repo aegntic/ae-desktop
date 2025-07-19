@@ -30,6 +30,7 @@ import { registerSettingsHandlers } from './services/settings';
 import { sanitizeState } from './utils/sanitizeState';
 import { windowManager } from './services/windowManager';
 import { checkBrowserAvailability } from './services/browserCheck';
+import { ServiceManager } from './services/serviceManager';
 
 const { isProd } = env;
 
@@ -94,6 +95,10 @@ const initializeApp = async () => {
 
   // Send app launched event
   await UTIOService.getInstance().appLaunched();
+
+  // Initialize all background services (Graphiti, Ollama, SuperClaude)
+  logger.info('Initializing ae-desktop background services');
+  await ServiceManager.getInstance().initialize();
 
   logger.info('createMainWindow');
   let mainWindow = createMainWindow();

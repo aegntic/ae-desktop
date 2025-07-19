@@ -16,8 +16,11 @@ import * as env from '@main/env';
 import { logger } from '@main/logger';
 import { sleep } from '@ui-tars/shared/utils';
 import { getScreenSize } from '@main/utils/screen';
+import { GraphitiTrackerService } from '@main/services/graphitiTracker';
 
 export class NutJSElectronOperator extends NutJSOperator {
+  private tracker = GraphitiTrackerService.getInstance();
+  private currentUserIntent?: string;
   static MANUAL = {
     ACTION_SPACES: [
       `click(start_box='[x1, y1, x2, y2]')`,
@@ -85,21 +88,88 @@ export class NutJSElectronOperator extends NutJSOperator {
 
   async execute(params: ExecuteParams): Promise<ExecuteOutput> {
     const { action_type, action_inputs } = params.parsedPrediction;
+    const startTime = Date.now();
+    let actionId: string | null = null;
+    let screenshotBefore: string | undefined;
 
-    if (action_type === 'type' && env.isWindows && action_inputs?.content) {
-      const content = action_inputs.content?.trim();
+    try {
+      // Take screenshot before action
+      if (this.tracker.isActive()) {
+        try {
+          const screenshot = await this.screenshot();
+          screenshotBefore = screenshot.base64;
+        } catch (error) {
+          logger.warn('Failed to capture screenshot before action', error);
+        }
+      }
 
-      logger.info('[device] type', content);
-      const stripContent = content.replace(/\\n$/, '').replace(/\n$/, '');
-      const originalClipboard = clipboard.readText();
-      clipboard.writeText(stripContent);
-      await keyboard.pressKey(Key.LeftControl, Key.V);
-      await sleep(50);
-      await keyboard.releaseKey(Key.LeftControl, Key.V);
-      await sleep(50);
-      clipboard.writeText(originalClipboard);
-    } else {
-      return await super.execute(params);
+      // Track action start
+      actionId = await this.tracker.trackAction(
+        action_type,
+        action_inputs || {},
+        undefined,
+        this.currentUserIntent
+      );
+
+      let result: ExecuteOutput;
+      
+      if (action_type === 'type' && env.isWindows && action_inputs?.content) {
+        const content = action_inputs.content?.trim();
+
+        logger.info('[device] type', content);
+        const stripContent = content.replace(/\\n$/, '').replace(/\n$/, '');
+        const originalClipboard = clipboard.readText();
+        clipboard.writeText(stripContent);
+        await keyboard.pressKey(Key.LeftControl, Key.V);
+        await sleep(50);
+        await keyboard.releaseKey(Key.LeftControl, Key.V);
+        await sleep(50);
+        clipboard.writeText(originalClipboard);
+        
+        result = { success: true };
+      } else {
+        result = await super.execute(params);
+      }
+
+      // Track action success
+      if (actionId) {
+        let screenshotAfter: string | undefined;
+        if (this.tracker.isActive()) {
+          try {
+            const screenshot = await this.screenshot();
+            screenshotAfter = screenshot.base64;
+          } catch (error) {
+            logger.warn('Failed to capture screenshot after action', error);
+          }
+        }
+
+        await this.tracker.trackActionResult(
+          actionId,
+          true,
+          Date.now() - startTime,
+          undefined,
+          screenshotBefore,
+          screenshotAfter
+        );
+      }
+
+      return result;
+    } catch (error) {
+      // Track action failure
+      if (actionId) {
+        await this.tracker.trackActionResult(
+          actionId,
+          false,
+          Date.now() - startTime,
+          error instanceof Error ? error.message : String(error),
+          screenshotBefore
+        );
+      }
+      throw error;
     }
+  }
+
+  setUserIntent(intent: string): void {
+    this.currentUserIntent = intent;
   }
 }

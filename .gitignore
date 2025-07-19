@@ -10,3 +10,20 @@ test-results/
 coverage/
 .turbo/
 scripts/merge-yml/*.yml
+
+# ae-desktop specific
+.ae-desktop/
+ae_neo4j_data/
+ae_neo4j_logs/
+ollama_data/
+*.asar
+
+# Graphiti
+packages/graphiti-tracker/src/python/venv/
+packages/graphiti-tracker/src/python/__pycache__/
+packages/graphiti-tracker/.env
+packages/graphiti-tracker/neo4j_data/
+packages/graphiti-tracker/neo4j_logs/
+
+# SuperClaude temp installation
+temp/

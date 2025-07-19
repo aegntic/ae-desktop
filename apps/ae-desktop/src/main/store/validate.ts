@@ -33,6 +33,16 @@ export const PresetSchema = z.object({
   reportStorageBaseUrl: z.string().url().optional(),
   utioBaseUrl: z.string().url().optional(),
   presetSource: PresetSourceSchema.optional(),
+  
+  // Graphiti Tracking Settings
+  graphitiEnabled: z.boolean().optional(),
+  graphitiServiceUrl: z.string().url().optional(),
+  graphitiApiKey: z.string().optional(),
+  
+  // Background Services Settings
+  backgroundServicesEnabled: z.boolean().optional(),
+  superClaudeIntegrationEnabled: z.boolean().optional(),
+  autoStartOllama: z.boolean().optional(),
 });
 
 export type PresetSource = z.infer<typeof PresetSourceSchema>;

@@ -12,21 +12,21 @@
         "**/out/**"
       ]
     },
-    "ui-tars-desktop#build": {
+    "ae-desktop#build": {
       "outputs": [
-        "apps/ui-tars-desktop/dist/**",
-        "apps/ui-tars-desktop/out/**"
+        "apps/ae-desktop/dist/**",
+        "apps/ae-desktop/out/**"
       ]
     },
-    "ui-tars-desktop#build:e2e": {
+    "ae-desktop#build:e2e": {
       "outputs": [
-        "apps/ui-tars-desktop/out/**",
-        "apps/ui-tars-desktop/dist/**"
+        "apps/ae-desktop/out/**",
+        "apps/ae-desktop/dist/**"
       ]
     },
-    "ui-tars-desktop#test:e2e": {
+    "ae-desktop#test:e2e": {
       "dependsOn": [
-        "ui-tars-desktop#build:e2e"
+        "ae-desktop#build:e2e"
       ]
     },
     "//#format": {},

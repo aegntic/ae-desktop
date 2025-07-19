@@ -1,0 +1,26 @@
+{
+  "name": "@ui-tars/graphiti-tracker",
+  "version": "0.1.0",
+  "description": "Graphiti knowledge graph integration for tracking UI-TARS actions",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "rslib build --watch",
+    "build": "rslib build",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@ui-tars/shared": "workspace:*",
+    "electron-log": "^5.2.4"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.1.14",
+    "@rslib/core": "^0.3.3",
+    "@types/node": "^20.14.8",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.8"
+  },
+  "peerDependencies": {
+    "electron": "^34.1.1"
+  }
+}

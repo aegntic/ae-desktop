@@ -1,11 +1,11 @@
 {
-  "name": "ui-tars-desktop",
-  "version": "0.2.2",
+  "name": "ae-desktop",
+  "version": "0.3.0",
   "private": true,
   "main": "./dist/main/main.js",
   "packageManager": "pnpm@9.10.0",
-  "description": "A GUI Agent application based on UI-TARS(Vision-Lanuage Model) that allows you to control your computer using natural language.",
-  "author": "ByteDance",
+  "description": "AI-Enhanced Desktop: A multimodal AI agent that controls your computer using natural language, with integrated knowledge graph tracking and SuperClaude framework.",
+  "author": "ae-desktop contributors",
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
@@ -59,7 +59,8 @@
   "dependencies": {
     "@computer-use/node-mac-permissions": "2.2.2",
     "sharp": "0.33.3",
-    "jose": "^6.0.11"
+    "jose": "^6.0.11",
+    "@ui-tars/graphiti-tracker": "workspace:*"
   },
   "devDependencies": {
     "semver": "7.7.2",
