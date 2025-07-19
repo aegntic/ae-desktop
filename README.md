@@ -2,37 +2,6 @@
 
 <div align="center">
 <svg width="800" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
-  <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#E0F5F5;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1" />
-    </linearGradient>
-    <filter id="dropshadow">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="0"/>
-      <feOffset dx="8" dy="8" result="offsetblur"/>
-      <feComponentTransfer>
-        <feFuncA type="discrete" tableValues="1 1"/>
-      </feComponentTransfer>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-  </defs>
-  
-  <!-- Background -->
-  <rect width="800" height="400" fill="url(#bgGradient)"/>
-  
-  <!-- 5% Crosshair margins -->
-  <line x1="40" y1="0" x2="40" y2="400" stroke="black" stroke-width="3"/>
-  <line x1="760" y1="0" x2="760" y2="400" stroke="black" stroke-width="3"/>
-  <line x1="0" y1="20" x2="800" y2="20" stroke="black" stroke-width="3"/>
-  <line x1="0" y1="380" x2="800" y2="380" stroke="black" stroke-width="3"/>
-  
-  <!-- Drop shadow lines -->
-  <line x1="100" y1="80" x2="700" y2="80" stroke="#555555" stroke-width="4" transform="translate(8, 8)"/>
-  <line x1="100" y1="320" x2="700" y2="320" stroke="#555555" stroke-width="4" transform="translate(8, 8)"/>
-  
   <!-- Double line drop shadow for Æ -->
   <text x="400" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="360" font-weight="900" fill="#555555" transform="translate(8, 8)">Æ</text>
   <text x="400" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="360" font-weight="900" fill="#666666" transform="translate(6, 6)">Æ</text>
@@ -40,8 +9,8 @@
   <!-- Main Æ character -->
   <text x="400" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="360" font-weight="900" fill="black">Æ</text>
   
-  <!-- DESKTOP text right-justified, connecting to shadow -->
-  <text x="700" y="337" text-anchor="end" font-family="Arial Black, sans-serif" font-size="72" font-weight="900" fill="black" letter-spacing="2">DESKTOP</text>
+  <!-- DESKTOP text right-justified, outline only with overlapping letters -->
+  <text x="700" y="337" text-anchor="end" font-family="Arial Black, sans-serif" font-size="72" font-weight="900" fill="none" stroke="black" stroke-width="3" letter-spacing="-8">DESKTOP</text>
 </svg>
 </div>
 
