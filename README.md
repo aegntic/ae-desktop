@@ -40,8 +40,8 @@
   <!-- Main Æ character -->
   <text x="400" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="360" font-weight="900" fill="black">Æ</text>
   
-  <!-- DESKTOP text positioned on bottom border -->
-  <text x="400" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="bold" fill="black" letter-spacing="3">DESKTOP</text>
+  <!-- DESKTOP text right-justified, connecting to shadow -->
+  <text x="700" y="337" text-anchor="end" font-family="Arial Black, sans-serif" font-size="72" font-weight="900" fill="black" letter-spacing="2">DESKTOP</text>
 </svg>
 </div>
 
