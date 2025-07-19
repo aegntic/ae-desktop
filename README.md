@@ -7,6 +7,17 @@
       <stop offset="0%" style="stop-color:#E0F5F5;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1" />
     </linearGradient>
+    <filter id="dropshadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="0"/>
+      <feOffset dx="8" dy="8" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="discrete" tableValues="1 1"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
   
   <!-- Background -->
@@ -18,11 +29,19 @@
   <line x1="0" y1="20" x2="800" y2="20" stroke="black" stroke-width="3"/>
   <line x1="0" y1="380" x2="800" y2="380" stroke="black" stroke-width="3"/>
   
-  <!-- Main Æ character -->
-  <text x="400" y="250" text-anchor="middle" font-family="Georgia, serif" font-size="280" font-weight="bold" fill="#4B0082">Æ</text>
+  <!-- Drop shadow lines -->
+  <line x1="100" y1="80" x2="700" y2="80" stroke="#555555" stroke-width="4" transform="translate(8, 8)"/>
+  <line x1="100" y1="320" x2="700" y2="320" stroke="#555555" stroke-width="4" transform="translate(8, 8)"/>
   
-  <!-- Tagline -->
-  <text x="400" y="320" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="normal" fill="black" letter-spacing="6">DESKTOP</text>
+  <!-- Double line drop shadow for Æ -->
+  <text x="400" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="360" font-weight="900" fill="#555555" transform="translate(8, 8)">Æ</text>
+  <text x="400" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="360" font-weight="900" fill="#666666" transform="translate(6, 6)">Æ</text>
+  
+  <!-- Main Æ character -->
+  <text x="400" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="360" font-weight="900" fill="black">Æ</text>
+  
+  <!-- DESKTOP text positioned in the base of E -->
+  <text x="480" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" letter-spacing="3">DESKTOP</text>
 </svg>
 </div>
 
