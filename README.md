@@ -1,15 +1,54 @@
 # 
-```
-     ███████╗ ███████╗    ██████╗  ███████╗██╗  ██╗████████╗██████╗ 
-    ██╔═══██╗██╔════╝    ██╔══██╗██╔════╝██║ ██╔╝╚══██╔══╝██╔══██╗
-    ████████║█████╗█████╗██║  ██║███████╗█████╔╝    ██║   ██████╔╝
-    ██╔═══██║██╔══╝╚════╝██║  ██║╚════██║██╔═██╗    ██║   ██╔═══╝ 
-    ██║   ██║███████╗    ██████╔╝███████║██║  ██╗   ██║   ██║     
-    ╚═╝   ╚═╝╚══════╝    ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝     
-                                                    ┌─────────────────┐
-                                                    │ aegnt-desktop   │
-                                                    └─────────────────┘
-```
+
+<div align="center">
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0F5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1" />
+    </linearGradient>
+    <filter id="bold">
+      <feMorphology operator="dilate" radius="1"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- 5% Crosshair margins -->
+  <line x1="60" y1="0" x2="60" y2="400" stroke="black" stroke-width="2"/>
+  <line x1="1140" y1="0" x2="1140" y2="400" stroke="black" stroke-width="2"/>
+  <line x1="0" y1="20" x2="1200" y2="20" stroke="black" stroke-width="2"/>
+  <line x1="0" y1="380" x2="1200" y2="380" stroke="black" stroke-width="2"/>
+  
+  <!-- ASCII Art with multiple layers for thickness -->
+  <g transform="translate(600, 200)">
+    <!-- Shadow layer for extra boldness -->
+    <text text-anchor="middle" font-family="monospace" font-size="32" font-weight="900" fill="black" opacity="0.3" filter="url(#bold)">
+      <tspan x="0" dy="-120">███████╗ ███████╗    ██████╗  ███████╗██╗  ██╗████████╗██████╗</tspan>
+      <tspan x="0" dy="35">██╔═══██╗██╔════╝    ██╔══██╗██╔════╝██║ ██╔╝╚══██╔══╝██╔══██╗</tspan>
+      <tspan x="0" dy="35">████████║█████╗█████╗██║  ██║███████╗█████╔╝    ██║   ██████╔╝</tspan>
+      <tspan x="0" dy="35">██╔═══██║██╔══╝╚════╝██║  ██║╚════██║██╔═██╗    ██║   ██╔═══╝</tspan>
+      <tspan x="0" dy="35">██║   ██║███████╗    ██████╔╝███████║██║  ██╗   ██║   ██║</tspan>
+      <tspan x="0" dy="35">╚═╝   ╚═╝╚══════╝    ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝</tspan>
+    </text>
+    
+    <!-- Main text layer -->
+    <text text-anchor="middle" font-family="monospace" font-size="32" font-weight="900" fill="#4B0082" letter-spacing="2">
+      <tspan x="0" dy="-120">███████╗ ███████╗    ██████╗  ███████╗██╗  ██╗████████╗██████╗</tspan>
+      <tspan x="0" dy="35">██╔═══██╗██╔════╝    ██╔══██╗██╔════╝██║ ██╔╝╚══██╔══╝██╔══██╗</tspan>
+      <tspan x="0" dy="35">████████║█████╗█████╗██║  ██║███████╗█████╔╝    ██║   ██████╔╝</tspan>
+      <tspan x="0" dy="35">██╔═══██║██╔══╝╚════╝██║  ██║╚════██║██╔═██╗    ██║   ██╔═══╝</tspan>
+      <tspan x="0" dy="35">██║   ██║███████╗    ██████╔╝███████║██║  ██╗   ██║   ██║</tspan>
+      <tspan x="0" dy="35">╚═╝   ╚═╝╚══════╝    ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝</tspan>
+    </text>
+    
+    <!-- Tagline box -->
+    <rect x="270" y="140" width="180" height="40" fill="none" stroke="black" stroke-width="2"/>
+    <text x="360" y="165" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="black">aegnt-desktop</text>
+  </g>
+</svg>
+</div>
 
 <div align="center">
 
