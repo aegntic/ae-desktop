@@ -10,6 +10,7 @@ import { aegntRoute } from './aegnt';
 import { browserRoute } from './browser';
 import { remoteResourceRouter } from './remoteResource';
 import { settingRoute } from './setting';
+import { claudeCodeRoute } from './claudeCode';
 
 const t = initIpc.create();
 
@@ -21,6 +22,7 @@ export const ipcRoutes = t.router({
   ...remoteResourceRouter,
   ...browserRoute,
   ...settingRoute,
+  ...claudeCodeRoute,
 });
 export type Router = typeof ipcRoutes;
 

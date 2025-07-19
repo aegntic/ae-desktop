@@ -6,4 +6,5 @@ packages:
   - 'packages/aegnt-infra/**'
   - '!packages/aegnt-infra/create-new-mcp/template-*'
   - 'packages/common/*'
+  - 'packages/claude-code-enhancer'
   - '!packages/ui-ae/visualizer'

@@ -60,7 +60,8 @@
     "@computer-use/node-mac-permissions": "2.2.2",
     "sharp": "0.33.3",
     "jose": "^6.0.11",
-    "@ui-ae/graphiti-tracker": "workspace:*"
+    "@ui-ae/graphiti-tracker": "workspace:*",
+    "@ae-desktop/claude-code-enhancer": "workspace:*"
   },
   "devDependencies": {
     "semver": "7.7.2",

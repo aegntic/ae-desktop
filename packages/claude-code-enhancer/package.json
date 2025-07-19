@@ -1,0 +1,33 @@
+{
+  "name": "@ae-desktop/claude-code-enhancer",
+  "version": "0.1.0",
+  "description": "Claude Code enhancements for ae-desktop - provides context and integration features",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "rslib build --watch",
+    "build": "rslib build",
+    "test": "vitest"
+  },
+  "keywords": [
+    "claude-code",
+    "ae-desktop",
+    "coding-assistant",
+    "ai-enhancement"
+  ],
+  "author": "aegntic <contact@aegntic.ai>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@ae-desktop/graphiti-tracker": "workspace:*",
+    "@ui-ae/shared": "workspace:*",
+    "find-process": "^1.4.7",
+    "which": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "@types/which": "^3.0.0",
+    "rslib": "^0.1.1",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.8"
+  }
+}

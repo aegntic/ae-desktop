@@ -10,6 +10,7 @@ import * as fs from 'fs/promises';
 import { logger } from '@main/logger';
 import { GraphitiTrackerService } from './graphitiTracker';
 import { SettingStore } from '@main/store/setting';
+import { initializeClaudeCodeManager } from '@main/ipcRoutes/claudeCode';
 import * as os from 'os';
 
 interface ServiceStatus {
@@ -65,6 +66,9 @@ export class ServiceManager {
 
       // 4. Initialize Graphiti tracker
       await this.initializeGraphiti();
+
+      // 5. Initialize Claude Code enhancement (after Graphiti)
+      await this.initializeClaudeCode();
 
       logger.info('All services initialized successfully');
     } catch (error) {
@@ -355,6 +359,24 @@ export class ServiceManager {
       logger.info(`Started Graphiti session: ${sessionId}`);
     } catch (error) {
       logger.error('Failed to initialize Graphiti', error);
+    }
+  }
+
+  private async initializeClaudeCode(): Promise<void> {
+    try {
+      logger.info('Initializing Claude Code enhancement...');
+
+      // Get Graphiti tracker instance if available
+      const tracker = this.serviceStatus.graphiti 
+        ? GraphitiTrackerService.getInstance().getTracker()
+        : undefined;
+
+      // Initialize Claude Code manager with Graphiti integration
+      await initializeClaudeCodeManager(tracker);
+
+      logger.info('Claude Code enhancement initialized successfully');
+    } catch (error) {
+      logger.error('Failed to initialize Claude Code enhancement', error);
     }
   }
 
