@@ -1,5 +1,14 @@
 # Credits
 
+## 🏛️ AEGNTIC.foundation
+
+**ae-desktop** is developed and maintained by [AEGNTIC.foundation](https://aegntic.foundation), a research organization dedicated to advancing open-source AI development and democratizing AI-enhanced computing.
+
+### AEGNTIC.foundation Research Team
+- **Lead Researcher**: aegntic <contact@aegntic.ai>
+- **Vision**: Making AI-enhanced desktop automation accessible to everyone
+- **Mission**: Open-source AI research and development
+
 ## 🌟 Original Project
 
 **ae-desktop** is a fork of [UI-TARS Desktop](https://github.com/bytedance/UI-TARS-desktop), originally created by ByteDance/ShowLab.

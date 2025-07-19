@@ -258,14 +258,24 @@ While ae-desktop builds upon UI-TARS, we've added:
 - 🤖 SuperClaude framework integration for enhanced AI capabilities
 - 🔓 Default support for free, local models (Gemma 3n)
 - 🚀 Automatic service management for seamless startup
-- 🎯 Unique "aegnt" branding and terminology
+
+## 🏛️ AEGNTIC.foundation
+
+This project is developed by **[AEGNTIC.foundation](https://aegntic.foundation)** - advancing open-source AI research and development.
+
+### Research Credits
+
+- **Lead Development**: AEGNTIC.foundation Research Team
+- **Project Architecture**: aegntic <contact@aegntic.ai>
+- **AI Integration**: SuperClaude Framework & Graphiti Knowledge Graphs
+- **Vision**: Democratizing AI-enhanced desktop automation
 
 ---
 
 <div align="center">
 
-**Built with ❤️ by [aegntic](https://github.com/aegntic)**
+**Built with ❤️ by [AEGNTIC.foundation](https://aegntic.foundation)**
 
-[Report Bug](https://github.com/aegntic/ae-desktop/issues) • [Request Feature](https://github.com/aegntic/ae-desktop/issues)
+[Report Bug](https://github.com/aegntic/ae-desktop/issues) • [Request Feature](https://github.com/aegntic/ae-desktop/issues) • [Join Research](https://aegntic.foundation/research)
 
 </div>
