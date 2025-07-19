@@ -1,18 +1,4 @@
-# 
-
-<div align="center">
-<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
-  <!-- Double line drop shadow for Æ -->
-  <text x="400" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="360" font-weight="900" fill="#555555" transform="translate(8, 8)">Æ</text>
-  <text x="400" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="360" font-weight="900" fill="#666666" transform="translate(6, 6)">Æ</text>
-  
-  <!-- Main Æ character -->
-  <text x="400" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="360" font-weight="900" fill="black">Æ</text>
-  
-  <!-- DESKTOP text right-justified, outline only with overlapping letters -->
-  <text x="700" y="337" text-anchor="end" font-family="Arial Black, sans-serif" font-size="72" font-weight="900" fill="none" stroke="black" stroke-width="3" letter-spacing="-8">DESKTOP</text>
-</svg>
-</div>
+# Æ DESKTOP
 
 <div align="center">
 
