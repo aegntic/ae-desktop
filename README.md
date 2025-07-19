@@ -239,18 +239,6 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-This project is a fork of the excellent [UI-TARS Desktop](https://github.com/bytedance/UI-TARS-desktop) by ByteDance/ShowLab. We are grateful for their pioneering work in multimodal AI agents.
-
-### Credits
-
-- **Original Project**: [UI-TARS Desktop](https://github.com/bytedance/UI-TARS-desktop) - The foundation of ae-desktop
-- **Vision Models**: Based on [UI-TARS](https://github.com/showlab/UI-TARS) vision-language models
-- **Knowledge Graphs**: Powered by [Graphiti](https://github.com/getzep/graphiti) for temporal knowledge tracking
-- **AI Framework**: Enhanced with [SuperClaude](https://github.com/aegntic/souprcld) for advanced capabilities
-- **Local Inference**: Uses [Ollama](https://ollama.ai) for privacy-preserving local model execution
-
 ### What's New in ae-desktop
 
 While ae-desktop builds upon UI-TARS, we've added:
@@ -262,6 +250,15 @@ While ae-desktop builds upon UI-TARS, we've added:
 ## 🏛️ AEGNTIC.foundation
 
 This project is developed by **[AEGNTIC.foundation](https://aegntic.foundation)** - advancing open-source AI research and development.
+This project is a fork of the excellent [UI-TARS Desktop](https://github.com/bytedance/UI-TARS-desktop) by ByteDance/ShowLab. We are grateful for their pioneering work in multimodal AI agents.
+
+### Credits
+
+- **Original Project**: [UI-TARS Desktop](https://github.com/bytedance/UI-TARS-desktop) - The foundation of ae-desktop
+- **Vision Models**: Based on [UI-TARS](https://github.com/showlab/UI-TARS) vision-language models
+- **Knowledge Graphs**: Powered by [Graphiti](https://github.com/getzep/graphiti) for temporal knowledge tracking
+- **AI Framework**: Enhanced with [SuperClaude](https://github.com/aegntic/souprcld) for advanced capabilities
+- **Local Inference**: Uses [Ollama](https://ollama.ai) for privacy-preserving local model execution
 
 ### Research Credits
 
@@ -274,8 +271,8 @@ This project is developed by **[AEGNTIC.foundation](https://aegntic.foundation)*
 
 <div align="center">
 
-**Built with ❤️ by [AEGNTIC.foundation](https://aegntic.foundation)**
+##### ᵖᵒʷᵉʳᵉᵈ ᵇʸ ᵃᵉᵍⁿᵗᶦᶜ ᵉᶜᵒˢʸˢᵗᵉᵐˢ - ʳᵘᵗʰˡᵉˢˢˡʸ ᵈᵉᵛᵉˡᵒᵖᵉᵈ ᵇʸ aeˡᵗᵈ [AEGNTIC.foundation](https://aegntic.ai)**
 
-[Report Bug](https://github.com/aegntic/ae-desktop/issues) • [Request Feature](https://github.com/aegntic/ae-desktop/issues) • [Join Research](https://aegntic.foundation/research)
+[Report Bug](https://github.com/aegntic/ae-desktop/issues) • [Request Feature](https://github.com/aegntic/ae-desktop/issues) • [Join Research](https://aegntic.airesearch)
 
 </div>
