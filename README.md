@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/cover-16x9.jpg" alt="ae-desktop — AI-Enhanced Desktop Agent with Knowledge Graph Tracking and SuperClaude Integration." width="100%" />
+</p>
+
 # Æ DESKTOP
 
 <div align="center">
